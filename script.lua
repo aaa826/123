@@ -1173,32 +1173,402 @@ local function RPIG_fake_script() -- TextLabel_5.LocalScript
 end
 coroutine.wrap(RPIG_fake_script)()
 
-if game.PlaceId == 606849621 then
-	local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-	local Window = Library.CreateLib("NoobHub - JailBreak", "Sentinel")
 
-	local Main = Window:NewTab("Main")
-	local MainSection = Window:NewSection("Main")
+if game.PlaceId == 5977280685 then 
+local Library = loadstring(game:HttpGet("https://paste.ee/r/ntNkC"))()
+local Window = Library.CreateLib("NoobHub - Ninja Legends 2 ", "Sentinel")
+local Tab = Window:NewTab("Auto Farm")
 
-	MainSection:NewDropdown("Give Gun", "Give you a gun(duh)", {"Pistol", "ShotGun", "AK47", "Rocket Launcher", "Riot Shield", "Sniper"})
-	local module = nil
-	if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(v) then
-		module = require(game:GetService("Players").LocalPlayer.Backpack[v].GunState)
+local Section = Tab:NewSection("Give all Elements")
+print("Loaded NoobHub - Ninja Legends 2")
+Section:NewButton("Give All Elements (wait 10 seconds)", "Gives all the Elements", function()
+	game.ReplicatedStorage.rEvents.elementMasteryEvent:FireServer("Frost")
+	wait(2)
+	game.ReplicatedStorage.rEvents.elementMasteryEvent:FireServer("Inferno")
+	wait(2)
+	game.ReplicatedStorage.rEvents.elementMasteryEvent:FireServer("Lightning")
+	wait(2)
+	game.ReplicatedStorage.rEvents.elementMasteryEvent:FireServer("Electral Chaos")
+	wait(2)
+	game.ReplicatedStorage.rEvents.elementMasteryEvent:FireServer("Masterful Wrath")
+	wait(2)
+	game.ReplicatedStorage.rEvents.elementMasteryEvent:FireServer("Shadow Charge")
+	wait(2)
+	game.ReplicatedStorage.rEvents.elementMasteryEvent:FireServer("Shadowfire")
+	wait(2)
+	game.ReplicatedStorage.rEvents.elementMasteryEvent:FireServer("Eternity Storm")
+end)
 
+local Section = Tab:NewSection("Main Functions")
+
+Section:NewToggle("Auto Swing", "Swings Your Blade Automatically", function(state)
+	if state then
+		_G.Condition = true -- true turns it on, false turns it off
+		while _G.Condition == true do
+			local A_1 = "swingKatana"
+			local Event = game:GetService("Players").LocalPlayer.ninjaEvent
+			Event:FireServer(A_1)
+			wait()
+		end
+	else
+		_G.Condition = false -- true turns it on, false turns it off
+		while _G.Condition == true do
+			local A_1 = "swingKatana"
+			local Event = game:GetService("Players").LocalPlayer.ninjaEvent
+			Event:FireServer(A_1)
+			wait()
+		end
 	end
-	if module ~= nil then 
+end)
 
+Section:NewToggle("Auto x30 Sell", "Sells at the Last Island which has x30 coins multiplier", function(state)
+	if state then
+		_G.Condition = true -- true turns it on, false turns it off
+		while _G.Condition == true do
+			wait(1)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(84.2945251, 87069.0391, 123.435143)
+			wait()
+		end
+	else
+		_G.Condition = false -- true turns it on, false turns it off
+		while _G.Condition == true do
+			wait(1)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(84.2945251, 87069.0391, 123.435143)
+			wait()
+		end
+	end
+end)
+
+local Section = Tab:NewSection("King of the Hill")
+
+Section:NewToggle("KOH Farm (Chi Farm)", "Teleports you to the King Of Hill", function(state)
+	if state then
+		_G.Condition = true -- true turns it on, false turns it off
+		while _G.Condition == true do
+			wait(1)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(218.628006, 89.7980728, -306.10614)
+			wait(1)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(250.906387, 89.7980728, -267.906158)
+			wait(1)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(217.515915, 89.7980728, -271.927338)
+			wait(1)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(245.596283, 89.7980728, -291.48761)
+			wait()
+		end
+	else
+		_G.Condition = false -- true turns it on, false turns it off
+		while _G.Condition == true do
+			wait(1)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(218.628006, 89.7980728, -306.10614)
+			wait(1)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(250.906387, 89.7980728, -267.906158)
+			wait(1)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(217.515915, 89.7980728, -271.927338)
+			wait(1)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(245.596283, 89.7980728, -291.48761)
+			wait()
+		end
+	end
+end)
+
+local Section = Tab:NewSection("Boss Autofarms")
+
+Section:NewToggle("Farm Robot Boss", "Use with Auto Swing", function(state)
+	if state then
+		_G.boss = true
+		while _G.boss do
+			wait()
+			if game:GetService("Workspace").bossFolder:FindFirstChild("RobotBoss"):FindFirstChild("HumanoidRootPart") then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.bossFolder.RobotBoss.HumanoidRootPart.CFrame
+			end
+			wait()
+		end
+	else
+		_G.boss = false
+		while _G.boss do
+			wait()
+			if game:GetService("Workspace").bossFolder:FindFirstChild("RobotBoss"):FindFirstChild("HumanoidRootPart") then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.bossFolder.RobotBoss.HumanoidRootPart.CFrame
+			end
+			wait()
+		end
+	end
+end)
+
+Section:NewToggle("Farm Magma Boss", "Use with Auto Swing", function(state)
+	if state then
+		_G.boss = true
+		while _G.boss do
+			wait()
+			if game:GetService("Workspace").bossFolder:FindFirstChild("AncientMagmaBoss"):FindFirstChild("HumanoidRootPart") then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.bossFolder.AncientMagmaBoss.HumanoidRootPart.CFrame
+			end
+			wait()
+		end
+	else
+		_G.boss = false
+		while _G.boss do
+			wait()
+			if game:GetService("Workspace").bossFolder:FindFirstChild("AncientMagmaBoss"):FindFirstChild("HumanoidRootPart") then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.bossFolder.AncientMagmaBoss.HumanoidRootPart.CFrame
+			end
+			wait()
+		end
+	end
+end)
+
+local Section = Tab:NewSection("Hoops Autofarm")
+
+Section:NewToggle("Farm Hoops", "Brings all The Hoops to You", function(state)
+	if state then
+		_G.cum = true -- set to false and it will stop
+		while wait() do
+			if _G.cum then
+				local plr = game.Players.LocalPlayer
+				for i,v in pairs(workspace.Hoops:GetDescendants()) do
+					if v.ClassName == "MeshPart" then
+						v.touchPart.CFrame = plr.Character.HumanoidRootPart.CFrame
+					end
+				end
+			end
+		end
+	else
+		_G.cum = false -- set to false and it will stop
+		while wait() do
+			if _G.cum then
+				local plr = game.Players.LocalPlayer
+				for i,v in pairs(workspace.Hoops:GetDescendants()) do
+					if v.ClassName == "MeshPart" then
+						v.touchPart.CFrame = plr.Character.HumanoidRootPart.CFrame
+					end
+				end
+			end
+		end
+	end
+end)
+
+local Tab = Window:NewTab("Auto Buys")
+local Section = Tab:NewSection("Options:")
+
+Section:NewToggle("Auto Buy Swords", "Buys Swords For You Automatically", function(state)
+	if state then
+		_G.Condition = true -- true turns it on, false turns it off
+		while _G.Condition == true do
+			local A_1 = "buyAllSwords"
+			local A_2 = "Inner Peace Island"
+			local Event = game:GetService("Players").LocalPlayer.ninjaEvent
+			Event:FireServer(A_1, A_2)
+			wait()
+		end
+	else
+		_G.Condition = false -- true turns it on, false turns it off
+		while _G.Condition == true do
+			local A_1 = "buyAllSwords"
+			local A_2 = "Inner Peace Island"
+			local Event = game:GetService("Players").LocalPlayer.ninjaEvent
+			Event:FireServer(A_1, A_2)
+			wait()
+		end
+	end
+end)
+
+Section:NewToggle("Auto Buy Belts", "Buys Belts For You Automatically", function(state)
+	if state then
+		_G.Condition = true -- true turns it on, false turns it off
+		while _G.Condition == true do
+			local A_1 = "buyAllBelts"
+			local A_2 = "Inner Peace Island"
+			local Event = game:GetService("Players").LocalPlayer.ninjaEvent
+			Event:FireServer(A_1, A_2)
+			wait()
+		end
+	else
+		_G.Condition = false -- true turns it on, false turns it off
+		while _G.Condition == true do
+			local A_1 = "buyAllBelts"
+			local A_2 = "Inner Peace Island"
+			local Event = game:GetService("Players").LocalPlayer.ninjaEvent
+			Event:FireServer(A_1, A_2)
+			wait()
+		end
+	end
+end)
+
+Section:NewToggle("Auto Buy Ranks", "Buys Ranks For You Automatically", function(state)
+	if state then
+		_G.Condition = true -- true turns it on, false turns it off
+		while _G.Condition == true do
+			local oh1 = "buyRank"
+			local oh2 = game:GetService("ReplicatedStorage").Ranks.Ground:GetChildren()
+			for i = 1,#oh2 do
+				game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(oh1, oh2[i].Name)
+			end
+			wait()
+		end
+	else
+		_G.Condition = false -- true turns it on, false turns it off
+		while _G.Condition == true do
+			local oh1 = "buyRank"
+			local oh2 = game:GetService("ReplicatedStorage").Ranks.Ground:GetChildren()
+			for i = 1,#oh2 do
+				game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(oh1, oh2[i].Name)
+			end
+			wait()
+		end
+	end
+end)
+
+Section:NewToggle("Auto Buy Skills", "Buys Skills For You Automatically", function(state)
+	if state then
+		_G.Condition = true -- true turns it on, false turns it off
+		while _G.Condition == true do
+			local A_1 = "buyAllSkills"
+			local A_2 = "Inner Peace Island"
+			local Event = game:GetService("Players").LocalPlayer.ninjaEvent
+			Event:FireServer(A_1, A_2)
+			wait()
+		end
+	else
+		_G.Condition = false -- true turns it on, false turns it off
+		while _G.Condition == true do
+			local A_1 = "buyAllSkills"
+			local A_2 = "Inner Peace Island"
+			local Event = game:GetService("Players").LocalPlayer.ninjaEvent
+			Event:FireServer(A_1, A_2)
+			wait()
+		end
+	end
+end)
+
+Section:NewToggle("Auto Buy Shuriken", "Buys Shurikens For You Automatically", function(state)
+	if state then
+		_G.Condition = true -- true turns it on, false turns it off
+		while _G.Condition == true do
+			local A_1 = "buyAllShurikens"
+			local A_2 = "Inner Peace Island"
+			local Event = game:GetService("Players").LocalPlayer.ninjaEvent
+			Event:FireServer(A_1, A_2)
+			wait()
+		end
+	else
+		_G.Condition = false -- true turns it on, false turns it off
+		while _G.Condition == true do
+			local A_1 = "buyAllShurikens"
+			local A_2 = "Inner Peace Island"
+			local Event = game:GetService("Players").LocalPlayer.ninjaEvent
+			Event:FireServer(A_1, A_2)
+			wait()
+		end
+	end
+end)
+
+local Tab = Window:NewTab("Teleports")
+
+local Section = Tab:NewSection("Unlock All Island (Coming Soon)")
+
+local Section = Tab:NewSection("Unlock All Chests")
+
+Section:NewButton("Teleport to All Chests", "Teleports you to all of the chests", function()
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(44.8091736, 772.892029, -186.113876)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(44.8091736, 772.892029, -186.113876)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(210.977661, 4054.0918, 58.45504)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(210.977661, 4054.0918, 58.45504)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(35.7061806, 5681.10449, 60.3083115)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(35.7061806, 5681.10449, 60.3083115)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(37.7248688, 9309.10352, 60.0999756)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(37.7248688, 9309.10352, 60.0999756)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(38.2728996, 13704.792, 58.9767265)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(38.2728996, 13704.792, 58.9767265)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(36.5750389, 17711.0234, 59.0358429)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(36.5750389, 17711.0234, 59.0358429)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(35.99506, 24094.6055, 59.6758461)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(35.99506, 24094.6055, 59.6758461)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(33.2964478, 28279.1758, 51.1746063)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(33.2964478, 28279.1758, 51.1746063)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-48.8769913, 33382.1094, -180.307999)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-48.8769913, 33382.1094, -180.307999)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-132.883453, 39457.9688, 169.222794)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-132.883453, 39457.9688, 169.222794)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(428.534729, 46137.9648, -45.9690437)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(428.534729, 46137.9648, -45.9690437)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(424.302216, 52741.6719, -50.0839348)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(424.302216, 52741.6719, -50.0839348)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(424.19577, 66800.8047, -46.1431847)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(424.19577, 66800.8047, -46.1431847)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(425.921204, 70414.9063, -44.0284424)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(425.921204, 70414.9063, -44.0284424)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(425.431824, 74579.7031, -45.7830544)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(425.431824, 74579.7031, -45.7830544)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(426.997314, 79884.4297, -48.2278976)
+	wait(1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(426.997314, 79884.4297, -48.2278976)
+end)
+
+local Tab = Window:NewTab("Misc.")
+local Section = Tab:NewSection("Miscellaneous")
+
+Section:NewSlider("WalkSpeed", "Modifies the Walk Speed", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Section:NewSlider("Jump Power", "Modifies the Jump Power", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+	game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+Section:NewButton("Ctrl Click Teleport", "I dont know what to put here :p", function()
+	local Plr = game:GetService("Players").LocalPlayer
+	local Mouse = Plr:GetMouse()
+	Mouse.Button1Down:connect(function()
+		if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
+		if not Mouse.Target then return end
+		Plr.Character:MoveTo(Mouse.Hit.p)
 	end)
-	local Player = Window:NewTab("LocalPlayer")
-local PlayerSection = Window:NewSection("LocalPlayer")
-
-PlayerSection:NewSlider("Walkspeed", "Changes your walkspeed and become sonic", 250, 16, function(v)
-	game.Players.LocalPlayer.WalkSpeed = v
 end)
 
-PlayerSection:NewSlider("Jumppower", "Changes your Jumppower and lets you go across the Milky Way", 250, 16, (function(c)
-	game.Players.LocalPlayer.JumpPower = c
+Section:NewButton("Infinite Jump", "Gives you 9999999 jumps", function()
+	game.Players.LocalPlayer.multiJumpCount.Value = 99999999
 end)
+
+local Tab = Window:NewTab("Credits")
+local Section = Tab:NewSection("Scripts - Made By SuperUnlimitedGod (me :p)")
+local Section = Tab:NewSection("Kavo UI Library - Made by xHeptc")
+
+local Wordofthewiser = Window:NewTab("Words")
+local Section = Wordofthewiser:NewSection("If you base your expectations")
+local Section = Wordofthewiser:NewSection("only on what you see, You Blind")
+local Section = Wordofthewiser:NewSection("yourself to the possibilities of ")
+local Section = Wordofthewiser:NewSection("a new reality - Zaheer(Legend of korra)")
 
 elseif game.PlaceId == 155615604 then
 	local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
@@ -1317,5 +1687,4 @@ elseif game.PlaceId == 3956818381 then
 		end
 	end)
 end
-
 
