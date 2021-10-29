@@ -452,17 +452,7 @@ hax.Clock.TextColor3 = Color3.fromRGB(255, 255, 255)
 hax.Clock.TextScaled = true
 hax.Clock.TextSize = 14.000
 hax.Clock.TextWrapped = true
-while wait() do
-	local minutes = os.date("*t")["min"]
-	local hours = os.date("*t")["hours"]
-	if tonumber(minutes) <= 9 then
-		minutes = "0"..minutes
-	end
-	if tonumber(hours) <= 9 then
-		hours = "0"..hours
-	end
-	hax.Clock.Text = hours..":"..minutes
-	end
+
 hax.Player.Name = "Player"
 hax.Player.Parent = hax.NoobXNavigator
 hax.Player.BackgroundColor3 = Color3.fromRGB(29, 29, 30)
@@ -2510,7 +2500,7 @@ local function JUAJ_fake_script() -- hax.ImageLabel.LocalScript
 	local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
 	
 	-- Set the ImageLabel's content to the user thumbnail
-	local imageLabel = script.Parent
+	local imageLabel = hax.ImageLabel
 	imageLabel.Image = content
 	imageLabel.Size = UDim2.new(0, 231,0, 177)
 end
@@ -2552,53 +2542,4 @@ local function KOPPYNW_fake_script() -- hax.Close_3.LocalScript
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(KOPPYNW_fake_script)()
-local function VAKV_fake_script() -- hax.Close_4.LocalScript 
-	local script = Instance.new('LocalScript', hax.Close_4)
-
-	print("Hello world!")
-	
-end
-coroutine.wrap(VAKV_fake_script)()
-local function XOITSSC_fake_script() -- hax.Close_5.LocalScript 
-	local script = Instance.new('LocalScript', hax.Close_5)
-
-	print("Hello world!")
-	
-end
-coroutine.wrap(XOITSSC_fake_script)()
-local function CIHBH_fake_script() -- hax.Close_6.LocalScript 
-	local script = Instance.new('LocalScript', hax.Close_6)
-
-	print("Hello world!")
-	
-end
-coroutine.wrap(CIHBH_fake_script)()
-local function BWAXTVZ_fake_script() -- hax.Close_7.LocalScript 
-	local script = Instance.new('LocalScript', hax.Close_7)
-
-	print("Hello world!")
-	
-end
-coroutine.wrap(BWAXTVZ_fake_script)()
-local function KWLQ_fake_script() -- hax.Close_8.LocalScript 
-	local script = Instance.new('LocalScript', hax.Close_8)
-
-	print("Hello world!")
-	
-end
-coroutine.wrap(KWLQ_fake_script)()
-local function CBEBGAM_fake_script() -- hax.Close_9.LocalScript 
-	local script = Instance.new('LocalScript', hax.Close_9)
-
-	print("Hello world!")
-	
-end
-coroutine.wrap(CBEBGAM_fake_script)()
-local function ROBWJQK_fake_script() -- hax.Close_10.LocalScript 
-	local script = Instance.new('LocalScript', hax.Close_10)
-
-	print("Hello world!")
-	
-end
-coroutine.wrap(ROBWJQK_fake_script)()
+coroutine.wrap(OYMPPV_fake_script)
