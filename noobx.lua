@@ -1,5 +1,6 @@
 --our version of domain x
 --not using btw
+--NoobX ON TOP 
 
 local hax = {
 	hax = Instance.new("ScreenGui"),
@@ -782,6 +783,7 @@ hax.TextLabel_17.TextScaled = true
 hax.TextLabel_17.TextSize = 14.000
 hax.TextLabel_17.TextWrapped = true
 hax.TextLabel_17.TextXAlignment = Enum.TextXAlignment.Left
+hax.TextLabel_17.Text = game.Players.LocalPlayer.DisplayName
 
 hax.TextLabel_18.Parent = hax.Info_4
 hax.TextLabel_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -795,6 +797,7 @@ hax.TextLabel_18.TextScaled = true
 hax.TextLabel_18.TextSize = 14.000
 hax.TextLabel_18.TextWrapped = true
 hax.TextLabel_18.TextXAlignment = Enum.TextXAlignment.Left
+hax.TextLabel_18.Text = game.Players.LocalPlayer.Name
 
 hax.Info_5.Name = "Info"
 hax.Info_5.Parent = hax.Frame
@@ -1142,6 +1145,7 @@ if game.PlaceId == 286090429 then
 	hax.Execute.TextSize = 14.000
 	hax.Execute.TextWrapped = true
 	hax.Execute.MouseButton1Click:Connect(function()
+		hax.Aresnal.Visible = false
 		loadstring(game:HttpGet('https://pastebin.com/raw/yCrBkPaY', true))()
 	end)
 
@@ -1173,7 +1177,7 @@ elseif game.PlaceId == 6447798030 then
 	hax.FunkyFriday.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 	hax.FunkyFriday.Position = UDim2.new(0.300761431, 0, 0.246679321, 0)
 	hax.FunkyFriday.Size = UDim2.new(0, 472, 0, 241)
-	hax.FunkyFriday.Visible = false
+	hax.FunkyFriday.Visible = true
 
 	hax.TextLabel_31.Parent = hax.FunkyFriday
 	hax.TextLabel_31.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1288,6 +1292,7 @@ elseif game.PlaceId == 6447798030 then
 	hax.Execute_3.TextSize = 14.000
 	hax.Execute_3.TextWrapped = true
 	hax.Execute_3.MouseButton1Click:Connect(function()
+		hax.FunkyFriday.Visible = false
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/wally-rblx/funky-friday-autoplay/main/main.lua",true))()
 	end)
 
@@ -1318,7 +1323,7 @@ elseif game.PlaceId == 155615604 then
 	hax.PrisonLife.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 	hax.PrisonLife.Position = UDim2.new(0.300761431, 0, 0.246679321, 0)
 	hax.PrisonLife.Size = UDim2.new(0, 472, 0, 241)
-	hax.PrisonLife.Visible = false
+	hax.PrisonLife.Visible = true
 
 	hax.TextLabel_29.Parent = hax.PrisonLife
 	hax.TextLabel_29.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1433,6 +1438,7 @@ elseif game.PlaceId == 155615604 then
 	hax.Execute_2.TextSize = 14.000
 	hax.Execute_2.TextWrapped = true
 	hax.Execute_2.MouseButton1Down:Connect(function()
+		hax.PrisonLife.Visible = false
 		loadstring(game:HttpGet("https://pastebin.com/raw/DTi4fbKh"))()
 	end)
 
@@ -1577,6 +1583,7 @@ elseif game.PlaceId == 606849621 then
 	hax.Execute_4.TextSize = 14.000
 	hax.Execute_4.TextWrapped = true
 	hax.Execute_4.MouseButton1Click:Connect(function()
+		hax.Jailbreak.Visible = false
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Jailbreak/Jailbreak"))()
 	end)
 
@@ -1606,7 +1613,7 @@ elseif game.PlaceId == 1224212277 then
 	hax.MadCity.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 	hax.MadCity.Position = UDim2.new(0.300761431, 0, 0.246679321, 0)
 	hax.MadCity.Size = UDim2.new(0, 472, 0, 241)
-	hax.MadCity.Visible = false
+	hax.MadCity.Visible = true
 
 	hax.TextLabel_35.Parent = hax.MadCity
 	hax.TextLabel_35.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1721,6 +1728,7 @@ elseif game.PlaceId == 1224212277 then
 	hax.Execute_5.TextSize = 14.000
 	hax.Execute_5.TextWrapped = true
 	hax.Execute_5.MouseButton1Down:Connect(function()
+		hax.MadCity.Visible = false
 		loadstring(game:HttpGet("https://jack1214060.xyz/jayhub",true))()
 	end)
 
@@ -1750,7 +1758,7 @@ elseif game.PlaceId == 5977280685 then
 	hax.NinjaLegend2.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 	hax.NinjaLegend2.Position = UDim2.new(0.300761431, 0, 0.246679321, 0)
 	hax.NinjaLegend2.Size = UDim2.new(0, 472, 0, 241)
-	hax.NinjaLegend2.Visible = false
+	hax.NinjaLegend2.Visible = true
 
 	hax.TextLabel_37.Parent = hax.NinjaLegend2
 	hax.TextLabel_37.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1865,6 +1873,7 @@ elseif game.PlaceId == 5977280685 then
 	hax.Execute_6.TextSize = 14.000
 	hax.Execute_6.TextWrapped = true
 	hax.Execute_6.MouseButton1Down:Connect(function()
+		hax.NinjaLegend2.Visible = false
 		loadstring(game:HttpGet("https://paste.ee/r/xjr5k", true))()
 	end)
 
@@ -2010,6 +2019,7 @@ elseif game.PlaceId == 6284583030 then
 	hax.Execute_7.TextSize = 14.000
 	hax.Execute_7.TextWrapped = true
 	hax.Execute_7.MouseButton1Down:Connect(function()
+		hax.PetSimX.Visible = false
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Wind596/VoidHub/main/WiningDediy", true))()
 	end)
 
@@ -2040,7 +2050,7 @@ elseif game.PlaceId == 1962086868 then
 	hax.TOH.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 	hax.TOH.Position = UDim2.new(0.300761431, 0, 0.246679321, 0)
 	hax.TOH.Size = UDim2.new(0, 472, 0, 241)
-	hax.TOH.Visible = false
+	hax.TOH.Visible = true
 
 	hax.TextLabel_43.Parent = hax.TOH
 	hax.TextLabel_43.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -2155,6 +2165,7 @@ elseif game.PlaceId == 1962086868 then
 	hax.Execute_9.TextSize = 14.000
 	hax.Execute_9.TextWrapped = true
 	hax.Execute_9.MouseButton1Click:Connect(function()
+		hax.TOH.Visible = false
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/2dgeneralspam1/scripts-and-stuff/master/scripts/garfield%20hub", true))()
 	end)
 
@@ -2184,7 +2195,7 @@ elseif game.PlaceId == 3956818381 then
 	hax.NinjaLegend.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 	hax.NinjaLegend.Position = UDim2.new(0.300761431, 0, 0.246679321, 0)
 	hax.NinjaLegend.Size = UDim2.new(0, 472, 0, 241)
-	hax.NinjaLegend.Visible = false
+	hax.NinjaLegend.Visible = true
 
 	hax.TextLabel_45.Parent = hax.NinjaLegend
 	hax.TextLabel_45.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -2299,6 +2310,7 @@ elseif game.PlaceId == 3956818381 then
 	hax.Execute_10.TextSize = 14.000
 	hax.Execute_10.TextWrapped = true
 	hax.Execute_10.MouseButton1Click:Connect(function()
+		hax.NinjaLegend.Visible = false
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/potatoman42o/potato-hub-mmmm/main/init%20-%20obf.lua"))()
 	end)
 
@@ -2329,7 +2341,7 @@ elseif game.PlaceId == 4623386862 then
 	hax.Piggy.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 	hax.Piggy.Position = UDim2.new(0.300761431, 0, 0.246679321, 0)
 	hax.Piggy.Size = UDim2.new(0, 472, 0, 241)
-	hax.Piggy.Visible = false
+	hax.Piggy.Visible = true
 
 	hax.TextLabel_41.Parent = hax.Piggy
 	hax.TextLabel_41.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -2444,6 +2456,7 @@ elseif game.PlaceId == 4623386862 then
 	hax.Execute_8.TextSize = 14.000
 	hax.Execute_8.TextWrapped = true
 	hax.Execute_8.MouseButton1Click:Connect(function()
+		hax.Piggy.Visible = false
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Piggy/Piggy"))()
 	end)
 
@@ -2486,60 +2499,5 @@ end
 
 -- Scripts:
 
-local function JUAJ_fake_script() -- hax.ImageLabel.LocalScript 
-	local script = Instance.new('LocalScript', hax.ImageLabel)
 
-	local Players = game:GetService("Players")
-	
-	local player = Players.LocalPlayer
-	
-	-- Fetch the thumbnail
-	local userId = player.UserId
-	local thumbType = Enum.ThumbnailType.HeadShot
-	local thumbSize = Enum.ThumbnailSize.Size420x420
-	local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
-	
-	-- Set the ImageLabel's content to the user thumbnail
-	local imageLabel = hax.ImageLabel
-	imageLabel.Image = content
-	imageLabel.Size = UDim2.new(0, 231,0, 177)
-end
-coroutine.wrap(JUAJ_fake_script)()
-local function SDWZ_fake_script() -- hax.TextLabel_17.LocalScript 
-	local script = Instance.new('LocalScript', hax.TextLabel_17)
 
-	local plr = game.Players.LocalPlayer.DisplayName
-	script.Parent.Text = plr
-end
-coroutine.wrap(SDWZ_fake_script)()
-local function SZZYF_fake_script() -- hax.TextLabel_18.LocalScript 
-	local script = Instance.new('LocalScript', hax.TextLabel_18)
-
-	local plr = game.Players.LocalPlayer.Name
-	script.Parent.Text = plr
-end
-coroutine.wrap(SZZYF_fake_script)()
-local function ROLH_fake_script() -- hax.Close.LocalScript 
-	local script = Instance.new('LocalScript', hax.Close)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Visible = false
-	end)
-end
-coroutine.wrap(ROLH_fake_script)()
-local function OYMPPV_fake_script() -- hax.Close_2.LocalScript 
-	local script = Instance.new('LocalScript', hax.Close_2)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Visible = false
-	end)
-end
-coroutine.wrap(OYMPPV_fake_script)()
-local function KOPPYNW_fake_script() -- hax.Close_3.LocalScript 
-	local script = Instance.new('LocalScript', hax.Close_3)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Visible = false
-	end)
-end
-coroutine.wrap(OYMPPV_fake_script)
