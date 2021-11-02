@@ -294,6 +294,19 @@ local ScreenGui = {
 	TextButton_4 = Instance.new("TextButton"),
 	UICorner_48 = Instance.new("UICorner"),
 	TextLabel_39 = Instance.new("TextLabel"),
+	UIC1 = Instance.new("UICorner"),
+	UIC2 = Instance.new("UICorner"),
+	UIC3 = Instance.new("UICorner"),
+	UIC4 = Instance.new("UICorner"),
+	UIC5 = Instance.new("UICorner"),
+	UIC6 = Instance.new("UICorner"),
+	UIC7 = Instance.new("UICorner"),
+	UIC8 = Instance.new("UICorner"),
+	UIC9 = Instance.new("UICorner"),
+	UIC10 = Instance.new("UICorner"),
+	UIC11 = Instance.new("UICorner"),
+	UIC12 = Instance.new("UICorner"),
+	UIC13 = Instance.new("UICorner"),
 }
 
 --Properties:
@@ -2772,6 +2785,8 @@ if game.PlaceId == 286090429 then
 	ScreenGui.Aresnal.Position = UDim2.new(0.186454922, 0, 0.163529217, 0)
 	ScreenGui.Aresnal.Size = UDim2.new(0, 592, 0, 313)
 	ScreenGui.Aresnal.Visible = true
+	
+	ScreenGui.UIC1.Parent = ScreenGui.Aresnal
 
 	ScreenGui.title_8.Name = "title"
 	ScreenGui.title_8.Parent = ScreenGui.Aresnal
@@ -2926,6 +2941,8 @@ elseif game.PlaceId == 3233893879 then
 	ScreenGui.BadBusniess.Position = UDim2.new(0.186454922, 0, 0.163529217, 0)
 	ScreenGui.BadBusniess.Size = UDim2.new(0, 592, 0, 313)
 	ScreenGui.BadBusniess.Visible = true
+	
+	ScreenGui.UIC2.Parent = ScreenGui.BadBusniess
 
 	ScreenGui.title_9.Name = "title"
 	ScreenGui.title_9.Parent = ScreenGui.BadBusniess
@@ -3078,6 +3095,8 @@ elseif game.PlaceId == 4623386862 then
 	ScreenGui.piggy.Position = UDim2.new(0.186454922, 0, 0.163529217, 0)
 	ScreenGui.piggy.Size = UDim2.new(0, 592, 0, 313)
 	ScreenGui.piggy.Visible = true
+	
+	ScreenGui.UIC3.Parent = ScreenGui.Piggy
 
 	ScreenGui.title_10.Name = "title"
 	ScreenGui.title_10.Parent = ScreenGui.piggy
@@ -3230,6 +3249,8 @@ elseif game.PlaceId == 6447798030 then
 	ScreenGui.FunkyFriday.Position = UDim2.new(0.186454922, 0, 0.163529217, 0)
 	ScreenGui.FunkyFriday.Size = UDim2.new(0, 592, 0, 313)
 	ScreenGui.FunkyFriday.Visible = true
+	
+	screenGui.UIC4.Parent = ScreenGui.FunkyFriday
 
 	ScreenGui.title_2.Name = "title"
 	ScreenGui.title_2.Parent = ScreenGui.FunkyFriday
@@ -3383,6 +3404,8 @@ elseif game.PlaceId == 1962086868 then
 	ScreenGui.TOH.Position = UDim2.new(0.186454922, 0, 0.163529217, 0)
 	ScreenGui.TOH.Size = UDim2.new(0, 592, 0, 313)
 	ScreenGui.TOH.Visible = true
+	
+	ScreenGui.UIC5.Parent = ScreenGui.TOH
 
 	ScreenGui.title.Name = "title"
 	ScreenGui.title.Parent = ScreenGui.TOH
@@ -3535,6 +3558,8 @@ elseif game.PlaceId == 606849621 then
 	ScreenGui.Jailbreak.Position = UDim2.new(0.186454922, 0, 0.163529217, 0)
 	ScreenGui.Jailbreak.Size = UDim2.new(0, 592, 0, 313)
 	ScreenGui.Jailbreak.Visible = true
+	
+	ScreenGui.UIC6.Parent = ScreenGui.Jailbreak
 
 	ScreenGui.title_5.Name = "title"
 	ScreenGui.title_5.Parent = ScreenGui.Jailbreak
@@ -3687,6 +3712,8 @@ elseif game.PlaceId == 1224212277 then
 	ScreenGui.MadCity.Position = UDim2.new(0.186454922, 0, 0.163529217, 0)
 	ScreenGui.MadCity.Size = UDim2.new(0, 592, 0, 313)
 	ScreenGui.MadCity.Visible = true
+	
+	ScreenGui.UIC7.Parent = ScreenGui.MadCity
 
 	ScreenGui.title_4.Name = "title"
 	ScreenGui.title_4.Parent = ScreenGui.MadCity
@@ -3839,6 +3866,7 @@ elseif game.PlaceId == 2753915549 then
 	ScreenGui.BloxFruits.Position = UDim2.new(0.186454922, 0, 0.163529217, 0)
 	ScreenGui.BloxFruits.Size = UDim2.new(0, 592, 0, 313)
 	ScreenGui.BloxFruits.Visible = true
+	ScreenGui.UIC8.Parent = ScreenGui.BloxFruits
 
 	ScreenGui.title_3.Name = "title"
 	ScreenGui.title_3.Parent = ScreenGui.BloxFruits
@@ -3992,6 +4020,8 @@ elseif game.PlaceId == 6284583030 then
 	ScreenGui.PSX.Size = UDim2.new(0, 592, 0, 313)
 	ScreenGui.PSX.Visible = true
 
+	ScreenGui.UIC9.Parent = ScreenGui.PSX
+	
 	ScreenGui.title_12.Name = "title"
 	ScreenGui.title_12.Parent = ScreenGui.PSX
 	ScreenGui.title_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -4143,6 +4173,7 @@ elseif game.PlaceId == 155615604 then
 	ScreenGui.PrisonLife.Position = UDim2.new(0.186454922, 0, 0.163529217, 0)
 	ScreenGui.PrisonLife.Size = UDim2.new(0, 592, 0, 313)
 	ScreenGui.PrisonLife.Visible = true
+	ScreenGui.UIC10.Parent = ScreenGui.PrisonLife
 	
 	ScreenGui.title_11.Name = "title"
 	ScreenGui.title_11.Parent = ScreenGui.PrisonLife
@@ -4295,6 +4326,8 @@ elseif game.PlaceId == 3956818381 then
 	ScreenGui.NinjaLegends.Position = UDim2.new(0.186454922, 0, 0.163529217, 0)
 	ScreenGui.NinjaLegends.Size = UDim2.new(0, 592, 0, 313)
 	ScreenGui.NinjaLegends.Visible = true
+	
+	ScreenGui.UIC11.Parent = ScreenGui.NinjaLegends
 
 	ScreenGui.title_6.Name = "title"
 	ScreenGui.title_6.Parent = ScreenGui.NinjaLegends
@@ -4448,6 +4481,8 @@ elseif game.PlaceId == 5977280685 then
 	ScreenGui.NinjaLegends2.Size = UDim2.new(0, 592, 0, 313)
 	ScreenGui.NinjaLegends2.Visible = true
 
+	ScreenGui.UIC12.Parent = ScreenGui.NinjaLegends2
+	
 	ScreenGui.title_7.Name = "title"
 	ScreenGui.title_7.Parent = ScreenGui.NinjaLegends2
 	ScreenGui.title_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
