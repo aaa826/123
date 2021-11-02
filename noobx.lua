@@ -2633,13 +2633,6 @@ ScreenGui.Clock.TextScaled = true
 ScreenGui.Clock.TextSize = 14.000
 ScreenGui.Clock.TextWrapped = true
 ScreenGui.Clock.TextTransparency = 1.000
-if  ScreenGui.Clock.TextTransparency ~= 0 then
-		local transitionInfo = TweenInfo.new(0.75, Enum.EasingStyle.Quint)
-		local tween = game:GetService("TweenService"):Create(ScreenGui.Clock, transitionInfo, {TextTransparency = 0})
-		tween:Play()
-	end
-	local currentHour = os.date("*t")["hour"]
-	ScreenGui.Clock.Text = getTime()
 
 ScreenGui.Player.Name = "Player"
 ScreenGui.Player.Parent = ScreenGui.NoobXNavigator
@@ -4615,3 +4608,29 @@ elseif game.PlaceId == 5977280685 then
 		ScreenGui.NinjaLegends2.Visible = false
 	end)
 end
+--Scripts
+local function HIWC_fake_script() -- Clock.Script 
+	local script = Instance.new('Script', Clock)
+
+	local timestamp = 906000490
+	
+	local function formatTime(t)
+		local t = t or tick()
+	
+		local hours = math.floor(t/3600) % 24
+		local mins = math.floor(t/60) % 60
+	
+		if mins <= 9 then
+			mins = "0"..mins
+		end
+		script.Parent.Text = hours..":"..mins
+	end
+	
+	while true do
+		formatTime()
+		wait(1)
+	end
+	
+end
+coroutine.wrap(HIWC_fake_script)()
+
