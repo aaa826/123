@@ -3985,7 +3985,7 @@ elseif game.PlaceId == 2753915549 then
 	ScreenGui.Exe_6.Parent = ScreenGui.BloxFruits
 	ScreenGui.Exe_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	ScreenGui.Exe_6.BackgroundTransparency = 1.000
-	ScreenGui.Exe_6.Position = UDim2.new(0.658783674, 0, 0.859425008, 0)
+	ScreenGui.Exe_6.Position = UDim2.new(00.849662066, 0, 0.862619817, 0)
 	ScreenGui.Exe_6.Size = UDim2.new(0, 98, 0, 33)
 	ScreenGui.Exe_6.Font = Enum.Font.SourceSansLight
 	ScreenGui.Exe_6.Text = "Close"
