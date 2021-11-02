@@ -2632,9 +2632,10 @@ ScreenGui.Clock.TextColor3 = Color3.fromRGB(255, 255, 255)
 ScreenGui.Clock.TextScaled = true
 ScreenGui.Clock.TextSize = 14.000
 ScreenGui.Clock.TextWrapped = true
-if  ScreenGUi.Clock.TextTransparency ~= 0 then
+ScreenGui.Clock.TextTransparency = 1.000
+if  ScreenGui.Clock.TextTransparency ~= 0 then
 		local transitionInfo = TweenInfo.new(0.75, Enum.EasingStyle.Quint)
-		local tween = game:GetService("TweenService"):Create(mainDomain.Time, transitionInfo, {TextTransparency = 0})
+		local tween = game:GetService("TweenService"):Create(ScreenGui.Clock, transitionInfo, {TextTransparency = 0})
 		tween:Play()
 	end
 	local currentHour = os.date("*t")["hour"]
