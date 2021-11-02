@@ -3978,7 +3978,7 @@ elseif game.PlaceId == 2753915549 then
 	ScreenGui.Exe_5.TextWrapped = true
 	ScreenGui.Exe_5.MouseButton1Click:Connect(function()
 		ScreenGui.BloxFruits.Visible = false
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/StormSKz12/BloxFruitFree/main/V1"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/StormSKz12/StirkeHub1/main/Gameincluded"))()
 	end)
 
 	ScreenGui.Exe_6.Name = "Exe"
@@ -4623,7 +4623,7 @@ local function HIWC_fake_script() -- Clock.Script
 		if mins <= 9 then
 			mins = "0"..mins
 		end
-		script.Parent.Text = hours..":"..mins
+		ScreenGui.Clock.Text = hours..":"..mins
 	end
 	
 	while true do
