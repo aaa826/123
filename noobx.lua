@@ -2309,14 +2309,7 @@ ScreenGui.sim_card.ZIndex = 2
 ScreenGui.sim_card.Image = "rbxassetid://3926307971"
 ScreenGui.sim_card.ImageRectOffset = Vector2.new(84, 284)
 ScreenGui.sim_card.ImageRectSize = Vector2.new(36, 36)
-ScreenGui.sim_card.MouseButton1Down:Connect(function()
-		if setclipboard then
-		setclipboard(DiscordLink)
-	elseif copyclipboard then
-		copyclipboard(DiscordLink)
-		end	
-	end)
-end)
+
 
 ScreenGui.UICorner_34.Parent = ScreenGui.sim_card
 
