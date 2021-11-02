@@ -2632,7 +2632,7 @@ ScreenGui.Clock.TextColor3 = Color3.fromRGB(255, 255, 255)
 ScreenGui.Clock.TextScaled = true
 ScreenGui.Clock.TextSize = 14.000
 ScreenGui.Clock.TextWrapped = true
-ScreenGui.Clock.TextTransparency = 1.000
+ScreenGui.Clock.TextTransparency = 0
 
 ScreenGui.Player.Name = "Player"
 ScreenGui.Player.Parent = ScreenGui.NoobXNavigator
