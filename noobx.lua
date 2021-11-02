@@ -2297,6 +2297,8 @@ ScreenGui.TextLabel_21.TextSize = 14.000
 ScreenGui.TextLabel_21.TextWrapped = true
 ScreenGui.TextLabel_21.TextXAlignment = Enum.TextXAlignment.Left
 
+DiscordLink = "https://discord.gg/8c2qKtFe"
+
 ScreenGui.sim_card.Name = "sim_card"
 ScreenGui.sim_card.Parent = ScreenGui.DC
 ScreenGui.sim_card.BackgroundColor3 = Color3.fromRGB(41, 41, 43)
@@ -2307,6 +2309,14 @@ ScreenGui.sim_card.ZIndex = 2
 ScreenGui.sim_card.Image = "rbxassetid://3926307971"
 ScreenGui.sim_card.ImageRectOffset = Vector2.new(84, 284)
 ScreenGui.sim_card.ImageRectSize = Vector2.new(36, 36)
+ScreenGui.sim_card.MouseButton1Down:Connect(function()
+		if setclipboard then
+		setclipboard(DiscordLink)
+	elseif copyclipboard then
+		copyclipboard(DiscordLink)
+		end	
+	end)
+end)
 
 ScreenGui.UICorner_34.Parent = ScreenGui.sim_card
 
@@ -4627,6 +4637,7 @@ elseif game.PlaceId == 5977280685 then
 		ScreenGui.NinjaLegends2.Visible = false
 	end)
 end
+
 --Scripts
 local function HIWC_fake_script() -- Clock.Script 
 	local script = Instance.new('Script', Clock)
