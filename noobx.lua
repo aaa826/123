@@ -1,7 +1,7 @@
 --NoobX IS the best Hack ever
 --our version of domainx
 --By NoobTech.INC
-
+local TS = game:GetService("TweenService")
 local ScreenGui = {
 	ScreenGui = Instance.new("ScreenGui"),
 	Holder = Instance.new("Frame"),
@@ -332,7 +332,7 @@ ScreenGui.Games.Parent = ScreenGui.Holder
 
 
 ScreenGui.NavigatorFrame.Name = "NavigatorFrame"
-ScreenGui.NavigatorFrame.Parent = ScreenGui.Holder
+ScreenGui.NavigatorFrame.Parent = ScreenGui.Holder 
 
 ScreenGui.LocalPlayer.Name = "LocalPlayer"
 ScreenGui.LocalPlayer.Parent = ScreenGui.NavigatorFrame
@@ -2592,6 +2592,13 @@ ScreenGui.NoobXNavigator.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 ScreenGui.NoobXNavigator.Position = UDim2.new(0.26522842, 0, 0.905123353, 0)
 ScreenGui.NoobXNavigator.Size = UDim2.new(0, 469, 0, 58)
 ScreenGui.NoobXNavigator.Visible = true
+local Plr = game.Players.LocalPlayer
+ 
+Plr:GetMouse().KeyDown:Connect(function(K)
+    if K == "L" then
+        script.Parent.Visible = true
+    end
+    end)
 
 ScreenGui.UICorner_40.Parent = ScreenGui.NoobXNavigator
 
@@ -2609,9 +2616,13 @@ ScreenGui.home.ImageRectOffset = Vector2.new(964, 204)
 ScreenGui.home.ImageRectSize = Vector2.new(36, 36)
 ScreenGui.home.MouseButton1Click:Connect(function()
 	if ScreenGui.InfoHolder.Visible == false then
+		TS:Create(ScreenGui.home, TweenInfo.new(0.5), {BackgroundColor3 = Color3.fromRGB(255,255,255)}):Play()
+						TS:Create(ScreenGui.home, TweenInfo.new(0.5), {ImageColor3 = Color3.fromRGB(0,0,0)}):Play()
 		ScreenGui.InfoHolder.Visible = true
 		ScreenGui.BlurEffect.Enabled = true
 	elseif ScreenGui.InfoHolder.Visible == true then
+						TS:Create(ScreenGui.home, TweenInfo.new(0.5), {ImageColor3 = Color3.fromRGB(255,255,255)}):Play()
+		TS:Create(ScreenGui.home, TweenInfo.new(0.5), {BackgroundColor3 = Color3.fromRGB(29,29,30)}):Play()
 		ScreenGui.InfoHolder.Visible = false
 		ScreenGui.BlurEffect.Enabled = false
 	end
@@ -2646,8 +2657,12 @@ ScreenGui.Player.ImageRectOffset = Vector2.new(884, 4)
 ScreenGui.Player.ImageRectSize = Vector2.new(36, 36)
 ScreenGui.Player.MouseButton1Click:Connect(function()
 	if ScreenGui.LocalPlayer.Visible == false then
+						TS:Create(ScreenGui.Player, TweenInfo.new(0.5), {ImageColor3 = Color3.fromRGB(0,0,0)}):Play()
+			TS:Create(ScreenGui.Player, TweenInfo.new(0.5), {BackgroundColor3 = Color3.fromRGB(255,255,255)}):Play()
 		ScreenGui.LocalPlayer.Visible = true 
 	elseif ScreenGui.LocalPlayer.Visible == true then
+						TS:Create(ScreenGui.Player, TweenInfo.new(0.2), {ImageColor3 = Color3.fromRGB(255,255,255)}):Play()
+			TS:Create(ScreenGui.Player, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(29,29,30)}):Play()
 		ScreenGui.LocalPlayer.Visible = false
 	end
 end)
@@ -2665,8 +2680,12 @@ ScreenGui.code.ImageRectOffset = Vector2.new(404, 844)
 ScreenGui.code.ImageRectSize = Vector2.new(36, 36)
 ScreenGui.code.MouseButton1Click:Connect(function()
 	if ScreenGui.UniScript.Visible == false then
+						TS:Create(ScreenGui.code, TweenInfo.new(0.2), {ImageColor3 = Color3.fromRGB(0,0,0)}):Play()
+			TS:Create(ScreenGui.code, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(255,255,255)}):Play()
 		ScreenGui.UniScript.Visible = true
 	elseif ScreenGui.UniScript.Visible == true then
+			TS:Create(ScreenGui.code, TweenInfo.new(0.2), {ImageColor3 = Color3.fromRGB(255,255,255)}):Play()
+			TS:Create(ScreenGui.code, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(29,29,30)}):Play()
 		ScreenGui.UniScript.Visible = false
 	end
 end)
