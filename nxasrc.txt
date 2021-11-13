@@ -1,0 +1,2197 @@
+-- Gui to Lua
+-- Version: 3.2
+local Domain = {
+	Other = Instance.new("Frame"),
+	Watermark = Instance.new("Frame"),
+	Text = Instance.new("TextLabel"),
+	ExploitFound = Instance.new("Frame"),
+	Title = Instance.new("TextLabel"),
+	UICorner_7 = Instance.new("UICorner"),
+	Content = Instance.new("TextLabel"),
+	ExploitName = Instance.new("TextLabel"),
+	Description = Instance.new("TextLabel"),
+	ExecuteButton = Instance.new("TextButton"),
+	ExecuteText = Instance.new("TextLabel"),
+	UICorner_8 = Instance.new("UICorner"),
+	Option = Instance.new("TextLabel"),
+	exitpromptButton = Instance.new("TextButton"),
+	exitprompttext = Instance.new("TextLabel"),
+	UICorner_9 = Instance.new("UICorner"),
+	Shadow_2 = Instance.new("ImageLabel"),
+}
+
+local UIS = game:GetService("UserInputService")
+local UserInputService = game:GetService("UserInputService")
+local TS = game:GetService("TweenService")
+
+local Domains = Instance.new("ScreenGui")
+local Holder = Instance.new("Frame")
+local Frames = Instance.new("Folder")
+local LocalPlayer = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_2 = Instance.new("UICorner")
+local Frame = Instance.new("Frame")
+local WS = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
+local SliderBTN = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local JP = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
+local TextLabel_3 = Instance.new("TextLabel")
+local JPBTN = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local local_airport = Instance.new("ImageButton")
+local UICorner_7 = Instance.new("UICorner")
+local directions_run = Instance.new("ImageButton")
+local UICorner_8 = Instance.new("UICorner")
+local accessibility = Instance.new("ImageButton")
+local UICorner_9 = Instance.new("UICorner")
+local directions_run_2 = Instance.new("ImageButton")
+local UICorner_10 = Instance.new("UICorner")
+local priority_high = Instance.new("ImageButton")
+local UICorner_11 = Instance.new("UICorner")
+local UniScripts = Instance.new("Frame")
+local TextLabel_4 = Instance.new("TextLabel")
+local UICorner_12 = Instance.new("UICorner")
+local Frame_2 = Instance.new("Frame")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local NH = Instance.new("Frame")
+local UICorner_13 = Instance.new("UICorner")
+local UIGradient = Instance.new("UIGradient")
+local TextLabel_5 = Instance.new("TextLabel")
+local TextLabel_6 = Instance.new("TextLabel")
+local ExeNH = Instance.new("TextButton")
+local UIListLayout = Instance.new("UIListLayout")
+local OH = Instance.new("Frame")
+local UICorner_14 = Instance.new("UICorner")
+local UIGradient_2 = Instance.new("UIGradient")
+local TextLabel_7 = Instance.new("TextLabel")
+local TextLabel_8 = Instance.new("TextLabel")
+local ExeOH = Instance.new("TextButton")
+local SH = Instance.new("Frame")
+local UICorner_15 = Instance.new("UICorner")
+local UIGradient_3 = Instance.new("UIGradient")
+local TextLabel_9 = Instance.new("TextLabel")
+local TextLabel_10 = Instance.new("TextLabel")
+local ExeSH = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
+local JC = Instance.new("Frame")
+local TextLabel_11 = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local UICorner_17 = Instance.new("UICorner")
+local send = Instance.new("ImageButton")
+local JCBOX = Instance.new("TextBox")
+local UICorner_18 = Instance.new("UICorner")
+local TextButton_2 = Instance.new("TextButton")
+local UICorner_19 = Instance.new("UICorner")
+local send_2 = Instance.new("ImageButton")
+local UICorner_20 = Instance.new("UICorner")
+local plrList = Instance.new("Frame")
+local TextLabel_12 = Instance.new("TextLabel")
+local UICorner_21 = Instance.new("UICorner")
+local UICorner_22 = Instance.new("UICorner")
+local ScrollingFrame_2 = Instance.new("ScrollingFrame")
+local Frame_3 = Instance.new("Frame")
+local TextLabel_13 = Instance.new("TextLabel")
+local UICorner_23 = Instance.new("UICorner")
+local ImageLabel = Instance.new("ImageLabel")
+local UICorner_24 = Instance.new("UICorner")
+local InfoHolder = Instance.new("Frame")
+local DC = Instance.new("Frame")
+local UIGradient_4 = Instance.new("UIGradient")
+local UICorner_25 = Instance.new("UICorner")
+local TextLabel_14 = Instance.new("TextLabel")
+local TextLabel_15 = Instance.new("TextLabel")
+local sim_card = Instance.new("ImageButton")
+local UICorner_26 = Instance.new("UICorner")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local Infomation = Instance.new("Frame")
+local UIGradient_5 = Instance.new("UIGradient")
+local UICorner_27 = Instance.new("UICorner")
+local TextLabel_16 = Instance.new("TextLabel")
+local TextLabel_17 = Instance.new("TextLabel")
+local TextLabel_18 = Instance.new("TextLabel")
+local TextLabel_19 = Instance.new("TextLabel")
+local TextLabel_20 = Instance.new("TextLabel")
+local Supported = Instance.new("Frame")
+local UIGradient_6 = Instance.new("UIGradient")
+local UICorner_28 = Instance.new("UICorner")
+local TextLabel_21 = Instance.new("TextLabel")
+local TextLabel_22 = Instance.new("TextLabel")
+local ImageLabel_3 = Instance.new("ImageLabel")
+local ImageLabel_4 = Instance.new("ImageLabel")
+local ImageLabel_5 = Instance.new("ImageLabel")
+local ImageLabel_6 = Instance.new("ImageLabel")
+local Friends = Instance.new("Frame")
+local UIGradient_7 = Instance.new("UIGradient")
+local UICorner_29 = Instance.new("UICorner")
+local TextLabel_23 = Instance.new("TextLabel")
+local TextLabel_24 = Instance.new("TextLabel")
+local TextLabel_25 = Instance.new("TextLabel")
+local PlrInfo = Instance.new("Frame")
+local UIGradient_8 = Instance.new("UIGradient")
+local UICorner_30 = Instance.new("UICorner")
+local TextLabel_26 = Instance.new("TextLabel")
+local TextLabel_27 = Instance.new("TextLabel")
+local ImageLabel_7 = Instance.new("ImageLabel")
+local UICorner_31 = Instance.new("UICorner")
+local TextLabel_28 = Instance.new("TextLabel")
+local TextLabel_29 = Instance.new("TextLabel")
+local MusicSystem = Instance.new("ImageLabel")
+local UICorner_32 = Instance.new("UICorner")
+local TextLabel_30 = Instance.new("TextLabel")
+local TextLabel_31 = Instance.new("TextLabel")
+local SoundIdBox = Instance.new("TextBox")
+local UICorner_33 = Instance.new("UICorner")
+local add = Instance.new("ImageButton")
+local UICorner_34 = Instance.new("UICorner")
+local ToggleSound = Instance.new("ImageButton")
+local UICorner_35 = Instance.new("UICorner")
+local Games = Instance.new("Folder")
+local ExploitFound = Instance.new("Frame")
+local UICorner_36 = Instance.new("UICorner")
+local Frame_4 = Instance.new("Frame")
+local UICorner_37 = Instance.new("UICorner")
+local UIGradient_9 = Instance.new("UIGradient")
+local TextLabel_32 = Instance.new("TextLabel")
+local title = Instance.new("TextLabel")
+local center_focus_strong = Instance.new("ImageButton")
+local TextLabel_33 = Instance.new("TextLabel")
+local TextLabel_34 = Instance.new("TextLabel")
+local TextLabel_35 = Instance.new("TextLabel")
+local Frame_5 = Instance.new("Frame")
+local UICorner_38 = Instance.new("UICorner")
+local UIGradient_10 = Instance.new("UIGradient")
+local EXEBB = Instance.new("TextButton")
+local CloseBB = Instance.new("TextButton")
+local Info = Instance.new("TextLabel")
+local Navi = Instance.new("Folder")
+local NoobXNavigator = Instance.new("Frame")
+local UICorner_39 = Instance.new("UICorner")
+local home = Instance.new("ImageButton")
+local UICorner_40 = Instance.new("UICorner")
+local Clock = Instance.new("TextLabel")
+local person = Instance.new("ImageButton")
+local UICorner_41 = Instance.new("UICorner")
+local code = Instance.new("ImageButton")
+local UICorner_42 = Instance.new("UICorner")
+local texture = Instance.new("ImageButton")
+local UICorner_43 = Instance.new("UICorner")
+local wifi = Instance.new("ImageButton")
+local UICorner_44 = Instance.new("UICorner")
+local storage = Instance.new("ImageButton")
+local UICorner_45 = Instance.new("UICorner")
+local keySystem = Instance.new("Frame")
+local TextLabel_36 = Instance.new("TextLabel")
+local TextLabel_37 = Instance.new("TextLabel")
+local TextBox = Instance.new("TextBox")
+local UICorner_46 = Instance.new("UICorner")
+local TextLabel_38 = Instance.new("TextLabel")
+local TextLabel_39 = Instance.new("TextLabel")
+local TextLabel_40 = Instance.new("TextLabel")
+local UICorner_47 = Instance.new("UICorner")
+local Frame_6 = Instance.new("Frame")
+local UICorner_48 = Instance.new("UICorner")
+local TextLabel_41 = Instance.new("TextLabel")
+local TextLabel_42 = Instance.new("TextLabel")
+local TextLabel_43 = Instance.new("TextLabel")
+local TextBox_2 = Instance.new("TextBox")
+local TextLabel_44 = Instance.new("TextLabel")
+
+autoexecute = false
+DOMAIN_ENABLED = true
+
+playing = false
+pexploit = false
+enabled = true
+antikick = true
+DiscordLink = "https://discord.gg/kjgmmvWUMH"
+NotifStack = {}
+NotificationDuration = 5
+
+--Properties:
+
+Domains.Name = "Domain"
+Domains.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Holder.Name = "Holder"
+Holder.Parent = Domains
+Holder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Holder.BackgroundTransparency = 1.000
+Holder.Size = UDim2.new(1, 1, 1, 1)
+Holder.Visible = false
+
+Frames.Name = "Frames"
+Frames.Parent = Holder
+
+LocalPlayer.Name = "LocalPlayer"
+LocalPlayer.Parent = Frames
+LocalPlayer.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+LocalPlayer.Position = UDim2.new(0.24714829, 0, 0.473484844, 0)
+LocalPlayer.Size = UDim2.new(0, 472, 0, 206)
+LocalPlayer.Visible = false
+
+UICorner.Parent = LocalPlayer
+
+TextLabel.Parent = LocalPlayer
+TextLabel.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TextLabel.Position = UDim2.new(0, 0, -0.0582524277, 0)
+TextLabel.Size = UDim2.new(0, 472, 0, 27)
+TextLabel.Font = Enum.Font.GothamSemibold
+TextLabel.Text = "LocalPlayer "
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_2.Parent = TextLabel
+
+Frame.Parent = LocalPlayer
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Position = UDim2.new(0, 0, 0.0728155375, 0)
+Frame.Size = UDim2.new(0, 472, 0, 0)
+
+WS.Name = "WS"
+WS.Parent = LocalPlayer
+WS.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+WS.Position = UDim2.new(0.0148305083, 0, 0.194174752, 0)
+WS.Size = UDim2.new(0, 292, 0, 29)
+
+UICorner_3.CornerRadius = UDim.new(3, 8)
+UICorner_3.Parent = WS
+
+TextLabel_2.Parent = WS
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.178082198, 0, 0.137931034, 0)
+TextLabel_2.Size = UDim2.new(0, 200, 0, 20)
+TextLabel_2.Font = Enum.Font.GothamSemibold
+TextLabel_2.Text = "Walkspeed"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+SliderBTN.Name = "SliderBTN"
+SliderBTN.Parent = WS
+SliderBTN.BackgroundColor3 = Color3.fromRGB(0, 188, 0)
+SliderBTN.BackgroundTransparency = 0.100
+SliderBTN.Size = UDim2.new(0, 0, 0, 30)
+SliderBTN.Font = Enum.Font.SourceSans
+SliderBTN.Text = ""
+SliderBTN.TextColor3 = Color3.fromRGB(0, 0, 0)
+SliderBTN.TextSize = 14.000
+
+UICorner_4.CornerRadius = UDim.new(3, 8)
+UICorner_4.Parent = SliderBTN
+
+JP.Name = "JP"
+JP.Parent = LocalPlayer
+JP.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+JP.Position = UDim2.new(0.0148305083, 0, 0.383495152, 0)
+JP.Size = UDim2.new(0, 292, 0, 29)
+
+UICorner_5.CornerRadius = UDim.new(3, 8)
+UICorner_5.Parent = JP
+
+TextLabel_3.Parent = JP
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0.178082198, 0, 0.137931034, 0)
+TextLabel_3.Size = UDim2.new(0, 200, 0, 20)
+TextLabel_3.Font = Enum.Font.GothamSemibold
+TextLabel_3.Text = "JumpPower"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+
+JPBTN.Name = "JPBTN"
+JPBTN.Parent = JP
+JPBTN.BackgroundColor3 = Color3.fromRGB(0, 123, 184)
+JPBTN.BackgroundTransparency = 0.100
+JPBTN.Size = UDim2.new(0, 0, 0, 30)
+JPBTN.Font = Enum.Font.SourceSans
+JPBTN.Text = ""
+JPBTN.TextColor3 = Color3.fromRGB(0, 0, 0)
+JPBTN.TextSize = 14.000
+
+UICorner_6.CornerRadius = UDim.new(3, 8)
+UICorner_6.Parent = JPBTN
+
+local_airport.Name = "local_airport"
+local_airport.Parent = LocalPlayer
+local_airport.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+local_airport.Position = UDim2.new(0.667372882, 0, 0.150485441, 0)
+local_airport.Size = UDim2.new(0, 41, 0, 38)
+local_airport.ZIndex = 2
+local_airport.Image = "rbxassetid://3926305904"
+local_airport.ImageRectOffset = Vector2.new(404, 404)
+local_airport.ImageRectSize = Vector2.new(36, 36)
+
+UICorner_7.Parent = local_airport
+
+directions_run.Name = "directions_run"
+directions_run.Parent = LocalPlayer
+directions_run.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+directions_run.LayoutOrder = 1
+directions_run.Position = UDim2.new(0.777542353, 0, 0.150485441, 0)
+directions_run.Size = UDim2.new(0, 40, 0, 38)
+directions_run.ZIndex = 2
+directions_run.Image = "rbxassetid://3926305904"
+directions_run.ImageRectOffset = Vector2.new(924, 684)
+directions_run.ImageRectSize = Vector2.new(36, 36)
+
+UICorner_8.Parent = directions_run
+
+accessibility.Name = "accessibility"
+accessibility.Parent = LocalPlayer
+accessibility.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+accessibility.LayoutOrder = 6
+accessibility.Position = UDim2.new(0.667372882, 0, 0.383495152, 0)
+accessibility.Size = UDim2.new(0, 42, 0, 39)
+accessibility.ZIndex = 2
+accessibility.Image = "rbxassetid://3926307971"
+accessibility.ImageRectOffset = Vector2.new(164, 124)
+accessibility.ImageRectSize = Vector2.new(36, 36)
+
+UICorner_9.Parent = accessibility
+
+directions_run_2.Name = "directions_run"
+directions_run_2.Parent = LocalPlayer
+directions_run_2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+directions_run_2.LayoutOrder = 1
+directions_run_2.Position = UDim2.new(0.881355882, 0, 0.150485441, 0)
+directions_run_2.Size = UDim2.new(0, 40, 0, 38)
+directions_run_2.ZIndex = 2
+directions_run_2.Image = "rbxassetid://3926305904"
+directions_run_2.ImageRectOffset = Vector2.new(924, 684)
+directions_run_2.ImageRectSize = Vector2.new(36, 36)
+
+UICorner_10.Parent = directions_run_2
+
+priority_high.Name = "priority_high"
+priority_high.Parent = LocalPlayer
+priority_high.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+priority_high.LayoutOrder = 12
+priority_high.Position = UDim2.new(0.777542353, 0, 0.388349503, 0)
+priority_high.Size = UDim2.new(0, 40, 0, 38)
+priority_high.ZIndex = 2
+priority_high.Image = "rbxassetid://3926307971"
+priority_high.ImageRectOffset = Vector2.new(164, 364)
+priority_high.ImageRectSize = Vector2.new(36, 36)
+
+UICorner_11.Parent = priority_high
+
+UniScripts.Name = "UniScripts"
+UniScripts.Parent = Frames
+UniScripts.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+UniScripts.Position = UDim2.new(0.249683142, 0, 0.520833313, 0)
+UniScripts.Size = UDim2.new(0, 474, 0, 185)
+UniScripts.Visible = false
+
+TextLabel_4.Parent = UniScripts
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TextLabel_4.Position = UDim2.new(0, 0, -0.0582524464, 0)
+TextLabel_4.Size = UDim2.new(0, 474, 0, 27)
+TextLabel_4.Font = Enum.Font.GothamSemibold
+TextLabel_4.Text = "Universal Scripts"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 14.000
+TextLabel_4.TextWrapped = true
+TextLabel_4.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_12.Parent = TextLabel_4
+
+Frame_2.Parent = UniScripts
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.Position = UDim2.new(0, 0, 0.0728155375, 0)
+Frame_2.Size = UDim2.new(0, 472, 0, 0)
+
+ScrollingFrame.Parent = UniScripts
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.Position = UDim2.new(0, 0, 0.0864864886, 0)
+ScrollingFrame.Size = UDim2.new(0, 474, 0, 169)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 1.5, 0)
+ScrollingFrame.ScrollBarThickness = 0
+
+NH.Name = "NH"
+NH.Parent = ScrollingFrame
+NH.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NH.Size = UDim2.new(0, 472, 0, 65)
+
+UICorner_13.Parent = NH
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 170, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 121, 181))}
+UIGradient.Parent = NH
+
+TextLabel_5.Parent = NH
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.Size = UDim2.new(0, 200, 0, 21)
+TextLabel_5.Font = Enum.Font.GothamBold
+TextLabel_5.Text = "NoobHub"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextScaled = true
+TextLabel_5.TextSize = 14.000
+TextLabel_5.TextWrapped = true
+TextLabel_5.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_6.Parent = NH
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.Position = UDim2.new(0, 0, 0.323076934, 0)
+TextLabel_6.Size = UDim2.new(0, 200, 0, 14)
+TextLabel_6.Font = Enum.Font.GothamSemibold
+TextLabel_6.Text = "By nothing500082"
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.TextScaled = true
+TextLabel_6.TextSize = 14.000
+TextLabel_6.TextWrapped = true
+TextLabel_6.TextXAlignment = Enum.TextXAlignment.Left
+
+ExeNH.Name = "ExeNH"
+ExeNH.Parent = NH
+ExeNH.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ExeNH.BackgroundTransparency = 1.000
+ExeNH.Position = UDim2.new(0.786017001, 0, 0.538461566, 0)
+ExeNH.Size = UDim2.new(0, 72, 0, 28)
+ExeNH.Font = Enum.Font.SourceSansBold
+ExeNH.Text = "Execute"
+ExeNH.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExeNH.TextScaled = true
+ExeNH.TextSize = 14.000
+ExeNH.TextWrapped = true
+
+UIListLayout.Parent = ScrollingFrame
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 3)
+
+OH.Name = "OH"
+OH.Parent = ScrollingFrame
+OH.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OH.Size = UDim2.new(0, 472, 0, 65)
+
+UICorner_14.Parent = OH
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(170, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(117, 0, 0))}
+UIGradient_2.Parent = OH
+
+TextLabel_7.Parent = OH
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.Size = UDim2.new(0, 200, 0, 21)
+TextLabel_7.Font = Enum.Font.GothamBold
+TextLabel_7.Text = "Owl hub"
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.TextScaled = true
+TextLabel_7.TextSize = 14.000
+TextLabel_7.TextWrapped = true
+TextLabel_7.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_8.Parent = OH
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BackgroundTransparency = 1.000
+TextLabel_8.Position = UDim2.new(0, 0, 0.323076934, 0)
+TextLabel_8.Size = UDim2.new(0, 200, 0, 14)
+TextLabel_8.Font = Enum.Font.GothamSemibold
+TextLabel_8.Text = "By Google Chrome and syntax"
+TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.TextScaled = true
+TextLabel_8.TextSize = 14.000
+TextLabel_8.TextWrapped = true
+TextLabel_8.TextXAlignment = Enum.TextXAlignment.Left
+
+ExeOH.Name = "ExeOH"
+ExeOH.Parent = OH
+ExeOH.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ExeOH.BackgroundTransparency = 1.000
+ExeOH.Position = UDim2.new(0.786017001, 0, 0.538461566, 0)
+ExeOH.Size = UDim2.new(0, 72, 0, 28)
+ExeOH.Font = Enum.Font.SourceSansBold
+ExeOH.Text = "Execute"
+ExeOH.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExeOH.TextScaled = true
+ExeOH.TextSize = 14.000
+ExeOH.TextWrapped = true
+
+SH.Name = "SH"
+SH.Parent = ScrollingFrame
+SH.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SH.Size = UDim2.new(0, 472, 0, 65)
+
+UICorner_15.Parent = SH
+
+UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(81, 81, 81))}
+UIGradient_3.Parent = SH
+
+TextLabel_9.Parent = SH
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BackgroundTransparency = 1.000
+TextLabel_9.Size = UDim2.new(0, 200, 0, 21)
+TextLabel_9.Font = Enum.Font.GothamBold
+TextLabel_9.Text = "Solaris"
+TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.TextScaled = true
+TextLabel_9.TextSize = 14.000
+TextLabel_9.TextWrapped = true
+TextLabel_9.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_10.Parent = SH
+TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.BackgroundTransparency = 1.000
+TextLabel_10.Position = UDim2.new(0, 0, 0.323076934, 0)
+TextLabel_10.Size = UDim2.new(0, 200, 0, 14)
+TextLabel_10.Font = Enum.Font.GothamSemibold
+TextLabel_10.Text = "Idk who made it"
+TextLabel_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.TextScaled = true
+TextLabel_10.TextSize = 14.000
+TextLabel_10.TextWrapped = true
+TextLabel_10.TextXAlignment = Enum.TextXAlignment.Left
+
+ExeSH.Name = "ExeSH"
+ExeSH.Parent = SH
+ExeSH.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ExeSH.BackgroundTransparency = 1.000
+ExeSH.Position = UDim2.new(0.786017001, 0, 0.538461566, 0)
+ExeSH.Size = UDim2.new(0, 72, 0, 28)
+ExeSH.Font = Enum.Font.SourceSansBold
+ExeSH.Text = "Execute"
+ExeSH.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExeSH.TextScaled = true
+ExeSH.TextSize = 14.000
+ExeSH.TextWrapped = true
+
+UICorner_16.Parent = UniScripts
+
+JC.Name = "JC"
+JC.Parent = Frames
+JC.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+JC.Position = UDim2.new(0, 0, 0.416666657, 0)
+JC.Size = UDim2.new(0, 269, 0, 141)
+JC.Visible = false
+
+TextLabel_11.Parent = JC
+TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.BackgroundTransparency = 1.000
+TextLabel_11.Size = UDim2.new(0, 172, 0, 25)
+TextLabel_11.Font = Enum.Font.GothamBold
+TextLabel_11.Text = "Join Codes(Coming Soon!)"
+TextLabel_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.TextScaled = true
+TextLabel_11.TextSize = 14.000
+TextLabel_11.TextWrapped = true
+
+TextButton.Parent = JC
+TextButton.BackgroundColor3 = Color3.fromRGB(0, 223, 0)
+TextButton.Position = UDim2.new(0.661710143, 0, 0, 0)
+TextButton.Size = UDim2.new(0, 80, 0, 25)
+TextButton.Font = Enum.Font.GothamSemibold
+TextButton.Text = "Create Code"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 10.000
+TextButton.TextWrapped = true
+TextButton.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_17.Parent = TextButton
+
+
+Domain.ExploitFound.Name = "ExploitFound"
+Domain.ExploitFound.Parent = Domain.Other
+Domain.ExploitFound.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+Domain.ExploitFound.BorderSizePixel = 0
+Domain.ExploitFound.Position = UDim2.new(-22.2755814, 0, 0.298788249, 0)
+Domain.ExploitFound.Size = UDim2.new(3.11941719, 0, 0.602401555, 0)
+Domain.ExploitFound.Visible = false
+Domain.ExploitFound.ZIndex = 100
+
+Domain.Title.Name = "Title"
+Domain.Title.Parent = Domain.ExploitFound
+Domain.Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Domain.Title.BackgroundTransparency = 1.000
+Domain.Title.BorderSizePixel = 0
+Domain.Title.Position = UDim2.new(0.0535893887, 0, 0.0414540097, 0)
+Domain.Title.Size = UDim2.new(0.474605739, 0, 0.0529777221, 0)
+Domain.Title.ZIndex = 100
+Domain.Title.Font = Enum.Font.GothamBold
+Domain.Title.Text = "Exploit Detected"
+Domain.Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Domain.Title.TextScaled = true
+Domain.Title.TextSize = 14.000
+Domain.Title.TextWrapped = true
+Domain.Title.TextXAlignment = Enum.TextXAlignment.Left
+
+Domain.UICorner_7.CornerRadius = UDim.new(0, 12)
+Domain.UICorner_7.Parent = Domain.ExploitFound
+
+Domain.Content.Name = "Content"
+Domain.Content.Parent = Domain.ExploitFound
+Domain.Content.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Domain.Content.BackgroundTransparency = 1.000
+Domain.Content.BorderSizePixel = 0
+Domain.Content.Position = UDim2.new(0.0535893962, 0, 0.0945718586, 0)
+Domain.Content.Size = UDim2.new(0.51844418, 0, 0.139617905, 0)
+Domain.Content.ZIndex = 100
+Domain.Content.Font = Enum.Font.GothamSemibold
+Domain.Content.Text = "NoobX has found an exploit for this specific game."
+Domain.Content.TextColor3 = Color3.fromRGB(255, 255, 255)
+Domain.Content.TextScaled = true
+Domain.Content.TextSize = 14.000
+Domain.Content.TextWrapped = true
+Domain.Content.TextXAlignment = Enum.TextXAlignment.Left
+
+Domain.ExploitName.Name = "ExploitName"
+Domain.ExploitName.Parent = Domain.ExploitFound
+Domain.ExploitName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Domain.ExploitName.BackgroundTransparency = 1.000
+Domain.ExploitName.BorderSizePixel = 0
+Domain.ExploitName.Position = UDim2.new(0.0500167944, 0, 0.307043254, 0)
+Domain.ExploitName.Size = UDim2.new(0.522016823, 0, 0.0493071787, 0)
+Domain.ExploitName.ZIndex = 100
+Domain.ExploitName.Font = Enum.Font.GothamBold
+Domain.ExploitName.Text = "Infinite Cash"
+Domain.ExploitName.TextColor3 = Color3.fromRGB(255, 255, 255)
+Domain.ExploitName.TextScaled = true
+Domain.ExploitName.TextSize = 14.000
+Domain.ExploitName.TextWrapped = true
+Domain.ExploitName.TextXAlignment = Enum.TextXAlignment.Left
+
+Domain.Description.Name = "Description"
+Domain.Description.Parent = Domain.ExploitFound
+Domain.Description.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Domain.Description.BackgroundTransparency = 1.000
+Domain.Description.BorderSizePixel = 0
+Domain.Description.Position = UDim2.new(0.0500167683, 0, 0.3572101, 0)
+Domain.Description.Size = UDim2.new(0.737336934, 0, 0.0967480093, 0)
+Domain.Description.ZIndex = 100
+Domain.Description.Font = Enum.Font.GothamSemibold
+Domain.Description.Text = "It can make you have infinite cash"
+Domain.Description.TextColor3 = Color3.fromRGB(255, 255, 255)
+Domain.Description.TextScaled = true
+Domain.Description.TextSize = 14.000
+Domain.Description.TextWrapped = true
+Domain.Description.TextXAlignment = Enum.TextXAlignment.Left
+
+Domain.ExecuteButton.Name = "ExecuteButton"
+Domain.ExecuteButton.Parent = Domain.ExploitFound
+Domain.ExecuteButton.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+Domain.ExecuteButton.BorderSizePixel = 0
+Domain.ExecuteButton.Position = UDim2.new(0.0500167944, 0, 0.858273864, 0)
+Domain.ExecuteButton.Size = UDim2.new(0.397247195, 0, 0.106700577, 0)
+Domain.ExecuteButton.ZIndex = 100
+Domain.ExecuteButton.Font = Enum.Font.GothamBold
+Domain.ExecuteButton.Text = ""
+Domain.ExecuteButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+Domain.ExecuteButton.TextScaled = true
+Domain.ExecuteButton.TextSize = 14.000
+Domain.ExecuteButton.TextWrapped = true
+
+Domain.ExecuteText.Name = "ExecuteText"
+Domain.ExecuteText.Parent = Domain.ExecuteButton
+Domain.ExecuteText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Domain.ExecuteText.BackgroundTransparency = 1.000
+Domain.ExecuteText.BorderSizePixel = 0
+Domain.ExecuteText.Position = UDim2.new(0.0680037364, 0, 0.257072449, 0)
+Domain.ExecuteText.Size = UDim2.new(0.851055086, 0, 0.473123908, 0)
+Domain.ExecuteText.ZIndex = 100
+Domain.ExecuteText.Font = Enum.Font.GothamBold
+Domain.ExecuteText.Text = "Execute"
+Domain.ExecuteText.TextColor3 = Color3.fromRGB(255, 255, 255)
+Domain.ExecuteText.TextScaled = true
+Domain.ExecuteText.TextSize = 14.000
+Domain.ExecuteText.TextWrapped = true
+
+Domain.UICorner_8.CornerRadius = UDim.new(0, 12)
+Domain.UICorner_8.Parent = Domain.ExecuteButton
+
+Domain.Option.Name = "Option"
+Domain.Option.Parent = Domain.ExploitFound
+Domain.Option.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Domain.Option.BackgroundTransparency = 1.000
+Domain.Option.BorderSizePixel = 0
+Domain.Option.Position = UDim2.new(0.528195143, 0, 0.885437608, 0)
+Domain.Option.Size = UDim2.new(0.468981385, 0, 0.0493071787, 0)
+Domain.Option.ZIndex = 100
+Domain.Option.Font = Enum.Font.GothamSemibold
+Domain.Option.Text = "or Tap Y"
+Domain.Option.TextColor3 = Color3.fromRGB(255, 255, 255)
+Domain.Option.TextScaled = true
+Domain.Option.TextSize = 14.000
+Domain.Option.TextWrapped = true
+Domain.Option.TextXAlignment = Enum.TextXAlignment.Left
+
+Domain.exitpromptButton.Name = "exitpromptButton"
+Domain.exitpromptButton.Parent = Domain.ExploitFound
+Domain.exitpromptButton.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+Domain.exitpromptButton.BorderSizePixel = 0
+Domain.exitpromptButton.Position = UDim2.new(0.831376076, 0, 0.0408491828, 0)
+Domain.exitpromptButton.Size = UDim2.new(0.121340051, 0, 0.0983940661, 0)
+Domain.exitpromptButton.ZIndex = 100
+Domain.exitpromptButton.Font = Enum.Font.GothamBold
+Domain.exitpromptButton.Text = ""
+Domain.exitpromptButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+Domain.exitpromptButton.TextScaled = true
+Domain.exitpromptButton.TextSize = 14.000
+Domain.exitpromptButton.TextWrapped = true
+
+Domain.exitprompttext.Name = "exitprompttext"
+Domain.exitprompttext.Parent = Domain.exitpromptButton
+Domain.exitprompttext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Domain.exitprompttext.BackgroundTransparency = 1.000
+Domain.exitprompttext.BorderSizePixel = 0
+Domain.exitprompttext.Position = UDim2.new(0.339725167, 0, 0.113160722, 0)
+Domain.exitprompttext.Size = UDim2.new(0.368411511, 0, 0.736881912, 0)
+Domain.exitprompttext.ZIndex = 100
+Domain.exitprompttext.Font = Enum.Font.GothamSemibold
+Domain.exitprompttext.Text = "X"
+Domain.exitprompttext.TextColor3 = Color3.fromRGB(255, 255, 255)
+Domain.exitprompttext.TextScaled = true
+Domain.exitprompttext.TextSize = 14.000
+Domain.exitprompttext.TextWrapped = true
+
+Domain.UICorner_9.CornerRadius = UDim.new(0, 10)
+Domain.UICorner_9.Parent = Domain.exitpromptButton
+
+Domain.Shadow_2.Name = "Shadow"
+Domain.Shadow_2.Parent = Domain.ExploitFound
+Domain.Shadow_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Domain.Shadow_2.BackgroundTransparency = 1.000
+Domain.Shadow_2.BorderSizePixel = 0
+Domain.Shadow_2.Position = UDim2.new(-0.0506853797, 0, -0.231648907, 0)
+Domain.Shadow_2.Size = UDim2.new(1.10606587, 0, 1.51781273, 0)
+Domain.Shadow_2.ZIndex = 0
+Domain.Shadow_2.Image = "rbxassetid://3523728077"
+Domain.Shadow_2.ImageColor3 = Color3.fromRGB(33, 33, 33)
+Domain.Shadow_2.ImageTransparency = 0.600
+
+
+send.Name = "send"
+send.Parent = TextButton
+send.BackgroundTransparency = 1.000
+send.Position = UDim2.new(0.744897962, 0, -0.0199999809, 0)
+send.Size = UDim2.new(0, 25, 0, 25)
+send.ZIndex = 2
+send.Image = "rbxassetid://3926307971"
+send.ImageRectOffset = Vector2.new(44, 284)
+send.ImageRectSize = Vector2.new(36, 36)
+
+JCBOX.Name = "JCBOX"
+JCBOX.Parent = JC
+JCBOX.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+JCBOX.Position = UDim2.new(0.0223048329, 0, 0.248226956, 0)
+JCBOX.Size = UDim2.new(0, 200, 0, 23)
+JCBOX.Font = Enum.Font.GothamSemibold
+JCBOX.PlaceholderText = "Join code"
+JCBOX.Text = ""
+JCBOX.TextColor3 = Color3.fromRGB(0, 0, 0)
+JCBOX.TextScaled = true
+JCBOX.TextSize = 14.000
+JCBOX.TextWrapped = true
+JCBOX.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_18.Parent = JCBOX
+
+TextButton_2.Parent = JC
+TextButton_2.BackgroundColor3 = Color3.fromRGB(0, 223, 0)
+TextButton_2.Position = UDim2.new(0.0185874701, 0, 0.460992903, 0)
+TextButton_2.Size = UDim2.new(0, 80, 0, 25)
+TextButton_2.Font = Enum.Font.GothamSemibold
+TextButton_2.Text = "Join"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.TextSize = 15.000
+TextButton_2.TextWrapped = true
+TextButton_2.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_19.Parent = TextButton_2
+
+send_2.Name = "send"
+send_2.Parent = TextButton_2
+send_2.BackgroundTransparency = 1.000
+send_2.Position = UDim2.new(0.744897962, 0, -0.0199999809, 0)
+send_2.Size = UDim2.new(0, 25, 0, 25)
+send_2.ZIndex = 2
+send_2.Image = "rbxassetid://3926307971"
+send_2.ImageRectOffset = Vector2.new(44, 284)
+send_2.ImageRectSize = Vector2.new(36, 36)
+
+UICorner_20.Parent = JC
+
+plrList.Name = "plrList"
+plrList.Parent = Frames
+plrList.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+plrList.Position = UDim2.new(0.244303793, 0, 0.583333313, 0)
+plrList.Size = UDim2.new(0, 479, 0, 152)
+plrList.Visible = false
+
+TextLabel_12.Parent = plrList
+TextLabel_12.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TextLabel_12.Position = UDim2.new(0, 0, -0.0582524352, 0)
+TextLabel_12.Size = UDim2.new(0, 479, 0, 27)
+TextLabel_12.Font = Enum.Font.GothamSemibold
+TextLabel_12.Text = "PlayerList (Coming Soon!)"
+TextLabel_12.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_12.TextScaled = true
+TextLabel_12.TextSize = 14.000
+TextLabel_12.TextWrapped = true
+TextLabel_12.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_21.Parent = TextLabel_12
+
+UICorner_22.Parent = plrList
+
+ScrollingFrame_2.Parent = plrList
+ScrollingFrame_2.Active = true
+ScrollingFrame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame_2.BackgroundTransparency = 1.000
+ScrollingFrame_2.Position = UDim2.new(0, 0, 0.118421055, 0)
+ScrollingFrame_2.Size = UDim2.new(0, 479, 0, 134)
+ScrollingFrame_2.ScrollBarThickness = 0
+
+Frame_3.Parent = plrList
+Frame_3.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Frame_3.Position = UDim2.new(0, 0, 0.11937914, 0)
+Frame_3.Size = UDim2.new(0, 479, 0, 50)
+
+TextLabel_13.Parent = Frame_3
+TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.BackgroundTransparency = 1.000
+TextLabel_13.Position = UDim2.new(0.125260979, 0, 0.24000001, 0)
+TextLabel_13.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_13.Font = Enum.Font.GothamBold
+TextLabel_13.Text = "ur name"
+TextLabel_13.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.TextScaled = true
+TextLabel_13.TextSize = 14.000
+TextLabel_13.TextWrapped = true
+TextLabel_13.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_23.Parent = Frame_3
+
+ImageLabel.Parent = Frame_3
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.Position = UDim2.new(0.0208768267, 0, 0.100000001, 0)
+ImageLabel.Size = UDim2.new(0, 44, 0, 40)
+ImageLabel.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+UICorner_24.CornerRadius = UDim.new(3, 8)
+UICorner_24.Parent = ImageLabel
+
+InfoHolder.Name = "InfoHolder"
+InfoHolder.Parent = Frames
+InfoHolder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+InfoHolder.BackgroundTransparency = 1.000
+InfoHolder.Size = UDim2.new(0, 530, 0, 527)
+InfoHolder.Visible = false
+
+DC.Name = "DC"
+DC.Parent = InfoHolder
+DC.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DC.Position = UDim2.new(0.0350250527, 0, 0.121442124, 0)
+DC.Size = UDim2.new(0, 209, 0, 126)
+
+Domain.Other.Name = "Other"
+Domain.Other.Parent = Domains
+Domain.Other.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Domain.Other.BackgroundTransparency = 1.000
+Domain.Other.BorderSizePixel = 0
+Domain.Other.Position = UDim2.new(0.966000021, 0, 0.261999995, 0)
+Domain.Other.Size = UDim2.new(0.0430000015, 0, 0.474999994, 0)
+Domain.Other.Visible = false
+
+Domain.Watermark.Name = "Watermark"
+Domain.Watermark.Parent = Domain.Other
+Domain.Watermark.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+Domain.Watermark.BackgroundTransparency = 0.800
+Domain.Watermark.BorderSizePixel = 0
+Domain.Watermark.Position = UDim2.new(-22.1222916, 0, 1.47872794, 0)
+Domain.Watermark.Size = UDim2.new(1.85834718, 0, 0.044188574, 0)
+Domain.Watermark.ZIndex = 100
+
+Domain.Text.Name = "Text"
+Domain.Text.Parent = Domain.Watermark
+Domain.Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Domain.Text.BackgroundTransparency = 1.000
+Domain.Text.BorderSizePixel = 0
+Domain.Text.Position = UDim2.new(0.16016829, 0, 0.146470279, 0)
+Domain.Text.Size = UDim2.new(0.670576036, 0, 0.670576274, 0)
+Domain.Text.ZIndex = 100
+Domain.Text.Font = Enum.Font.GothamSemibold
+Domain.Text.Text = "NoobX v0.5"
+Domain.Text.TextColor3 = Color3.fromRGB(255, 255, 255)
+Domain.Text.TextScaled = true
+Domain.Text.TextSize = 14.000
+Domain.Text.TextTransparency = 0.400
+Domain.Text.TextWrapped = true
+
+UIGradient_4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(12, 12, 12)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(24, 24, 24))}
+UIGradient_4.Parent = DC
+
+UICorner_25.Parent = DC
+
+TextLabel_14.Parent = DC
+TextLabel_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_14.BackgroundTransparency = 1.000
+TextLabel_14.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_14.Font = Enum.Font.SourceSansBold
+TextLabel_14.Text = "Discord"
+TextLabel_14.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_14.TextScaled = true
+TextLabel_14.TextSize = 14.000
+TextLabel_14.TextWrapped = true
+TextLabel_14.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_15.Parent = DC
+TextLabel_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_15.BackgroundTransparency = 1.000
+TextLabel_15.Position = UDim2.new(0, 0, 0.198412701, 0)
+TextLabel_15.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_15.Font = Enum.Font.SourceSansBold
+TextLabel_15.Text = "Please Join Our Discord!"
+TextLabel_15.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_15.TextScaled = true
+TextLabel_15.TextSize = 14.000
+TextLabel_15.TextWrapped = true
+TextLabel_15.TextXAlignment = Enum.TextXAlignment.Left
+
+sim_card.Name = "sim_card"
+sim_card.Parent = DC
+sim_card.BackgroundColor3 = Color3.fromRGB(41, 41, 43)
+sim_card.LayoutOrder = 5
+sim_card.Position = UDim2.new(0.736688614, 0, 0.638941586, 0)
+sim_card.Size = UDim2.new(0, 46, 0, 37)
+sim_card.ZIndex = 2
+sim_card.Image = "rbxassetid://3926307971"
+sim_card.ImageRectOffset = Vector2.new(84, 284)
+sim_card.ImageRectSize = Vector2.new(36, 36)
+
+UICorner_26.Parent = sim_card
+
+ImageLabel_2.Parent = DC
+ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_2.BackgroundTransparency = 1.000
+ImageLabel_2.Position = UDim2.new(0.0430622026, 0, 0.507936537, 0)
+ImageLabel_2.Size = UDim2.new(0, 74, 0, 61)
+ImageLabel_2.Image = "http://www.roblox.com/asset/?id=6240829846"
+ImageLabel_2.ImageTransparency = 0.700
+ImageLabel_2.ScaleType = Enum.ScaleType.Tile
+ImageLabel_2.SliceScale = 10.000
+
+Infomation.Name = "Infomation"
+Infomation.Parent = InfoHolder
+Infomation.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Infomation.Position = UDim2.new(0.0350250527, 0, 0.371916533, 0)
+Infomation.Size = UDim2.new(0, 209, 0, 126)
+
+UIGradient_5.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(12, 12, 12)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(24, 24, 24))}
+UIGradient_5.Parent = Infomation
+
+UICorner_27.Parent = Infomation
+
+TextLabel_16.Parent = Infomation
+TextLabel_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_16.BackgroundTransparency = 1.000
+TextLabel_16.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_16.Font = Enum.Font.SourceSansBold
+TextLabel_16.Text = "Infomation"
+TextLabel_16.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_16.TextScaled = true
+TextLabel_16.TextSize = 14.000
+TextLabel_16.TextWrapped = true
+TextLabel_16.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_17.Parent = Infomation
+TextLabel_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_17.BackgroundTransparency = 1.000
+TextLabel_17.Position = UDim2.new(0, 0, 0.198412701, 0)
+TextLabel_17.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_17.Font = Enum.Font.SourceSansBold
+TextLabel_17.Text = "A brief list of info"
+TextLabel_17.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_17.TextScaled = true
+TextLabel_17.TextSize = 14.000
+TextLabel_17.TextWrapped = true
+TextLabel_17.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_18.Parent = Infomation
+TextLabel_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_18.BackgroundTransparency = 1.000
+TextLabel_18.Position = UDim2.new(-0.00478468882, 0, 0.396825403, 0)
+TextLabel_18.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_18.Font = Enum.Font.SourceSansBold
+TextLabel_18.Text = "Executor: Comet"
+TextLabel_18.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_18.TextScaled = true
+TextLabel_18.TextSize = 14.000
+TextLabel_18.TextWrapped = true
+TextLabel_18.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_19.Parent = Infomation
+TextLabel_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_19.BackgroundTransparency = 1.000
+TextLabel_19.Position = UDim2.new(-0.00478468882, 0, 0.59523809, 0)
+TextLabel_19.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_19.Font = Enum.Font.SourceSansBold
+TextLabel_19.Text = "Friends: 100 idk actually"
+TextLabel_19.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_19.TextScaled = true
+TextLabel_19.TextSize = 14.000
+TextLabel_19.TextWrapped = true
+TextLabel_19.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_20.Parent = Infomation
+TextLabel_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_20.BackgroundTransparency = 1.000
+TextLabel_20.Position = UDim2.new(0, 0, 0.793650806, 0)
+TextLabel_20.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_20.Font = Enum.Font.SourceSansBold
+TextLabel_20.Text = "Premium: yes"
+TextLabel_20.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_20.TextScaled = true
+TextLabel_20.TextSize = 14.000
+TextLabel_20.TextWrapped = true
+TextLabel_20.TextXAlignment = Enum.TextXAlignment.Left
+
+Supported.Name = "Supported"
+Supported.Parent = InfoHolder
+Supported.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Supported.Position = UDim2.new(0.0350250527, 0, 0.622390926, 0)
+Supported.Size = UDim2.new(0, 209, 0, 135)
+
+UIGradient_6.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(12, 12, 12)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(24, 24, 24))}
+UIGradient_6.Parent = Supported
+
+UICorner_28.Parent = Supported
+
+TextLabel_21.Parent = Supported
+TextLabel_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_21.BackgroundTransparency = 1.000
+TextLabel_21.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_21.Font = Enum.Font.SourceSansBold
+TextLabel_21.Text = "Supported"
+TextLabel_21.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_21.TextScaled = true
+TextLabel_21.TextSize = 14.000
+TextLabel_21.TextWrapped = true
+TextLabel_21.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_22.Parent = Supported
+TextLabel_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_22.BackgroundTransparency = 1.000
+TextLabel_22.Position = UDim2.new(0, 0, 0.198412701, 0)
+TextLabel_22.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_22.Font = Enum.Font.SourceSansBold
+TextLabel_22.Text = "Want to know if your friends can join in?"
+TextLabel_22.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_22.TextScaled = true
+TextLabel_22.TextSize = 14.000
+TextLabel_22.TextWrapped = true
+TextLabel_22.TextXAlignment = Enum.TextXAlignment.Left
+
+ImageLabel_3.Parent = Supported
+ImageLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_3.BackgroundTransparency = 1.000
+ImageLabel_3.Position = UDim2.new(0.0717703328, 0, 0.377777785, 0)
+ImageLabel_3.Size = UDim2.new(0, 31, 0, 25)
+ImageLabel_3.Image = "http://www.roblox.com/asset/?id=7352804392"
+
+ImageLabel_4.Parent = Supported
+ImageLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_4.BackgroundTransparency = 1.000
+ImageLabel_4.Position = UDim2.new(0.220095694, 0, 0.377777785, 0)
+ImageLabel_4.Size = UDim2.new(0, 31, 0, 25)
+ImageLabel_4.Image = "http://www.roblox.com/asset/?id=2093843497"
+
+ImageLabel_5.Parent = Supported
+ImageLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_5.BackgroundTransparency = 1.000
+ImageLabel_5.Position = UDim2.new(0.397129178, 0, 0.377777785, 0)
+ImageLabel_5.Size = UDim2.new(0, 31, 0, 25)
+ImageLabel_5.Image = "http://www.roblox.com/asset/?id=5669036604"
+
+ImageLabel_6.Parent = Supported
+ImageLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_6.BackgroundTransparency = 1.000
+ImageLabel_6.Position = UDim2.new(0.583732069, 0, 0.377777785, 0)
+ImageLabel_6.Size = UDim2.new(0, 31, 0, 25)
+ImageLabel_6.Image = "http://www.roblox.com/asset/?id=6354140510"
+
+Friends.Name = "Friends"
+Friends.Parent = InfoHolder
+Friends.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Friends.Position = UDim2.new(0.453892976, 0, 0.121442124, 0)
+Friends.Size = UDim2.new(0, 209, 0, 126)
+
+UIGradient_7.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(12, 12, 12)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(24, 24, 24))}
+UIGradient_7.Parent = Friends
+
+UICorner_29.Parent = Friends
+
+TextLabel_23.Parent = Friends
+TextLabel_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_23.BackgroundTransparency = 1.000
+TextLabel_23.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_23.Font = Enum.Font.SourceSansBold
+TextLabel_23.Text = "Friends"
+TextLabel_23.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_23.TextScaled = true
+TextLabel_23.TextSize = 14.000
+TextLabel_23.TextWrapped = true
+TextLabel_23.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_24.Parent = Friends
+TextLabel_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_24.BackgroundTransparency = 1.000
+TextLabel_24.Position = UDim2.new(0.0191387571, 0, 0.198412701, 0)
+TextLabel_24.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_24.Font = Enum.Font.SourceSansBold
+TextLabel_24.Text = "Friends Online: Idk"
+TextLabel_24.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_24.TextScaled = true
+TextLabel_24.TextSize = 14.000
+TextLabel_24.TextWrapped = true
+TextLabel_24.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_25.Parent = Friends
+TextLabel_25.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_25.BackgroundTransparency = 1.000
+TextLabel_25.Position = UDim2.new(0, 0, 0.396825403, 0)
+TextLabel_25.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_25.Font = Enum.Font.SourceSansBold
+TextLabel_25.Text = "Friends you have: Idk"
+TextLabel_25.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_25.TextScaled = true
+TextLabel_25.TextSize = 14.000
+TextLabel_25.TextWrapped = true
+TextLabel_25.TextXAlignment = Enum.TextXAlignment.Left
+
+PlrInfo.Name = "PlrInfo"
+PlrInfo.Parent = InfoHolder
+PlrInfo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlrInfo.Position = UDim2.new(0.453893006, 0, 0.371916533, 0)
+PlrInfo.Size = UDim2.new(0, 209, 0, 87)
+
+UIGradient_8.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(12, 12, 12)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(24, 24, 24))}
+UIGradient_8.Parent = PlrInfo
+
+UICorner_30.Parent = PlrInfo
+
+TextLabel_26.Parent = PlrInfo
+TextLabel_26.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_26.BackgroundTransparency = 1.000
+TextLabel_26.Position = UDim2.new(0.373205751, 0, 0.183908045, 0)
+TextLabel_26.Size = UDim2.new(0, 131, 0, 25)
+TextLabel_26.Font = Enum.Font.SourceSansBold
+TextLabel_26.Text = "Ur Displayname"
+TextLabel_26.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_26.TextScaled = true
+TextLabel_26.TextSize = 14.000
+TextLabel_26.TextWrapped = true
+TextLabel_26.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_27.Parent = PlrInfo
+TextLabel_27.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_27.BackgroundTransparency = 1.000
+TextLabel_27.Position = UDim2.new(0.373205751, 0, 0.471264362, 0)
+TextLabel_27.Size = UDim2.new(0, 131, 0, 12)
+TextLabel_27.Font = Enum.Font.SourceSansBold
+TextLabel_27.Text = "Ur Name"
+TextLabel_27.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_27.TextScaled = true
+TextLabel_27.TextSize = 14.000
+TextLabel_27.TextWrapped = true
+TextLabel_27.TextXAlignment = Enum.TextXAlignment.Left
+
+ImageLabel_7.Parent = PlrInfo
+ImageLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_7.Position = UDim2.new(0.0861244053, 0, 0.126436785, 0)
+ImageLabel_7.Size = UDim2.new(0, 53, 0, 53)
+ImageLabel_7.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+UICorner_31.CornerRadius = UDim.new(3, 8)
+UICorner_31.Parent = ImageLabel_7
+
+TextLabel_28.Parent = InfoHolder
+TextLabel_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_28.BackgroundTransparency = 1.000
+TextLabel_28.Size = UDim2.new(0, 156, 0, 25)
+TextLabel_28.Font = Enum.Font.GothamBold
+TextLabel_28.Text = "Welcome, User"
+TextLabel_28.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_28.TextScaled = true
+TextLabel_28.TextSize = 14.000
+TextLabel_28.TextWrapped = true
+
+TextLabel_29.Parent = InfoHolder
+TextLabel_29.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_29.BackgroundTransparency = 1.000
+TextLabel_29.Position = UDim2.new(0, 0, 0.0474383309, 0)
+TextLabel_29.Size = UDim2.new(0, 140, 0, 16)
+TextLabel_29.Font = Enum.Font.GothamBold
+TextLabel_29.Text = "You should go to bed"
+TextLabel_29.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_29.TextScaled = true
+TextLabel_29.TextSize = 14.000
+TextLabel_29.TextWrapped = true
+
+MusicSystem.Name = "MusicSystem"
+MusicSystem.Parent = InfoHolder
+MusicSystem.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MusicSystem.Position = UDim2.new(1.58867931, 0, 0.722960174, 0)
+MusicSystem.Size = UDim2.new(0, 251, 0, 146)
+MusicSystem.Image = "http://www.roblox.com/asset/?id=303074382"
+
+UICorner_32.Parent = MusicSystem
+
+TextLabel_30.Parent = MusicSystem
+TextLabel_30.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_30.BackgroundTransparency = 1.000
+TextLabel_30.Position = UDim2.new(0.0438247025, 0, 0.315068483, 0)
+TextLabel_30.Size = UDim2.new(0, 151, 0, 32)
+TextLabel_30.Font = Enum.Font.GothamBold
+TextLabel_30.Text = "Welcome To"
+TextLabel_30.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_30.TextScaled = true
+TextLabel_30.TextSize = 14.000
+TextLabel_30.TextWrapped = true
+TextLabel_30.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_31.Parent = MusicSystem
+TextLabel_31.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_31.BackgroundTransparency = 1.000
+TextLabel_31.Position = UDim2.new(0.0438247025, 0, 0.534246624, 0)
+TextLabel_31.Size = UDim2.new(0, 151, 0, 22)
+TextLabel_31.Font = Enum.Font.GothamSemibold
+TextLabel_31.Text = "Noob Sound"
+TextLabel_31.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_31.TextScaled = true
+TextLabel_31.TextSize = 14.000
+TextLabel_31.TextWrapped = true
+TextLabel_31.TextXAlignment = Enum.TextXAlignment.Left
+
+SoundIdBox.Name = "SoundIdBox"
+SoundIdBox.Parent = MusicSystem
+SoundIdBox.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+SoundIdBox.Position = UDim2.new(0, 0, -0.260273963, 0)
+SoundIdBox.Size = UDim2.new(0, 212, 0, 25)
+SoundIdBox.Font = Enum.Font.GothamSemibold
+SoundIdBox.PlaceholderText = "Music ID(roblox only)"
+SoundIdBox.Text = ""
+SoundIdBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+SoundIdBox.TextSize = 14.000
+SoundIdBox.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_33.Parent = SoundIdBox
+
+add.Name = "add"
+add.Parent = MusicSystem
+add.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+add.Position = UDim2.new(0.874502063, 0, -0.260273993, 0)
+add.Size = UDim2.new(0, 25, 0, 25)
+add.ZIndex = 2
+add.Image = "rbxassetid://3926307971"
+add.ImageRectOffset = Vector2.new(324, 364)
+add.ImageRectSize = Vector2.new(36, 36)
+
+UICorner_34.Parent = add
+
+ToggleSound.Name = "ToggleSound"
+ToggleSound.Parent = MusicSystem
+ToggleSound.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+ToggleSound.Position = UDim2.new(0.476095617, 0, 0.767123222, 0)
+ToggleSound.Size = UDim2.new(0, 25, 0, 25)
+ToggleSound.ZIndex = 2
+ToggleSound.Image = "rbxassetid://3926307971"
+ToggleSound.ImageRectOffset = Vector2.new(804, 124)
+ToggleSound.ImageRectSize = Vector2.new(36, 36)
+
+UICorner_35.CornerRadius = UDim.new(3, 8)
+UICorner_35.Parent = ToggleSound
+
+Games.Name = "Games"
+Games.Parent = Holder
+
+
+
+Navi.Name = "Navi"
+Navi.Parent = Holder
+
+NoobXNavigator.Name = "NoobXNavigator"
+NoobXNavigator.Parent = Navi
+NoobXNavigator.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+NoobXNavigator.Position = UDim2.new(0.245000005, 0, 0.920000017, 0)
+NoobXNavigator.Size = UDim2.new(0, 478, 0, 44)
+local Opened = false
+UserInputService.InputBegan:Connect(function(KeyCode)
+	if KeyCode.KeyCode == Enum.KeyCode.RightControl then
+		if Opened then
+			NoobXNavigator:TweenPosition(UDim2.new(.245000005, 0, 0.920000017, 0), "InOut", "Quad")
+			Opened = false
+		else
+			Opened = true
+			NoobXNavigator:TweenPosition(UDim2.new(0.245000005, 0, 2, 0), "InOut", "Quad")
+		end
+	end
+end)
+
+UICorner_39.Parent = NoobXNavigator
+
+home.Name = "home"
+home.Parent = NoobXNavigator
+home.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+home.Position = UDim2.new(0.179916322, 0, 0.113636367, 0)
+home.Size = UDim2.new(0, 34, 0, 34)
+home.ZIndex = 2
+home.Image = "rbxassetid://3926305904"
+home.ImageRectOffset = Vector2.new(964, 204)
+home.ImageRectSize = Vector2.new(36, 36)
+home.MouseButton1Click:Connect(function()
+	if InfoHolder.Visible == false then
+		TS:Create(home, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(255, 255, 255)}):Play()
+		InfoHolder.Visible = true
+		TS:Create(home, TweenInfo.new(0.2), {ImageColor3 = Color3.fromRGB(0,0,0)}):Play()
+	elseif InfoHolder.Visible == true then
+		InfoHolder.Visible = false
+		TS:Create(home, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(25,25,25)}):Play()
+		TS:Create(home, TweenInfo.new(0.2), {ImageColor3 = Color3.fromRGB(255,255,255)}):Play()
+	end
+end)
+
+UICorner_40.Parent = home
+
+Clock.Name = "Clock"
+Clock.Parent = NoobXNavigator
+Clock.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Clock.BackgroundTransparency = 1.000
+Clock.Position = UDim2.new(0.0230125524, 0, 0.25, 0)
+Clock.Size = UDim2.new(0, 58, 0, 22)
+Clock.Font = Enum.Font.GothamBold
+Clock.Text = "12:00"
+Clock.TextColor3 = Color3.fromRGB(255, 255, 255)
+Clock.TextScaled = true
+Clock.TextSize = 14.000
+Clock.TextWrapped = true
+Clock.TextXAlignment = Enum.TextXAlignment.Left
+
+person.Name = "person"
+person.Parent = NoobXNavigator
+person.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+person.Position = UDim2.new(0.26778242, 0, 0.113636374, 0)
+person.Size = UDim2.new(0, 32, 0, 34)
+person.ZIndex = 2
+person.Image = "rbxassetid://3926307971"
+person.ImageRectOffset = Vector2.new(884, 4)
+person.ImageRectSize = Vector2.new(36, 36)
+person.MouseButton1Click:Connect(function()
+	if LocalPlayer.Visible == false then
+	LocalPlayer.Visible = true
+	TS:Create(person, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(255, 255, 255)}):Play()
+	TS:Create(person, TweenInfo.new(0.2), {ImageColor3 = Color3.fromRGB(0,0,0)}):Play()
+	elseif LocalPlayer.Visible == true then
+	LocalPlayer.Visible = false
+	TS:Create(person, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(25,25,25)}):Play()
+	TS:Create(person, TweenInfo.new(0.2), {ImageColor3 = Color3.fromRGB(255,255,255)}):Play()
+	end
+end)
+
+UICorner_41.Parent = person
+
+code.Name = "code"
+code.Parent = NoobXNavigator
+code.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+code.Position = UDim2.new(0.349488556, 0, 0.0924764872, 0)
+code.Size = UDim2.new(0, 37, 0, 34)
+code.ZIndex = 2
+code.Image = "rbxassetid://3926305904"
+code.ImageRectOffset = Vector2.new(404, 844)
+code.ImageRectSize = Vector2.new(36, 36)
+code.MouseButton1Click:Connect(function()
+
+	if UniScripts.Visible == false then
+		UniScripts.Visible = true
+	TS:Create(code, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(255, 255, 255)}):Play()
+	TS:Create(code, TweenInfo.new(0.2), {ImageColor3 = Color3.fromRGB(0,0,0)}):Play()
+	elseif UniScripts.Visible == true then
+		TS:Create(code, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(25,25,25)}):Play()
+		TS:Create(code, TweenInfo.new(0.2), {ImageColor3 = Color3.fromRGB(255,255,255)}):Play()
+		UniScripts.Visible = false
+	end
+end)
+
+UICorner_42.CornerRadius = UDim.new(0.0500000007, 8)
+UICorner_42.Parent = code
+
+texture.Name = "texture"
+texture.Parent = NoobXNavigator
+texture.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+texture.LayoutOrder = 5
+texture.Position = UDim2.new(0.918410063, 0, 0.204545468, 0)
+texture.Size = UDim2.new(0, 25, 0, 25)
+texture.ZIndex = 2
+texture.Image = "rbxassetid://3926305904"
+texture.ImageRectOffset = Vector2.new(524, 44)
+texture.ImageRectSize = Vector2.new(36, 36)
+
+UICorner_43.Parent = texture
+
+wifi.Name = "wifi"
+wifi.Parent = NoobXNavigator
+wifi.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+wifi.Position = UDim2.new(0.53556484, 0, 0.0909090936, 0)
+wifi.Size = UDim2.new(0, 32, 0, 33)
+wifi.ZIndex = 2
+wifi.Image = "rbxassetid://3926307971"
+wifi.ImageRectOffset = Vector2.new(4, 284)
+wifi.ImageRectSize = Vector2.new(36, 36)
+wifi.MouseButton1Click:Connect(function()
+	if JC.Visible == false then
+		TS:Create(wifi, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(255, 255, 255)}):Play()
+		JC.Visible = true
+		TS:Create(wifi, TweenInfo.new(0.2), {ImageColor3 = Color3.fromRGB(0,0,0)}):Play()
+	elseif JC.Visible == true then
+		JC.Visible = false
+		TS:Create(wifi, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(25, 25, 25)}):Play()
+		TS:Create(wifi, TweenInfo.new(0.2), {ImageColor3 = Color3.fromRGB(255,255,255)}):Play()
+	end
+end)
+UICorner_44.Parent = wifi
+
+storage.Name = "storage"
+storage.Parent = NoobXNavigator
+storage.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+storage.LayoutOrder = 5
+storage.Position = UDim2.new(0.437238485, 0, 0.0454545468, 0)
+storage.Size = UDim2.new(0, 40, 0, 38)
+storage.ZIndex = 2
+storage.Image = "rbxassetid://3926305904"
+storage.ImageRectOffset = Vector2.new(284, 684)
+storage.ImageRectSize = Vector2.new(36, 36)
+storage.MouseButton1Click:Connect(function()
+	if plrList.Visible == false then
+		TS:Create(storage, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(255, 255, 255)}):Play()
+		plrList.Visible = true
+		TS:Create(storage, TweenInfo.new(0.2), {ImageColor3 = Color3.fromRGB(0,0,0)}):Play()
+	elseif plrList.Visible == true then
+		plrList.Visible = false
+		TS:Create(storage, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(25, 25, 25)}):Play()
+		TS:Create(storage, TweenInfo.new(0.2), {ImageColor3 = Color3.fromRGB(255,255,255)}):Play()
+	end
+end)
+
+UICorner_45.Parent = storage
+
+keySystem.Name = "keySystem"
+keySystem.Parent = Domains
+keySystem.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+keySystem.Position = UDim2.new(0.201776639, 0, 0.223908931, 0)
+keySystem.Size = UDim2.new(0, 395, 0, 169)
+keySystem.Visible = true
+
+TextLabel_36.Parent = keySystem
+TextLabel_36.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_36.BackgroundTransparency = 1.000
+TextLabel_36.Size = UDim2.new(0, 161, 0, 17)
+TextLabel_36.Font = Enum.Font.GothamBold
+TextLabel_36.Text = "Noob Softworks"
+TextLabel_36.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_36.TextScaled = true
+TextLabel_36.TextSize = 14.000
+TextLabel_36.TextWrapped = true
+TextLabel_36.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_37.Parent = keySystem
+TextLabel_37.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_37.BackgroundTransparency = 1.000
+TextLabel_37.Position = UDim2.new(0, 0, 0.100591719, 0)
+TextLabel_37.Size = UDim2.new(0, 395, 0, 12)
+TextLabel_37.Font = Enum.Font.GothamSemibold
+TextLabel_37.Text = "Key System"
+TextLabel_37.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_37.TextScaled = true
+TextLabel_37.TextSize = 14.000
+TextLabel_37.TextWrapped = true
+TextLabel_37.TextXAlignment = Enum.TextXAlignment.Left
+
+TextBox.Parent = keySystem
+TextBox.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+TextBox.Position = UDim2.new(0.0278481022, 0, 0.236686394, 0)
+TextBox.Size = UDim2.new(0, 310, 0, 26)
+TextBox.Font = Enum.Font.GothamSemibold
+TextBox.PlaceholderColor3 = Color3.fromRGB(193, 193, 193)
+TextBox.PlaceholderText = "Key"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextSize = 14.000
+TextBox.TextXAlignment = Enum.TextXAlignment.Left
+UserInputService.InputBegan:Connect(function(KeyCode)
+	if KeyCode.KeyCode == Enum.KeyCode.Return then
+		if TextBox.Text == "NoobXIsDaBest" then
+			TS:Create(keySystem, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
+			TS:Create(Frame_6, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
+			wait(0.5)
+			TS:Create(TextBox, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
+			keySystem.Visible = false
+			Holder.Visible = true
+			Domain.Other.Visible = true
+		else 
+			game.Players.LocalPlayer:Kick("Nice try")
+			
+		end
+	end
+end)
+
+UICorner_46.Parent = TextBox
+
+TextLabel_38.Parent = keySystem
+TextLabel_38.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_38.BackgroundTransparency = 1.000
+TextLabel_38.Position = UDim2.new(0.0278481022, 0, 0.390532553, 0)
+TextLabel_38.Size = UDim2.new(0, 320, 0, 12)
+TextLabel_38.Font = Enum.Font.GothamSemibold
+TextLabel_38.Text = "Your key wont be saved Sorry! This is coming soon in a future release"
+TextLabel_38.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_38.TextScaled = true
+TextLabel_38.TextSize = 14.000
+TextLabel_38.TextWrapped = true
+TextLabel_38.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_39.Parent = keySystem
+TextLabel_39.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_39.BackgroundTransparency = 1.000
+TextLabel_39.Position = UDim2.new(0, 0, 0.692307711, 0)
+TextLabel_39.Size = UDim2.new(0, 395, 0, 17)
+TextLabel_39.Font = Enum.Font.GothamBold
+TextLabel_39.Text = "Supported"
+TextLabel_39.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_39.TextScaled = true
+TextLabel_39.TextSize = 14.000
+TextLabel_39.TextWrapped = true
+TextLabel_39.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_40.Parent = keySystem
+TextLabel_40.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_40.BackgroundTransparency = 1.000
+TextLabel_40.Position = UDim2.new(0, 0, 0.816568077, 0)
+TextLabel_40.Size = UDim2.new(0, 395, 0, 12)
+TextLabel_40.Font = Enum.Font.GothamSemibold
+TextLabel_40.Text = "You are using the \"Comet\"version of noobx"
+TextLabel_40.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_40.TextScaled = true
+TextLabel_40.TextSize = 14.000
+TextLabel_40.TextWrapped = true
+TextLabel_40.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_47.Parent = keySystem
+
+Frame_6.Parent = keySystem
+Frame_6.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Frame_6.Position = UDim2.new(1.02784812, 0, 0, 0)
+Frame_6.Size = UDim2.new(0, 116, 0, 169)
+
+UICorner_48.Parent = Frame_6
+
+TextLabel_41.Parent = Frame_6
+TextLabel_41.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_41.BackgroundTransparency = 1.000
+TextLabel_41.Position = UDim2.new(-0.00663441606, 0, 0, 0)
+TextLabel_41.Size = UDim2.new(0, 116, 0, 11)
+TextLabel_41.Font = Enum.Font.GothamBold
+TextLabel_41.Text = "Huh????????"
+TextLabel_41.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_41.TextScaled = true
+TextLabel_41.TextSize = 14.000
+TextLabel_41.TextWrapped = true
+TextLabel_41.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_42.Parent = Frame_6
+TextLabel_42.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_42.BackgroundTransparency = 1.000
+TextLabel_42.Position = UDim2.new(0, 0, 0.100591719, 0)
+TextLabel_42.Size = UDim2.new(0, 115, 0, 33)
+TextLabel_42.Font = Enum.Font.GothamBold
+TextLabel_42.Text = "Where can i get my NoobX Key?"
+TextLabel_42.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_42.TextScaled = true
+TextLabel_42.TextSize = 14.000
+TextLabel_42.TextWrapped = true
+TextLabel_42.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_43.Parent = Frame_6
+TextLabel_43.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_43.BackgroundTransparency = 1.000
+TextLabel_43.Position = UDim2.new(0.00862068962, 0, 0.325443804, 0)
+TextLabel_43.Size = UDim2.new(0, 115, 0, 33)
+TextLabel_43.Font = Enum.Font.GothamSemibold
+TextLabel_43.Text = "You can get it in the discord"
+TextLabel_43.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_43.TextScaled = true
+TextLabel_43.TextSize = 14.000
+TextLabel_43.TextWrapped = true
+TextLabel_43.TextXAlignment = Enum.TextXAlignment.Left
+
+TextBox_2.Parent = Frame_6
+TextBox_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_2.BackgroundTransparency = 1.000
+TextBox_2.Position = UDim2.new(0.00862068962, 0, 0.520710051, 0)
+TextBox_2.Size = UDim2.new(0, 115, 0, 21)
+TextBox_2.ClearTextOnFocus = false
+TextBox_2.Font = Enum.Font.GothamSemibold
+TextBox_2.Text = "https://discord.gg/kjgmmvWUMH"
+TextBox_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_2.TextScaled = true
+TextBox_2.TextSize = 14.000
+TextBox_2.TextWrapped = true
+
+TextLabel_44.Parent = Frame_6
+TextLabel_44.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_44.BackgroundTransparency = 1.000
+TextLabel_44.Position = UDim2.new(-0.00862068962, 0, 0.644970417, 0)
+TextLabel_44.Size = UDim2.new(0, 115, 0, 16)
+TextLabel_44.Font = Enum.Font.GothamSemibold
+TextLabel_44.Text = "Copy!"
+TextLabel_44.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_44.TextScaled = true
+TextLabel_44.TextSize = 14.000
+TextLabel_44.TextWrapped = true
+TextLabel_44.TextXAlignment = Enum.TextXAlignment.Left
+
+-- Scripts:
+
+
+
+function figureNotifs(Stack,Container)
+	local stacksize = 0
+
+	local i = #Stack
+	while i > 0 do
+		local gui = Stack[i]
+		if gui then
+			if stacksize == 0 then
+				stacksize = 0.03
+			else
+				stacksize = stacksize + 0.085
+			end
+			local desiredpos = UDim2.new(0.5,0,stacksize,0)
+			if gui.Position ~= desiredpos then
+				gui:TweenPosition(desiredpos,"Out","Quint",0.3,true)
+			end
+		end
+		i = i-1
+	end
+end
+
+function Execute(String)
+	if loadstring then
+		loadstring(game:HttpGet(String, true))()
+	else
+		Notify("You don't have the loadstring function! Use a different executor.","GothamSemibold",Color3.fromRGB(255, 163, 5))
+	end
+end
+
+function Notify(Content,Font,Color)
+	spawn(function()
+		if not Font then
+			Font = "GothamBold"
+		end
+		local notificationContainer = Domain.Other.NotificationClip
+		local Notification = notificationContainer:WaitForChild('Template')	
+		local notifClone = Notification:Clone()
+		local notifContent = notifClone:WaitForChild('Content')
+		if Font == "GothamSemiBold" then
+			Font = "GothamSemibold"
+		end
+		notifContent.Font = Font
+		notifContent.TextScaled = false
+		notifContent.TextTransparency = 1
+		notifContent.BackgroundTransparency = 1
+		notifClone.BackgroundTransparency = 1
+		notifClone.Name = 'Notification'
+		notifClone.Visible = true
+		notifContent.BackgroundColor3 = Color
+		notifContent.Text = Content
+		notifClone.Parent = notificationContainer
+		notifClone.Position = UDim2.new(0.5,0,-0.05,0)
+		wait(0.001)
+		notifContent.Size = UDim2.new(0, math.max(16, notifContent.TextBounds.X * 1.15),1, 0)
+		wait(0.5)
+		local sound = Instance.new("Sound")
+		sound.Parent = game:GetService("CoreGui")
+		sound.SoundId = "rbxassetid://"..5711733888
+		sound.Name = "dmnnotify"
+		sound.Volume = 0.6
+		sound.PlayOnRemove = true
+		sound:Destroy()
+		notifClone:TweenPosition(UDim2.new(0.5,0,0.03,0),'Out','Quint',0.3,true)
+		local transitionInfo = TweenInfo.new(0.35, Enum.EasingStyle.Quint)
+		local tween = game:GetService("TweenService"):Create(notifContent, transitionInfo, {TextTransparency = 0})
+		tween:Play()
+		local transitionInfo = TweenInfo.new(0.35, Enum.EasingStyle.Quint)
+		local tween = game:GetService("TweenService"):Create(notifContent, transitionInfo, {BackgroundTransparency = 0})
+		tween:Play()
+		table.insert(NotifStack,notifClone)
+		figureNotifs(NotifStack,notificationContainer)
+
+
+		wait(NotificationDuration)
+		for a,b in pairs(NotifStack) do
+			if b == notifClone then
+				table.remove(NotifStack,a)
+			end
+		end
+		wait(0.05)
+		notifClone:TweenPosition(UDim2.new(0.5,0,notifClone.Position.Y.Scale+0.1,0),'Out','Quint',0.3,true)
+		local transitionInfo = TweenInfo.new(0.3, Enum.EasingStyle.Quint)
+		local tween = game:GetService("TweenService"):Create(notifContent, transitionInfo, {TextTransparency = 1})
+		tween:Play()
+		local transitionInfo = TweenInfo.new(0.3, Enum.EasingStyle.Quint)
+		local tween = game:GetService("TweenService"):Create(notifContent, transitionInfo, {BackgroundTransparency = 1})
+		tween:Play()
+		wait(0.305)
+		notifClone:Destroy()
+		figureNotifs(NotifStack,notificationContainer)
+	end)
+end
+
+
+
+ToggleSound.MouseButton1Click:Connect(function()
+	if not playing then
+		playing = true
+		if tonumber(SoundIdBox.Text) then
+			if not Frames:FindFirstChildWhichIsA("Sound") then
+				local MusicSound = Instance.new("Sound",Frames)
+				MusicSound.Volume = 1
+				MusicSound.SoundId = "rbxassetid://"..tonumber(SoundIdBox.Text)
+				SoundIdBox.Text = ""
+				MusicSound.TimePosition = 0
+				MusicSound.Looped = true
+				MusicSound:Play()
+				ToggleSound.Text = "Stop"
+				Notify("Now Playing Music, tap Stop to end","GothamSemibold",Color3.fromRGB(0, 85, 127))
+			elseif Frames:FindFirstChildWhichIsA("Sound") then
+				Frames:FindFirstChildWhichIsA("Sound").Volume = 1
+				Frames:FindFirstChildWhichIsA("Sound").Looped = true
+				Frames:FindFirstChildWhichIsA("Sound").SoundId = "rbxassetid://"..tonumber(NoobX.SoundIdBox.Text)
+				Frames:FindFirstChildWhichIsA("Sound").TimePosition = 0
+				Frames:FindFirstChildWhichIsA("Sound"):Play()
+				ToggleSound.Text = "Stop"
+				Notify("Now Playing Music","GothamSemibold",Color3.fromRGB(0, 85, 127))
+			end
+		end
+	elseif playing then
+		playing = false
+		if not Frames:FindFirstChildWhichIsA("Sound") then
+			Notify("Couldn't find music to stop","GothamSemibold",Color3.fromRGB(0, 85, 127))
+			ToggleSound.Text = "Play"
+		else
+			ToggleSound.Text = "Play"
+			Frames:FindFirstChildWhichIsA("Sound").Volume = 0
+			Notify("Removed Music","GothamSemibold",Color3.fromRGB(0, 85, 127))
+		end
+	end
+end)
+
+
+
+
+
+--Anticheats
+AntiExploits = {
+
+	Venti = {
+		PlaceId = 1217895158,
+		Locations = {game.Players.LocalPlayer.PlayerScripts:FindFirstChild("goodbye"),game.Players.LocalPlayer.PlayerScripts:FindFirstChild("hello")}
+	},
+	Pastriez = {
+		PlaceId = 3243063589,
+		Locations = {game.Players.LocalPlayer.PlayerScripts:FindFirstChild("AntiWeld"),game.Players.LocalPlayer.PlayerScripts:FindFirstChild("AntiVR")}
+	},
+	Cortado = {
+		PlaceId = 3522042406,
+		Locations = {game.Players.LocalPlayer.PlayerScripts:FindFirstChild("B"),game.Players.LocalPlayer.PlayerGui:FindFirstChild("ADEL")}
+	},
+	CustomDuels = {
+		PlaceId = 2609668898,
+		Locations = {game.Players.LocalPlayer.PlayerScripts:FindFirstChild("Anti"),game.Players.LocalPlayer.PlayerGui:FindFirstChild("Monitor")}
+	},
+	towerofhell = {
+		PlaceId = 2609668898,
+		Locations = {game.Players.LocalPlayer.PlayerScripts:FindFirstChild("LocalScript"),game.Players.LocalPlayer.PlayerGui:FindFirstChild("LocalScript2")}
+	},
+	fencing = {
+		PlaceId = 12109643,
+		Locations = {workspace:FindFirstChild("AntiExploitScript")}
+	},
+
+}
+
+for _, antiexploit in pairs(AntiExploits) do
+	if antiexploit.PlaceId == game.PlaceId then
+		for _, anti in ipairs(antiexploit.Locations) do
+			if #antiexploit.Locations > 1 then
+				Notify("Removed multiple anti cheats ("..tostring(#antiexploit.Locations)..")","GothamSemibold",Color3.fromRGB(0, 85, 127))
+			else
+				Notify(" Removed 1 anti cheat ","GothamBold",Color3.fromRGB(0, 85, 127))
+			end
+		end
+	end
+end
+DangerousGames = {6358843321,3522042406,286090429} -- games that will ban you if caught with the anticheat
+if table.find(DangerousGames,game.PlaceId) then
+	Notify("This game will ban you if caught by anti cheat","GothamSemibold",Color3.fromRGB(206, 0, 0))
+end
+sim_card.MouseButton1Click:Connect(function()
+	if setclipboard then
+		setclipboard(DiscordLink)
+	elseif copyclipboard then
+		copyclipboard(DiscordLink)
+	end
+end)
+function AntiKick()
+	if not IS_LYNX then
+		if antikick and getrawmetatable and newcclosure or protect_function and setreadonly and getnamecallmethod and hookfunction then
+			mt = getrawmetatable(game)
+			old = mt.__namecall
+			protect = newcclosure or protect_function
+
+			if not protect then
+				protect = function(f) return f end
+			end
+
+			setreadonly(mt, false)
+			mt.__namecall = protect(function(self, ...)
+				method = getnamecallmethod()
+				if method == "Kick" and antikick then
+					Notify("We stopped this game from kicking you locally","GothamSemibold",Color3.fromRGB(0, 153, 112))
+					wait(9e9)
+					return
+				end
+				return old(self, ...)
+			end)
+
+			hookfunction(game.Players.LocalPlayer.Kick,protect(function() wait(9e9) end))
+		end
+	end
+end
+
+function PromptExploit(Exploit)
+	pexploit = true
+	wait(Exploit.WaitDuration)
+	Domain.Other.ExploitFound.Visible = true
+	Domain.Other.ExploitFound.Position = UDim2.new(-26.5,0,0.299,0)
+	Domain.Other.ExploitFound.Description.Text = Exploit.Description
+	Domain.Other.ExploitFound.ExploitName.Text = Exploit.Name
+
+	Domain.Other.ExploitFound:TweenPosition(UDim2.new(-22.276, 0, 0.299, 0),"Out","Quint",0.6)
+	wait(0.5)
+	Domain.Other.ExploitFound.ExecuteButton.MouseButton1Click:Connect(function()
+		if pexploit then
+
+			Domain.Other.ExploitFound:TweenPosition(UDim2.new(-26.5,0,0.299,0),"In","Quint",0.4)
+			pexploit = false
+			Notify("Loading "..Exploit.Name..", this may bug for a few seconds in some cases","GothamSemibold",Color3.fromRGB(0, 95, 139))
+			Execute(Exploit.Loadstring)
+		end
+	end)
+	Domain.Other.ExploitFound.exitpromptButton.MouseButton1Click:Connect(function()
+		Domain.Other.ExploitFound:TweenPosition(UDim2.new(-26.5,0,0.299,0),"In","Quint",0.4)
+		pexploit = false
+	end)
+	UIS.InputBegan:Connect(function(input, processed)
+		if (input.KeyCode == Enum.KeyCode.Y and processed == false) and pexploit == true then
+			pexploit = false
+
+			Domain.Other.ExploitFound:TweenPosition(UDim2.new(-26.5,0,0.299,0),"In","Quint",0.4)
+			Execute(Exploit.Loadstring)
+		end
+	end)
+end
+
+
+function RePromptExploit(Exploit)
+	pexploit = true
+	Domain.Other.ExploitFound.Visible = true
+	--	Domain.Other.ExploitFound.Position = UDim2.new(-26.5,0,0.299,0)
+	Domain.Other.ExploitFound.Description.Text = Exploit.Description
+	Domain.Other.ExploitFound.ExploitName.Text = Exploit.Name
+
+	Domain.Other.ExploitFound:TweenPosition(UDim2.new(-22.276, 0, 0.299, 0),"Out","Quint",0.6)
+	wait(0.1)
+	Domain.Other.ExploitFound.ExecuteButton.MouseButton1Click:Connect(function()
+		if pexploit then
+			Domain.Other.ExploitFound:TweenPosition(UDim2.new(-26.5,0,0.299,0),"In","Quint",0.4)
+			pexploit = false
+			Notify("Loading "..Exploit.Name,"GothamSemibold",Color3.fromRGB(52, 52, 52))
+			Execute(Exploit.Loadstring)
+		end
+	end)
+	Domain.Other.ExploitFound.exitpromptButton.MouseButton1Click:Connect(function()
+		Domain.Other.ExploitFound:TweenPosition(UDim2.new(-26.5,0,0.299,0),"In","Quint",0.4)
+		pexploit = false
+	end)
+	UIS.InputBegan:Connect(function(input, processed)
+		if (input.KeyCode == Enum.KeyCode.Y and processed == false) and pexploit == true then
+			pexploit = false
+			Execute(Exploit.Loadstring)
+			Domain.Other.ExploitFound:TweenPosition(UDim2.new(-26.5,0,0.299,0),"In","Quint",0.4)
+		end
+	end)
+end
+
+function UnRePromptExploit()
+	Domain.Other.ExploitFound:TweenPosition(UDim2.new(-26.5,0,0.299,0),"In","Quint",0.4)
+	pexploit = false
+end
+
+BackgroundExploits = {
+	EZHub = {
+		Name = "EZHub",
+		Description = "The all-in-one script hub",
+		PlaceIds = {204990346,2629642516,1962086868,155615604,2512643572,3101667897,402122991,3823781113,142823291,2317712696,171391948},
+		PremiumOnly = false,
+		WaitDuration = 0,
+		Loadstring = "https://raw.githubusercontent.com/debug420/Ez-Hub/master/EzHub3.9.lua",
+	},
+	lmber = {
+		Name = "Lumber Tycoon",
+		Description = "Created by Bark Development",
+		PlaceIds = {13822889},
+		PremiumOnly = false,
+		WaitDuration = 0,
+		Loadstring = "https://cdn.applebee1558.com/bark/bark.lua",
+	},
+	fnf = {
+		Name = "Funky Friday",
+		Description = "Autoplayer for Funky Friday",
+		PlaceIds = {6447798030},
+		PremiumOnly = false,
+		WaitDuration = 9,
+		Loadstring = "https://raw.githubusercontent.com/wally-rblx/funky-friday-autoplay/main/main.lua",
+	},
+	anomic = {
+		Name = "Anomic",
+		Description = "Script for Anomic",
+		PlaceIds = {4581966615},
+		PremiumOnly = false,
+		WaitDuration = 0,
+		Loadstring = "https://pastebin.com/raw/ztgRqnin",
+	},
+	stroller = {
+		Name = "Stroller UI",
+		Description = "Kill and bring players",
+		PlaceIds = {1662219031},
+		PremiumOnly = false,
+		WaitDuration = 0,
+		Loadstring = "https://pastebin.com/raw/Q4qQh4MS",
+	},
+	WizardTycoon = {
+		Name = "Wizard Tycoon",
+		Description = "No Doors, Infinite Inferno",
+		PlaceIds = {281489669},
+		PremiumOnly = true,
+		WaitDuration = 0,
+		Loadstring = "https://pastebin.com/raw/zv81LudV",
+	},
+	jailbreak = {
+		Name = "Jailbreak",
+		Description = "Overpowered tools for Jailbreak",
+		PlaceIds = {606849621},
+		PremiumOnly = false,
+		WaitDuration = 0,
+		Loadstring = "https://raw.githubusercontent.com/opBandwidth/_Nexagon_/main/main.lua",
+	},
+	ZombieAttack = {
+		Name = "Autofarm UI",
+		Description = "Overpowered autofarm functionality",
+		PlaceIds = {1240123653,1632210982},
+		PremiumOnly = false,
+		WaitDuration = 0,
+		Loadstring = "https://pastebin.com/raw/nwah3wUK",
+	},
+	fencingscripts = {
+		Name = "Fencing",
+		Description = "An example, to show this feature",
+		PlaceIds = {5793474642,12109643},
+		PremiumOnly = false,
+		WaitDuration = 0,
+		Loadstring = "https://pastebin.com/raw/ymMn4UdR",
+	},
+	sis = {
+		Name = "Stop It Slender!",
+		Description = "UI for Stop It Slender!",
+		PlaceIds = {30869879},
+		PremiumOnly = false,
+		WaitDuration = 0,
+		Loadstring = "https://pastebin.com/raw/hFxynXvs",
+	},
+	doomspire = {
+		Name = "Doomspire UI",
+		Description = "Smart Doomspire UI",
+		PlaceIds = {1215581239},
+		PremiumOnly = false,
+		WaitDuration = 0,
+		Loadstring = "https://pastebin.com/raw/NguHCk5t",
+	},
+	animebattlearena = {
+		Name = "ABA UI",
+		Description = "UI for Anime Battle Arena",
+		PlaceIds = {1458767429},
+		PremiumOnly = false,
+		WaitDuration = 0,
+		Loadstring = "https://raw.githubusercontent.com/travislmao/pub-scripts/main/abagui",
+	},
+	Ragdolleng = {
+		Name = "Ragdoll Engine",
+		Description = "Very useful UI for Ragdoll Engine",
+		PlaceIds = {2041312716},
+		PremiumOnly = false,
+		WaitDuration = 0,
+		Loadstring = "https://gitlab.com/Tsuniox/lua-stuff/-/raw/master/RagdollEngineGUI.lua",
+	},
+	cafegameslol = {
+		Name = "Barrier Remover",
+		Description = "Bypass many cafe barriers",
+		PlaceIds = {1217895158,3243063589,718328620,610172644,738548299,5580097107,323925323,3522042406,2075082966},
+		PremiumOnly = false,
+		WaitDuration = 0,
+		Loadstring = "https://pastebin.com/raw/HqFgVGXn",
+	},
+	DarkHub = {
+		Name = "Dark Hub",
+		Description = "Incredible script for many games",
+		PlaceIds = {286090429,2377868063,263761432,292439477,3233893879,3527629287,2555870920,5081773298},
+		PremiumOnly = false,
+		WaitDuration = 0,
+		Loadstring = "https://darkhub.xyz/script",
+	},
+	madcity = {
+		Name = "Mad City",
+		Description = "UI for Mad City",
+		PlaceIds = {1224212277},
+		PremiumOnly = false,
+		WaitDuration = 0,
+		Loadstring = "https://raw.githubusercontent.com/Sumithebestak/MadChicken/main/README.md",
+	},
+	myrestaurant = {
+		Name = "My Restaurant",
+		Description = "Useful autofarm interface",
+		PlaceIds = {4490140733},
+		PremiumOnly = false,
+		WaitDuration = 0,
+		Loadstring = "http://void-scripts.com/Scripts/myRest.lua",
+	},
+	dday = {
+		Name = "D-DAY",
+		Description = "UI for D-DAY",
+		PlaceIds = {901793731},
+		PremiumOnly = false,
+		WaitDuration = 0,
+		Loadstring = "https://raw.githubusercontent.com/iQAIRHUB/Project-Ripple/main/D-DAY/V3.0.3",
+	},
+	beesim = {
+		Name = "BSS Auto-farm",
+		Description = "Autofarm the bees lol",
+		PlaceIds = {1537690962},
+		PremiumOnly = false,
+		WaitDuration = 0,
+		Loadstring = "https://pastebin.com/raw/KSpGSvQg",
+	},
+	ninjalegends = {
+		Name = "Autofarm UI",
+		Description = "Very good autofarm for Ninja Legends",
+		PlaceIds = {3956818381},
+		PremiumOnly = false,
+		WaitDuration = 0,
+		Loadstring = "https://pastebin.com/raw/Q39hYJ8V",
+	},
+	autorapbatt = {
+		Name = "Auto RB UI",
+		Description = "Rap like a beast",
+		PlaceIds = {579955134},
+		PremiumOnly = false,
+		WaitDuration = 0,
+		Loadstring = "https://pastebin.com/raw/bHQ8dyX8",
+	},
+	animefighters = {
+		Name = "Anime Fighters GUI",
+		Description = "autofarm les go",
+		PlaceIds = {6299805723},
+		PremiumOnly = false,
+		WaitDuration = 0,
+		Loadstring = "https://raw.githubusercontent.com/pspboy08/dollhouse/main/AFSGUI.lua",
+		
+	},
+	buildaboatfortreasure = {
+		Name = "Roblox Hub",
+		Description = "just a garbo hub but a powerful script for babft",
+		PlaceIds = {537413528},
+		PremiumOnly = false,
+		WaitDuration = 0,
+		Loadstring = "https://raw.githubusercontent.com/rbxhubs/robloxscript/main/script.lua",
+	},
+	aresnal = {
+		Name = "Solaris",
+		Description = "just a aresnal script",
+		PlaceIds = {286090429}, 
+		PremiumOnly = false,
+		WaitDuration = 0,
+		Loadstring = "https://solarishub.dev/script.lua",
+	},
+	towerofhell = {
+		Name = "GHUB",
+		Description = "Tower of hell script. it op",
+		PlaceIds = {286090429}, 
+		PremiumOnly = false,
+		WaitDuration = 0,
+		Loadstring = "https://raw.githubusercontent.com/2dgeneralspam1/scripts-and-stuff/master/scripts/garfield%20hub",
+	},
+	bedwars = {
+		Name = "vape v4",
+		Description = "vape.gg copy but in roblox :>",
+		PlaceIds = {6872265039}, 
+		PremiumOnly = false,
+		WaitDuration = 0,
+		Loadstring = "https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua",
+	},
+	islands = {
+		Name = "Snow Hub",
+		Description = "Key: 6024920efd115561aa374f10d77b982ae848687b6b9f8b839376a204d520f4cf",
+		PlaceIds = {4872321990}, 
+		PremiumOnly = false,
+		WaitDuration = 0,
+		Loadstring = "https://snowhub.dev/script.lua",
+	},
+	ninjalegends2 = {
+		Name = "NoobHub",
+		Description = "Imagine your first version is more popular then the second",
+		PlaceIds = {5977280685}, 
+		PremiumOnly = false,
+		WaitDuration = 0,
+		Loadstring = "https://raw.githubusercontent.com/aaa826/123/main/script.lua",
+	},
+	
+
+	
+}
+for _, exp in pairs(BackgroundExploits) do
+
+	for _, place in pairs(exp.PlaceIds) do
+		if place == game.PlaceId then
+			if exp.PremiumOnly == true then
+				if game.Players.LocalPlayer:IsInGroup(6164166) then
+					PromptExploit(exp)
+				end
+			else
+				PromptExploit(exp)
+			end
+		end
+	end
+end
