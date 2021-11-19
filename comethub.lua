@@ -368,6 +368,11 @@ content_copy.MouseButton1Click:Connect(function()
 	elseif copyclipboard then
 		copyclipboard(DiscordLink)
 	end
+	content_copy.MouseButton1Down:Connect(function()
+		TextLabel_2.Text = "Copied!"
+		wait(3)
+		TextLabel.Text = "Click to copy!"
+	end)
 
 end)
 
@@ -1305,6 +1310,7 @@ Loading.Parent = CometHub
 Loading.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 Loading.Position = UDim2.new(0.248554915, 0, 0.242884263, 0)
 Loading.Size = UDim2.new(0, 0, 0, 158)
+Loading.ClipsDescendants = true
 
 ImageLabel_3.Parent = Loading
 ImageLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
