@@ -640,7 +640,7 @@ JB.MouseButton1Click:Connect(function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Splooshhy/PantherHub/main/main/sexy/script.lua"))()
 setclipboard("https://discord.gg/YgvrgEjQ8G")
 game.StarterGui:SetCore("SendNotification",  {
-	Title = "Coco Hub";
+	Title = "Comet Hub";
 	Text = "This Script requires a key, i've copied the discord link for you, paste the link into your browser.";
 	Icon = "http://www.roblox.com/asset/?id=5114892367";
 	Duration = 10;
