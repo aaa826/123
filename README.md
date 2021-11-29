@@ -1,5 +1,4 @@
 # NoobX
 
-##Version 3.25
-Animations
-UI remake
+##Version 3.26
+Animations(AGAIN??)
