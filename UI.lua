@@ -289,7 +289,7 @@ function Library:Create(hubname, gamename)
 						end)
 						TextButton_2.Size = UDim2.new(0, math.clamp(mouse.X - TextButton_2.AbsolutePosition.X, 0, 273), 0, 8)
 					end)
-					releaseconnection = uis.InputEnded:Connect(function(Mouse)
+					releaseconnection = UIS.InputEnded:Connect(function(Mouse)
 						if Mouse.UserInputType == Enum.UserInputType.MouseButton1 then
 							Value = math.floor((((tonumber(maxvalue) - tonumber(minvalue)) / 318) * TextButton_2.AbsoluteSize.X) + tonumber(minvalue))
 							pcall(function()
