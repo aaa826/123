@@ -143,6 +143,12 @@ function Library:Create(hubname, gamename)
 	PageButton.Text = pagename or "PageName"
 	PageButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 	PageButton.TextSize = 14.000
+		PageButton.MouseButton1Down:Connect(function()
+		for i,v in next, Pages:GetChildren() do 
+			v.Visible = false
+			end
+			Page.Visible = true
+		end)
 
 	UICorner_2.Parent = PageButton
 
@@ -154,6 +160,10 @@ function Library:Create(hubname, gamename)
 	Page.Position = UDim2.new(0.281879187, 0, 0.0215384606, 0)
 	Page.Size = UDim2.new(0, 428, 0, 318)
 	Page.ScrollBarThickness = 0
+		if mainpage == true then
+			Page.Visible = true
+			PageButton.BackgroundColor3 = Color3.fromRGB(230, 35, 69)
+		end
 
 	UIListLayout_2.Parent = Page
 	UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
