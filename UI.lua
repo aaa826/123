@@ -215,7 +215,7 @@ function Library:Create(hubname, gamename)
 				local Slider = Instance.new("Frame")
 				local UICorner_4 = Instance.new("UICorner")
 				local TextLabel_3 = Instance.new("TextLabel")
-				local Value = Instance.new("TextLabel")
+				local value = Instance.new("TextLabel")
 				local OuterSlider = Instance.new("Frame")
 				local UICorner_5 = Instance.new("UICorner")
 				local TextButton_2 = Instance.new("TextButton")
@@ -243,19 +243,19 @@ function Library:Create(hubname, gamename)
 				TextLabel_3.TextWrapped = true
 				TextLabel_3.TextXAlignment = Enum.TextXAlignment.Left
 
-				Value.Name = "Value"
-				Value.Parent = Slider
-				Value.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-				Value.BackgroundTransparency = 1.000
-				Value.Position = UDim2.new(0.903999984, 0, 0.142464563, 0)
-				Value.Size = UDim2.new(0, 24, 0, 17)
-				Value.Font = Enum.Font.GothamSemibold
-				Value.Text = "Value"
-				Value.TextColor3 = Color3.fromRGB(255, 255, 255)
-				Value.TextScaled = true
-				Value.TextSize = 14.000
-				Value.TextWrapped = true
-				Value.TextXAlignment = Enum.TextXAlignment.Left
+				value.Name = "Value"
+				value.Parent = Slider
+				value.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+				value.BackgroundTransparency = 1.000
+				value.Position = UDim2.new(0.903999984, 0, 0.142464563, 0)
+				value.Size = UDim2.new(0, 24, 0, 17)
+				value.Font = Enum.Font.GothamSemibold
+				value.Text = "Value"
+				value.TextColor3 = Color3.fromRGB(255, 255, 255)
+				value.TextScaled = true
+				value.TextSize = 14.000
+				value.TextWrapped = true
+				value.TextXAlignment = Enum.TextXAlignment.Left
 
 				OuterSlider.Name = "OuterSlider"
 				OuterSlider.Parent = Slider
