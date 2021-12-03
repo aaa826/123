@@ -293,7 +293,7 @@ function Library:Create(hubname, gamename)
 				
 				Page.CanvasSize = Page.CanvasSize + UDim2.new(0,0,0,UIListLayout_2.AbsoluteContentSize.Y)
 				end
-				function NewToggle(togglename, callback)
+				function PageItems:NewToggle(togglename, callback)
 					
 				local callback = callback or function() end
 					local Toggle = Instance.new("Frame")
@@ -370,7 +370,7 @@ function Library:Create(hubname, gamename)
 					Page.CanvasSize = Page.CanvasSize + UDim2.new(0,0,0,UIListLayout_2.AbsoluteContentSize.Y)
 
 			end
-				function NewDropdown(dropdownname, itemlist, callback)
+				function PageItems:NewDropdown(dropdownname, itemlist, callback)
 					
 					
 				
