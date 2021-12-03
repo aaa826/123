@@ -28,6 +28,8 @@ function Library:Create(hubname, gamename)
 	Container.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
 	Container.Position = UDim2.new(0.0940665677, 0, 0.17693837, 0)
 	Container.Size = UDim2.new(0, 596, 0, 325)
+	Container.Active = true
+	Container.Draggable = true
 
 	UICorner.Parent = Container
 
