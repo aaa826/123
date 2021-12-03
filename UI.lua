@@ -148,6 +148,7 @@ function Library:Create(hubname, gamename)
 			v.Visible = false
 			end
 			Page.Visible = true
+			PageButton.BackgroundColor3 = Color3.fromRGB(230, 35, 69)
 		end)
 
 	UICorner_2.Parent = PageButton
@@ -162,7 +163,7 @@ function Library:Create(hubname, gamename)
 	Page.ScrollBarThickness = 0
 		if mainpage == true then
 			Page.Visible = true
-			PageButton.BackgroundColor3 = Color3.fromRGB(230, 35, 69)
+			
 		end
 
 	UIListLayout_2.Parent = Page
