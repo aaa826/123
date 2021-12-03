@@ -153,7 +153,7 @@ function Library:Create(hubname, gamename)
 
 	UICorner_2.Parent = PageButton
 
-	Page.Name = "Page"
+	Page.Name = pagename or "Page"
 	Page.Parent = Pages
 	Page.Active = true
 	Page.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
