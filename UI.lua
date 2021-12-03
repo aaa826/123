@@ -148,7 +148,6 @@ function Library:Create(hubname, gamename)
 			v.Visible = false
 			end
 			Page.Visible = true
-			PageButton.BackgroundColor3 = Color3.fromRGB(230, 35, 69)
 		end)
 
 	UICorner_2.Parent = PageButton
