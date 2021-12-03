@@ -194,6 +194,7 @@ function Library:Create(hubname, gamename)
 			TextButton.TextScaled = true
 			TextButton.TextSize = 14.000
 			TextButton.TextWrapped = true
+			TextButton.Text = buttonname or "button"
 
 			touch_app.Name = "touch_app"
 			touch_app.Parent = ButtonElement
@@ -236,7 +237,7 @@ function Library:Create(hubname, gamename)
 				TextLabel_3.Position = UDim2.new(0.0255464911, 0, 0.326923072, 0)
 				TextLabel_3.Size = UDim2.new(0, 71, 0, 23)
 				TextLabel_3.Font = Enum.Font.GothamSemibold
-				TextLabel_3.Text = "Slider"
+				TextLabel_3.Text = slidername or "Slider"
 				TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 				TextLabel_3.TextScaled = true
 				TextLabel_3.TextSize = 14.000
@@ -330,7 +331,7 @@ function Library:Create(hubname, gamename)
 					TextLabel_5.Position = UDim2.new(0.0112267304, 0, 0.183673471, 0)
 					TextLabel_5.Size = UDim2.new(0, 175, 0, 23)
 					TextLabel_5.Font = Enum.Font.GothamSemibold
-					TextLabel_5.Text = "Toggle"
+					TextLabel_5.Text = togglename or "Toggle"
 					TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
 					TextLabel_5.TextScaled = true
 					TextLabel_5.TextSize = 14.000
@@ -426,7 +427,7 @@ function Library:Create(hubname, gamename)
 						TextButton_3.Position = UDim2.new(0.431266844, 0, 0.227272734, 0)
 						TextButton_3.Size = UDim2.new(0, 200, 0, 29)
 						TextButton_3.Font = Enum.Font.GothamSemibold
-						TextButton_3.Text = "DropDown"
+						TextButton_3.Text = dropdownname or "DropDown"
 						TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 						TextButton_3.TextScaled = true
 						TextButton_3.TextSize = 14.000
