@@ -188,6 +188,7 @@ Home.TextSize = 14.000
 Home.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 Home.TextWrapped = true
 Home.TextXAlignment = Enum.TextXAlignment.Left
+
 Home.MouseButton1Click:Connect(function()
 Home_2.Visible = true
 Scripts_2.Visible = false
@@ -1399,3 +1400,9 @@ local function TBJKQNR_fake_script() -- Loading.LocalScript
 	Loading.Visible = false
 end
 coroutine.wrap(TBJKQNR_fake_script)()
+Home.Active = true
+Home.Draggable = true
+Scripts_2.Active = true
+Scripts_2.Draggable = true
+Hubs_2.Active = true
+Hubs_2.Draggable = true
