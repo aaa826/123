@@ -126,7 +126,7 @@ function Library:NewWindow(hubname, gamename)
 	Pages.Parent = Container
 	
 	local Win = {}
-	function Win:NewSection(pagename, mainpage)
+	function Win:NewTab(pagename, mainpage)
 		
 	
 	local PageButton = Instance.new("TextButton")
