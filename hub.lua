@@ -386,11 +386,12 @@ function Library:NewWindow(hubname, gamename)
 					
 					
 				
-					local callback = callback or function() end						
-				local itemnumber = 0 
-				local pagesize = 0
-				local dropopened = false
-				local dropdownname = dropdownname or "DropDown"
+					 local DropYSize = 0	
+					 local IsDropped = false
+				
+               				 list = list or {}
+   					 text = dropdownname or "DropDown"
+  		             		 callback = callback or function() end  
 			
 						local DropDown = Instance.new("Frame")
 						local UICorner_7 = Instance.new("UICorner")
@@ -399,8 +400,6 @@ function Library:NewWindow(hubname, gamename)
 						local UICorner_8 = Instance.new("UICorner")
 						local DropStuff = Instance.new("Frame")
 						local UIListLayout_3 = Instance.new("UIListLayout")
-						local Item1 = Instance.new("TextButton")
-						local UICorner_9 = Instance.new("UICorner")
 						local UICorner_10 = Instance.new("UICorner")
 						
 						DropDown.Name = "DropDown"
@@ -435,23 +434,19 @@ function Library:NewWindow(hubname, gamename)
 						TextButton_3.TextSize = 14.000
 						TextButton_3.TextWrapped = true
 						TextButton_3.TextXAlignment = Enum.TextXAlignment.Left
-
-						UICorner_8.Parent = TextButton_3
-
-						DropStuff.Name = "DropStuff"
-						DropStuff.Parent = DropDown
-						DropStuff.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-						DropStuff.Position = UDim2.new(1.021, 0, -0.016, 0)
+						TextButton_3.MouseButton1Down:Connect(function()
+						if IsDropped then
+						IsDropped = false
 						DropStuff.Size = UDim2.new(0, 364, 0, 176)
-
-						UIListLayout_3.Parent = DropStuff
-						UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
-						UIListLayout_3.Padding = UDim.new(0, 3)
-
-						UICorner_10.Parent = DropStuff
+						TextButton_3.Text = "-"
+						else
+						IsDropped = true
+						DropStuff.Size = UDim2.new(0, 364, 0, DropYSize)
+						TextButton_3.Text = "-"
+						    end
+						end)
+						for i, v in next, item do
 				
-				for i,v in next, itemlist do 
-					itemnumber = itemnumber + 1 
 				
 					local Item1 = Instance.new("TextButton")
 					Item1.Name = "Item1"
@@ -467,8 +462,28 @@ function Library:NewWindow(hubname, gamename)
 					Item1.TextWrapped = true
 					Item1.TextXAlignment = Enum.TextXAlignment.Left
 				
+					local UICorner_9 = Instance.new("UICorner")
+					UICorner_9.Parent = Item1
+				
+					DropYSize = DropYSize + 25
+					end
 
-					UICorner_9.Parent = Item1				
+						UICorner_8.Parent = TextButton_3
+
+						DropStuff.Name = "DropStuff"
+						DropStuff.Parent = DropDown
+						DropStuff.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+						DropStuff.Position = UDim2.new(1.021, 0, -0.016, 0)
+						DropStuff.Size = UDim2.new(0, 364, 0, 176)
+						DropStuff.ClipsDescendants = true
+
+						UIListLayout_3.Parent = DropStuff
+						UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+						UIListLayout_3.Padding = UDim.new(0, 3)
+
+						UICorner_10.Parent = DropStuff
+				
+								
 						Item1.MouseButton1Down:Connect(function()
 						TextButton_3.Size = UDim2.new(0, 381, 0, 172)
 						TextButton_3.Text = dropdownname.."-"..v
@@ -482,17 +497,7 @@ function Library:NewWindow(hubname, gamename)
 				end
 
              
-					TextButton_3.MouseButton1Click:Connect(function()
-		if dropopened then
-			DropStuff.Size = UDim2.new(0, 364, 0, 176) 
-	else	
-			DropStuff.Size = UDim2.new(0, 364, 0, 176 + pagesize)
-
-		
-			dropopened = not dropopened
-		end
-	end)
-
+	
 
 				
 				
