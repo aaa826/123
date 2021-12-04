@@ -390,6 +390,7 @@ function Library:NewWindow(hubname, gamename)
 				local itemnumber = 0 
 				local pagesize = 0
 				local dropopened = false
+				local dropdownname = dropdownname or "DropDown"
 			
 						local DropDown = Instance.new("Frame")
 						local UICorner_7 = Instance.new("UICorner")
@@ -416,7 +417,7 @@ function Library:NewWindow(hubname, gamename)
 						TextLabel_4.Position = UDim2.new(0.0236411951, 0, 0.25757575, 0)
 						TextLabel_4.Size = UDim2.new(0, 123, 0, 24)
 						TextLabel_4.Font = Enum.Font.GothamSemibold
-						TextLabel_4.Text = "Dropdown"
+						TextLabel_4.Text = dropdownname or "Dropdown"
 						TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 						TextLabel_4.TextScaled = true
 						TextLabel_4.TextSize = 14.000
@@ -442,7 +443,7 @@ function Library:NewWindow(hubname, gamename)
 						DropStuff.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 						DropStuff.Position = UDim2.new(1.021, 0, -0.016, 0)
 						DropStuff.Size = UDim2.new(0, 364, 0, 176)
-						
+						DropStuff.ClipDescendants = true
 
 						UIListLayout_3.Parent = DropStuff
 						UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
@@ -466,11 +467,13 @@ function Library:NewWindow(hubname, gamename)
 					Item1.TextSize = 14.000
 					Item1.TextWrapped = true
 					Item1.TextXAlignment = Enum.TextXAlignment.Left
+				
 
-					UICorner_9.Parent = Item1
-					Item1.MouseButton1Down:Connect(function()
+					UICorner_9.Parent = Item1				
+						Item1.MouseButton1Down:Connect(function()
 						TextButton_3.Size = UDim2.new(0, 381, 0, 172)
 						TextButton_3.Text = dropdownname.."-"..v
+						
 						pcall(callback, v)
 						dropopened = false
 					end)
@@ -487,7 +490,8 @@ function Library:NewWindow(hubname, gamename)
 					end
 
 					dropopened = not dropopened
-
+				
+					end
 				end)
 				
 				
