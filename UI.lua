@@ -390,6 +390,7 @@ function Library:NewWindow(hubname, gamename)
 				local itemnumber = 0 
 				local pagesize = 0
 				local dropopened = false
+			
 						local DropDown = Instance.new("Frame")
 						local UICorner_7 = Instance.new("UICorner")
 						local TextLabel_4 = Instance.new("TextLabel")
@@ -470,7 +471,7 @@ function Library:NewWindow(hubname, gamename)
 					Item1.MouseButton1Down:Connect(function()
 						TextButton_3.Size = UDim2.new(0, 381, 0, 172)
 						TextButton_3.Text = dropdownname.."-"..v
-						pcall(callback,v)
+						pcall(callback, v)
 						dropopened = false
 					end)
 
