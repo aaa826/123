@@ -482,17 +482,20 @@ function Library:NewWindow(hubname, gamename)
 
 				end
 
-				TextButton_3.MouseButton1Down:Connect(function()
-					if dropopened then
-						DropStuff.Size = UDim2.new(0, 364, 0, 176)
-					else
-						DropStuff.Size = UDim2.new(0, 364, 0, 176 + pagesize)
-					end
+             
+					TextButton_3.MouseButton1Click:Connect(function()
+	if dropopened then
+		DropStuff.Size = UDim2.new(0, 364, 0, 176) 
+	else
+		DropStuff.Size = UDim2.new(0, 364, 0, 176 + pagesize)
 
-					dropopened = not dropopened
+		
+	dropopened = not dropopened
+		end
+	end)
+
+
 				
-					end
-				end)
 				
 				
 				Page.CanvasSize = Page.CanvasSize + UDim2.new(0,0,0,UIListLayout_2.AbsoluteContentSize.Y)
@@ -507,7 +510,6 @@ function Library:NewWindow(hubname, gamename)
 			end
 			
 	return Library
-
 
 
 
