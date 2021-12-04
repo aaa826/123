@@ -221,7 +221,7 @@ function Library:Create(hubname, gamename)
 			toggle.Position = UDim2.new(0.843273222, 0, 0.224999994, 0)
 			toggle.Size = UDim2.new(0, 48, 0, 21)
 
-			UICorner_10.CornerRadius = UDim.new(1, 8)
+		
 			UICorner_10.Parent = toggle
 
 			Circle.Name = "Circle"
@@ -234,7 +234,7 @@ function Library:Create(hubname, gamename)
 			Circle.TextColor3 = Color3.fromRGB(0, 0, 0)
 			Circle.TextSize = 14.000
 
-			UICorner_11.CornerRadius = UDim.new(0.100000001, 8)
+			
 			UICorner_11.Parent = Circle
 
 			local toggled = false
