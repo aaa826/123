@@ -447,21 +447,6 @@ function Library:NewWindow(hubname, gamename)
 						UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
 						UIListLayout_3.Padding = UDim.new(0, 3)
 
-						Item1.Name = "Item1"
-						Item1.Parent = DropStuff
-						Item1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-						Item1.Position = UDim2.new(0.0192307699, 0, 0, 0)
-						Item1.Size = UDim2.new(0, 346, 0, 25)
-						Item1.Font = Enum.Font.GothamSemibold
-						Item1.Text = "Item1"
-						Item1.TextColor3 = Color3.fromRGB(255, 255, 255)
-						Item1.TextScaled = true
-						Item1.TextSize = 14.000
-						Item1.TextWrapped = true
-						Item1.TextXAlignment = Enum.TextXAlignment.Left
-
-						UICorner_9.Parent = Item1
-
 						UICorner_10.Parent = DropStuff
 				
 				for i,v in next, itemlist do 
@@ -493,7 +478,7 @@ function Library:NewWindow(hubname, gamename)
 
 				end
 
-				Item1.MouseButton1Down:Connect(function()
+				TextButton_3.MouseButton1Down:Connect(function()
 					if dropopened then
 						DropStuff.Size = UDim2.new(0, 381, 0, 172)
 					else
