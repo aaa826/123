@@ -441,7 +441,7 @@ function Library:NewWindow(hubname, gamename)
 						DropStuff.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 						DropStuff.Position = UDim2.new(1.021, 0, -0.016, 0)
 						DropStuff.Size = UDim2.new(0, 364, 0, 176)
-						DropStuff.Visible = false
+						
 
 						UIListLayout_3.Parent = DropStuff
 						UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
@@ -451,7 +451,7 @@ function Library:NewWindow(hubname, gamename)
 				
 				for i,v in next, itemlist do 
 					itemnumber = itemnumber + 1 
-					pagesize = pagesize + 50
+				
 					local Item1 = Instance.new("TextButton")
 					Item1.Name = "Item1"
 					Item1.Parent = DropStuff
@@ -459,7 +459,7 @@ function Library:NewWindow(hubname, gamename)
 					Item1.Position = UDim2.new(0.0192307699, 0, 0, 0)
 					Item1.Size = UDim2.new(0, 346, 0, 25)
 					Item1.Font = Enum.Font.GothamSemibold
-					Item1.Text = "Item1"
+					Item1.Text = v or "Item1"
 					Item1.TextColor3 = Color3.fromRGB(255, 255, 255)
 					Item1.TextScaled = true
 					Item1.TextSize = 14.000
@@ -480,9 +480,9 @@ function Library:NewWindow(hubname, gamename)
 
 				TextButton_3.MouseButton1Down:Connect(function()
 					if dropopened then
-						DropStuff.Size = UDim2.new(0, 381, 0, 172)
+						DropStuff.Size = UDim2.new(0, 364, 0, 176)
 					else
-						DropStuff.Size = UDim2.new(0, 381, 0, 172 + pagesize)
+						DropStuff.Size = UDim2.new(0, 364, 0, 176 + pagesize)
 					end
 
 					dropopened = not dropopened
