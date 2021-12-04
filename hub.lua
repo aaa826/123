@@ -483,13 +483,13 @@ function Library:NewWindow(hubname, gamename)
 
              
 					TextButton_3.MouseButton1Click:Connect(function()
-	if dropopened then
-		DropStuff.Size = UDim2.new(0, 364, 0, 176) 
-	else
-		DropStuff.Size = UDim2.new(0, 364, 0, 176 + pagesize)
+		if dropopened then
+			DropStuff.Size = UDim2.new(0, 364, 0, 176) 
+	else	
+			DropStuff.Size = UDim2.new(0, 364, 0, 176 + pagesize)
 
 		
-	dropopened = not dropopened
+			dropopened = not dropopened
 		end
 	end)
 
