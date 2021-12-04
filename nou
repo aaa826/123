@@ -386,12 +386,9 @@ function Library:NewWindow(hubname, gamename)
 					
 					
 				
-					 local DropYSize = 0	
-					 local IsDropped = false
-				
-               				 list = list or {}
-   					 text = dropdownname or "DropDown"
-  		             		 callback = callback or function() end  
+					 local dropopened = false
+					 local itemnumber = 0
+					 local pagesize = 0
 			
 						local DropDown = Instance.new("Frame")
 						local UICorner_7 = Instance.new("UICorner")
@@ -435,38 +432,7 @@ function Library:NewWindow(hubname, gamename)
 						TextButton_3.TextWrapped = true
 						TextButton_3.TextXAlignment = Enum.TextXAlignment.Left
 						TextButton_3.MouseButton1Down:Connect(function()
-						if IsDropped then
-						IsDropped = false
-						DropStuff.Size = UDim2.new(0, 364, 0, 176)
-						TextButton_3.Text = "-"
-						else
-						IsDropped = true
-						DropStuff.Size = UDim2.new(0, 364, 0, DropYSize)
-						TextButton_3.Text = "-"
-						    end
-						end)
-						for i, v in next, item do
-				
-				
-					local Item1 = Instance.new("TextButton")
-					Item1.Name = "Item1"
-					Item1.Parent = DropStuff
-					Item1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-					Item1.Position = UDim2.new(0.0192307699, 0, 0, 0)
-					Item1.Size = UDim2.new(0, 346, 0, 25)
-					Item1.Font = Enum.Font.GothamSemibold
-					Item1.Text = v or "Item1"
-					Item1.TextColor3 = Color3.fromRGB(255, 255, 255)
-					Item1.TextScaled = true
-					Item1.TextSize = 14.000
-					Item1.TextWrapped = true
-					Item1.TextXAlignment = Enum.TextXAlignment.Left
-				
-					local UICorner_9 = Instance.new("UICorner")
-					UICorner_9.Parent = Item1
-				
-					DropYSize = DropYSize + 25
-					end
+						
 
 						UICorner_8.Parent = TextButton_3
 
@@ -483,27 +449,44 @@ function Library:NewWindow(hubname, gamename)
 
 						UICorner_10.Parent = DropStuff
 				
-								
-						Item1.MouseButton1Down:Connect(function()
-						TextButton_3.Size = UDim2.new(0, 381, 0, 172)
-						TextButton_3.Text = dropdownname.."-"..v
-						
-						pcall(callback, v)
-						dropopened = false
-					end)
+for i,v in next, itemlist do 
+    itemnumber = itemnumber + 1 
+    pagesize = pagesize + 50
+    Item1.Name = "Button"
+    Item1.Parent = Dropdownstuff
+    Item1.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+    Item1.BorderSizePixel = 0
+    Item1.Position = UDim2.new(0.0286620762, 0, 0.342024326, 0)
+    Item1.Size = UDim2.new(0, 345, 0, 25)
+    Item1.Font = Enum.Font.SourceSansLight
+    Item1.Text = "Box"
+    Item1.TextColor3 = Color3.fromRGB(255, 255, 255)
+    Item1.TextScaled = true
+    Item1.TextSize = 14.000
+    Item1.TextWrapped = true
+    Item1.TextXAlignment = Enum.TextXAlignment.Left
+    Item1.MouseButton1Down:Connect(function()
+        Button_2.Size = UDim2.new(0, 381, 0, 172)
+        Button_2.Text = dropdownname.."-"..v
+        pcall(callback,v)
+        dropopened = false
+end)
 
 
 
-				end
+end
 
-             
-	
+TextButton_3.MouseButton1Down:Connect(function()
+if dropopened then
+    Dropdownstuff.Size = UDim2.new(0, 381, 0, 172)
+else
+    Dropdownstuff.Size = UDim2.new(0, 381, 0, 172 + pagesize)
+end
 
-				
-				
-				
-				Page.CanvasSize = Page.CanvasSize + UDim2.new(0,0,0,UIListLayout_2.AbsoluteContentSize.Y)
-				
+dropopened = not dropopened
+
+end)
+Page.CanvasSize = Page.CanvasSize + UDim2.new(0,0,0,UIList.AbsoluteContentSize.Y)
 
 					end
 					
