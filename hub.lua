@@ -443,7 +443,6 @@ function Library:NewWindow(hubname, gamename)
 						DropStuff.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 						DropStuff.Position = UDim2.new(1.021, 0, -0.016, 0)
 						DropStuff.Size = UDim2.new(0, 364, 0, 176)
-						DropStuff.ClipDescendants = true
 
 						UIListLayout_3.Parent = DropStuff
 						UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
