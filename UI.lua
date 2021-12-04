@@ -3,7 +3,7 @@ local Library = {}
 local TS = game:GetService("TweenService")
 local UIS = game:GetService("UserInputService")
 local mouse = game.Players.LocalPlayer:GetMouse()
-function Library:Create(hubname, gamename)
+function Library:NewWindow(hubname, gamename)
 	local NX = Instance.new("ScreenGui")
 	local Container = Instance.new("Frame")
 	local UICorner = Instance.new("UICorner")
@@ -126,7 +126,7 @@ function Library:Create(hubname, gamename)
 	Pages.Parent = Container
 	
 	local Win = {}
-	function Win:Page(pagename, mainpage)
+	function Win:NewSection(pagename, mainpage)
 		
 	
 	local PageButton = Instance.new("TextButton")
