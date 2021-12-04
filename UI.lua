@@ -360,7 +360,8 @@ function Library:NewWindow(hubname, gamename)
 
 				TextButton_4.MouseButton1Down:Connect(function()
 					
-					local toggled = false
+					local toggled = true
+					local debounce = false
 
 					if toggled == false then
 
