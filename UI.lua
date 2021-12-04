@@ -438,7 +438,7 @@ function Library:NewWindow(hubname, gamename)
 						DropStuff.Name = "DropStuff"
 						DropStuff.Parent = DropDown
 						DropStuff.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-						DropStuff.Position = UDim2.new(0.0188679248, 0, 0.772727251, 0)
+						DropStuff.Position = UDim2.new(1.021, 0, -0.016, 0)
 						DropStuff.Size = UDim2.new(0, 364, 0, 176)
 						DropStuff.Visible = false
 
