@@ -358,30 +358,30 @@ function Library:NewWindow(hubname, gamename)
 				UICorner_18.Parent = TextButton_4
 				
 
-				TextButton_4.MouseButton1Down:Connect(function()
+					local toggled = false
+			
+			TextButton_4.MouseButton1Down:Connect(function()
+				
+				if toggled == false then
 					
-					local toggled = true
-					local debounce = false
-
-					if toggled == false then
-
-						TS:Create(TextButton_4, TweenInfo.new(0.2), {Position = UDim2.new(0, 56, 0, 2)}):Play()
-						TS:Create(Frame, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(0, 156, 234)}):Play()
-
-					else
-
-						TS:Create(TextButton_4, TweenInfo.new(0.2), {Position = UDim2.new(0, 3, 0, 2)}):Play()
-						TS:Create(Frame, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(193, 193, 193)}):Play()
-
-					end
-
-					toggled = not toggled
-					pcall(callback, toggled)
-
-				end)
-					Page.CanvasSize = Page.CanvasSize + UDim2.new(0,0,0,UIListLayout_2.AbsoluteContentSize.Y)
-
-			end
+					TS:Create(TextButton_4, TweenInfo.new(0.2), {Position = UDim2.new(0, 55, 0, 2)}):Play()
+					TS:Create(Frame, TweenInfo.new(0.2), {ImageColor3 = Color3.fromRGB(0, 156, 234)}):Play()
+					
+				else
+					
+					TS:Create(TextButton_4, TweenInfo.new(0.2), {Position = UDim2.new(0, 4, 0, 2)}):Play()
+					TS:Create(Frame, TweenInfo.new(0.2), {ImageColor3 = Color3.fromRGB(193, 193, 193)}):Play()
+					
+				end
+				
+				toggled = not toggled
+				pcall(callback, toggled)
+				
+			end)
+			
+			Page.CanvasSize = Page.CanvasSize + UDim2.new(0,0,0,UIListLayout_2.AbsoluteContentSize.Y)
+			
+		end
 				function PageItems:NewDropdown(dropdownname, itemlist, callback)
 					
 					
