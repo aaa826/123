@@ -488,7 +488,6 @@ end
 DropToggle.MouseButton1Down:Connect(function()
 	if dropopened then
 		DropStuff.Size = UDim2.new(0, 381, 0, 172)
-		dropopened = true
 	else
 		DropStuff.Size = UDim2.new(0, 381, 0, 172 + pagesize)
 
