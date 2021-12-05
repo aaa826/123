@@ -497,8 +497,9 @@ DropToggle.MouseButton1Down:Connect(function()
 	end
 end)
 
-Page.CanvasSize = Page.CanvasSize + UDim2.new(0,0,0,UIListLayout_2.AbsoluteContentSize.Y)					end
-					
+Page.CanvasSize = Page.CanvasSize + UDim2.new(0,0,0,UIListLayout_2.AbsoluteContentSize.Y)			
+				
+				end
 				return PageItems
 				end
 				
