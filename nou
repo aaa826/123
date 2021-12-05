@@ -403,7 +403,7 @@ local ImageLabel = Instance.new("ImageLabel")
 --Properties:
 
 DropDown.Name = "DropDown"
-DropDown.Parent = game.StarterGui.NX.Container.Page
+DropDown.Parent = Page
 DropDown.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 DropDown.ClipsDescendants = true
 DropDown.Position = UDim2.new(0, 0, 0.361635208, 0)
