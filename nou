@@ -393,6 +393,7 @@ local UIListLayout = Instance.new("UIListLayout")
 local Item1 = Instance.new("TextButton")
 local UICorner2 = Instance.new("UICorner")
 local UICorner1 = Instance.new("UICorner")
+local itemnumber = 0
 
 local ImageLabel = Instance.new("ImageLabel")
 
@@ -454,7 +455,7 @@ UICorner1.Parent = DropStuff
 
 				
 for i,v in next, itemlist do 
-    itemnumbers = itemnumber + 1 
+    itemnumber = itemnumber + 1 
     pagesize = pagesize + 50
 
 
