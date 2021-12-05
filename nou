@@ -488,9 +488,9 @@ DropToggle.MouseButton1Down:Connect(function()
 	else
 		Dropdownstuff.Size = UDim2.new(0, 381, 0, 172 + pagesize)
 
-	end
-		dropopened = not dropopened
 	
+		dropopened = not dropopened
+	end
 end)
 
 Page.CanvasSize = Page.CanvasSize + UDim2.new(0,0,0,UIList.AbsoluteContentSize.Y)
