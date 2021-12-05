@@ -383,6 +383,7 @@ function Library:NewWindow(hubname, gamename)
 			
 		end
 function PageItems:NewDropdown(dropdownname, itemlist, callback)
+local callback = callback or function() end
 local DropDown = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local DropToggle = Instance.new("TextButton")
@@ -496,8 +497,7 @@ DropToggle.MouseButton1Down:Connect(function()
 	end
 end)
 
-Page.CanvasSize = Page.CanvasSize + UDim2.new(0,0,0,UIList.AbsoluteContentSize.Y)
-					end
+Page.CanvasSize = Page.CanvasSize + UDim2.new(0,0,0,UIListLayout_2.AbsoluteContentSize.Y)					end
 					
 				return PageItems
 				end
