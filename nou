@@ -394,6 +394,7 @@ local Item1 = Instance.new("TextButton")
 local UICorner2 = Instance.new("UICorner")
 local UICorner1 = Instance.new("UICorner")
 local itemnumber = 0
+local pagesize = 1
 
 local ImageLabel = Instance.new("ImageLabel")
 
