@@ -394,7 +394,7 @@ local Item1 = Instance.new("TextButton")
 local UICorner2 = Instance.new("UICorner")
 local UICorner1 = Instance.new("UICorner")
 local itemnumber = 0
-local pagesize = 1
+local pagesize = 0
 
 local ImageLabel = Instance.new("ImageLabel")
 
@@ -430,7 +430,7 @@ ImageLabel.Position = UDim2.new(0.838942349, 0, -0.274509817, 0)
 ImageLabel.Size = UDim2.new(0, 80, 0, 80)
 ImageLabel.Image = "http://www.roblox.com/asset/?id=6034818372"
 
-UICorner3.Parent = TextButton
+UICorner3.Parent = DropToggle
 
 ImageLabel.Parent = TextButton
 ImageLabel.BackgroundTransparency = 1.000
