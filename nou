@@ -444,7 +444,7 @@ DropStuff.Parent = DropDown
 DropStuff.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 DropStuff.Position = UDim2.new(1.02125454, 0, -0.0157342702, 0)
 DropStuff.Size = UDim2.new(0.17, 364, -3.385, 176)
-DropStuff.ClipsDescendants = true
+
 
 UIListLayout.Parent = DropStuff
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
