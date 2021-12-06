@@ -199,6 +199,7 @@ function Library:NewWindow(hubname, gamename)
 			TextButton.TextSize = 14.000
 			TextButton.TextWrapped = true
 			TextButton.Text = buttonname or "button"
+			TextButton.ClipsDescendants = true
 			
 			Sample.Name = "Sample"
 Sample.Parent = TextButton
