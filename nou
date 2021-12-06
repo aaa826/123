@@ -160,6 +160,7 @@ function Library:NewWindow(hubname, gamename)
 	Page.Position = UDim2.new(0.281879187, 0, 0.0215384606, 0)
 	Page.Size = UDim2.new(0, 428, 0, 318)
 	Page.ScrollBarThickness = 0
+	Page.Visible = false
 		if mainpage == true then
 			Page.Visible = true
 			
