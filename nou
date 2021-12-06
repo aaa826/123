@@ -540,10 +540,11 @@ DropToggle.MouseButton1Down:Connect(function()
 		dropopened = not dropopened
 	end
 end)
-		end
+Page.CanvasSize = Page.CanvasSize + UDim2.new(0,0,0,UIListLayout_2.AbsoluteContentSize.Y)
 				
-		end
-				return PageItems
+					end
+					
+					return PageItems
 				end
 				
 			return Win
@@ -551,25 +552,3 @@ end)
 			end
 
 	    return Library
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
