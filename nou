@@ -210,6 +210,9 @@ function Library:NewWindow(hubname, gamename)
 			end)
 			Page.CanvasSize = Page.CanvasSize + UDim2.new(0,0,0,UIListLayout_2.AbsoluteContentSize.Y)
 			end
+			function Destroy()
+			NX:Destroy()
+			end
 			function PageItems:NewSlider(slidername, minvalue, maxvalue, callback)
 				local callback = callback or function() end 
 				local Slider = Instance.new("Frame")
