@@ -175,6 +175,11 @@ function Library:NewWindow(hubname, gamename)
 			local UICorner_3 = Instance.new("UICorner")
 			local TextButton = Instance.new("TextButton")
 			local touch_app = Instance.new("ImageButton")
+			local Sample = Instance.new("ImageLabel")
+
+--Properties:
+
+
 			
 			ButtonElement.Name = "ButtonElement"
 			ButtonElement.Parent = Page
@@ -194,6 +199,15 @@ function Library:NewWindow(hubname, gamename)
 			TextButton.TextSize = 14.000
 			TextButton.TextWrapped = true
 			TextButton.Text = buttonname or "button"
+			
+			Sample.Name = "Sample"
+Sample.Parent = TextButton
+Sample.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sample.BackgroundTransparency = 1.000
+Sample.Image = "http://www.roblox.com/asset/?id=4560909609"
+Sample.ImageColor3 = Color3.fromRGB(0, 170, 255)
+Sample.ImageTransparency = 0.600
+			
 
 			touch_app.Name = "touch_app"
 			touch_app.Parent = ButtonElement
@@ -207,6 +221,31 @@ function Library:NewWindow(hubname, gamename)
 			touch_app.ImageRectSize = Vector2.new(36, 36)
 			TextButton.MouseButton1Click:Connect(function()
 				pcall(callback)
+			end)
+			TextButton.MouseButton1Click:Connect(function()
+			local ms = game.Players.LocalPlayer:GetMouse()
+
+local btn = TextButton
+local sample = Sample
+
+btn.MouseButton1Click:Connect(function()
+	local c = sample:Clone()
+	c.Parent = btn
+	local x, y = (ms.X - c.AbsolutePosition.X), (ms.Y - c.AbsolutePosition.Y)
+	c.Position = UDim2.new(0, x, 0, y)
+	local len, size = 0.35, nil
+	if btn.AbsoluteSize.X >= btn.AbsoluteSize.Y then
+		size = (btn.AbsoluteSize.X * 1.5)
+	else
+		size = (btn.AbsoluteSize.Y * 1.5)
+	end
+	c:TweenSizeAndPosition(UDim2.new(0, size, 0, size), UDim2.new(0.5, (-size / 2), 0.5, (-size / 2)), 'Out', 'Quad', len, true, nil)
+	for i = 1, 10 do
+		c.ImageTransparency = c.ImageTransparency + 0.05
+		wait(len / 12)
+	end
+	c:Destroy()
+end)
 			end)
 			Page.CanvasSize = Page.CanvasSize + UDim2.new(0,0,0,UIListLayout_2.AbsoluteContentSize.Y)
 			end
