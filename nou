@@ -478,7 +478,7 @@ ImageLabel.Image = "http://www.roblox.com/asset/?id=6034818372"
 
 UICorner3.Parent = DropToggle
 
-ImageLabel.Parent = DropToggle
+ImageLabel.Parent = TextButton
 ImageLabel.BackgroundTransparency = 1.000
 ImageLabel.BorderSizePixel = 0
 ImageLabel.Position = UDim2.new(0.838942349, 0, -0.274509817, 0)
