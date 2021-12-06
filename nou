@@ -191,6 +191,7 @@ function Library:NewWindow(hubname, gamename)
 			TextButton.Parent = ButtonElement
 			TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			TextButton.BackgroundTransparency = 1.000
+			TextButton.ClipsDescendants = true
 			TextButton.Position = UDim2.new(0.00238663494, 0, 0.137779728, 0)
 			TextButton.Size = UDim2.new(0, 401, 0, 31)
 			TextButton.Font = Enum.Font.Gotham
@@ -199,7 +200,7 @@ function Library:NewWindow(hubname, gamename)
 			TextButton.TextSize = 14.000
 			TextButton.TextWrapped = true
 			TextButton.Text = buttonname or "button"
-			TextButton.ClipsDescendants = true
+			
 			
 			Sample.Name = "Sample"
 Sample.Parent = TextButton
