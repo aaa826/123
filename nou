@@ -127,7 +127,9 @@ function Library:NewWindow(hubname, gamename)
 	
 	local Win = {}
 	function Win:NewTab(pagename, mainpage)
-		
+	itemnumber = 0
+    pagesize = 0
+    drop
 	
 	local PageButton = Instance.new("TextButton")
 	local UICorner_2 = Instance.new("UICorner")
@@ -429,6 +431,10 @@ end)
 		end
 function PageItems:NewDropdown(dropdownname, itemlist, callback)
 local callback = callback or function() end
+local itemnumber = 0 
+local pagesize = 0
+local dropopened = false
+local dropdownname = dropdownname or "Dropdown"
 local DropDown = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local DropToggle = Instance.new("TextButton")
@@ -441,14 +447,7 @@ local UICorner2 = Instance.new("UICorner")
 local UICorner1 = Instance.new("UICorner")
 local itemnumber = 0
 local pagesize = 0
-
 local ImageLabel = Instance.new("ImageLabel")
-
---Properties:
-
-
-
---Properties:
 
 DropDown.Name = "DropDown"
 DropDown.Parent = Page
@@ -463,7 +462,7 @@ DropToggle.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 DropToggle.Position = UDim2.new(0.00238663494, 0, 0, 0)
 DropToggle.Size = UDim2.new(0, 416, 0, 51)
 DropToggle.Font = Enum.Font.GothamSemibold
-DropToggle.Text = "DropDown"
+DropToggle.Text = dropdownname or "DropDown"
 DropToggle.TextColor3 = Color3.fromRGB(255, 255, 255)
 DropToggle.TextSize = 30.000
 DropToggle.TextWrapped = true
@@ -512,7 +511,7 @@ Item1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 Item1.Position = UDim2.new(0.0192307699, 0, 0, 0)
 Item1.Size = UDim2.new(0, 426, 0, 25)
 Item1.Font = Enum.Font.GothamSemibold
-Item1.Text = "Item1"
+Item1.Text = v or "Item1"
 Item1.TextColor3 = Color3.fromRGB(255, 255, 255)
 Item1.TextScaled = true
 Item1.TextSize = 14.000
@@ -537,10 +536,8 @@ DropToggle.MouseButton1Down:Connect(function()
 
 	
 		dropopened = not dropopened
-	end
-end)
-Page.CanvasSize = Page.CanvasSize + UDim2.new(0,0,0,UIListLayout_2.AbsoluteContentSize.Y)
-				
+                    	    end
+                        end)			
 					end
 					
 					return PageItems
