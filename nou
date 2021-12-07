@@ -129,7 +129,7 @@ function Library:NewWindow(hubname, gamename)
 	function Win:NewTab(pagename, mainpage)
 	itemnumber = 0
     pagesize = 0
-    drop
+    
 	
 	local PageButton = Instance.new("TextButton")
 	local UICorner_2 = Instance.new("UICorner")
