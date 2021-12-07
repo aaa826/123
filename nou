@@ -453,7 +453,6 @@ local ImageLabel = Instance.new("ImageLabel")
 DropDown.Name = "DropDown"
 DropDown.Parent = Page
 DropDown.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-DropDown.ClipsDescendants = false
 DropDown.Position = UDim2.new(0, 0, 0.361635208, 0)
 DropDown.Size = UDim2.new(0, 419, 0, 52)
 
