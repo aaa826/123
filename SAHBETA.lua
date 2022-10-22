@@ -123,8 +123,6 @@ SniffAirHub.Parent = SniffAirHubGUI
 SniffAirHub.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
 SniffAirHub.Position = UDim2.new(0.274598598, 0, 0.14063932, 0)
 SniffAirHub.Size = UDim2.new(0, 597, 0, 399)
-SniffAirHub.Active = true
-SniffAirHub.Draggable = true
 
 UICorner.CornerRadius = UDim.new(0, 10)
 UICorner.Parent = SniffAirHub
@@ -482,8 +480,6 @@ HomeFrame.Parent = SniffAirHubGUI
 HomeFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 HomeFrame.Position = UDim2.new(0.44053638, 0, 0.0244897958, 0)
 HomeFrame.Size = UDim2.new(0, 173, 0, 31)
-HomeFrame.Active = true
-HomeFrame.Draggable = true
 
 UICorner_13.CornerRadius = UDim.new(3, 8)
 UICorner_13.Parent = HomeFrame
@@ -1062,7 +1058,7 @@ local function FMQPMVZ_fake_script() -- TextLabel_3.LocalScript
 	local script = Instance.new('LocalScript', TextLabel_3)
 
 	local players = game:GetService("Players")
-	script.Parent.Text = "Welcome, "..players.LocalPlayer.DisplayName
+	script.Parent.Text = players.LocalPlayer.DisplayName
 end
 coroutine.wrap(FMQPMVZ_fake_script)()
 local function IAKMXL_fake_script() -- TextLabel_5.LocalScript 
@@ -1076,7 +1072,7 @@ local function JCFEPDI_fake_script() -- TextLabel_6.LocalScript
 	local script = Instance.new('LocalScript', TextLabel_6)
 
 	local players = game:GetService("Players")
-	script.Parent.Text = players.LocalPlayer.DisplayName
+	script.Parent.Text = players.LocalPlayer.Name
 end
 coroutine.wrap(JCFEPDI_fake_script)()
 
@@ -1361,6 +1357,8 @@ Load.MouseButton1Click:Connect(function()
 		TS:Create(Shadow, TweenInfo.new(0.2), {ImageTransparency = 1}):Play()
 		TS:Create(Load, TweenInfo.new(0.2), {TextTransparency = 1}):Play()
 		TS:Create(Load, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
+		TS:Create(cancel, TweenInfo.new(0.2), {TextTransparency = 0}):Play()
+		TS:Create(cancel, TweenInfo.new(0.2), {BackgroundTransparency = 0.2}):Play()
 		wait(0.2)
 		TS:Create(HomeFrame, TweenInfo.new(0.2), {Size = UDim2.new(0, 173,0, 31)}):Play()
 		HomeFrame.UICorner.CornerRadius = UDim.new(3,8)
