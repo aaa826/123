@@ -123,6 +123,8 @@ SniffAirHub.Parent = SniffAirHubGUI
 SniffAirHub.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
 SniffAirHub.Position = UDim2.new(0.274598598, 0, 0.14063932, 0)
 SniffAirHub.Size = UDim2.new(0, 597, 0, 399)
+SniffAirHub.Active = true
+SniffAirHub.Draggable = true
 
 UICorner.CornerRadius = UDim.new(0, 10)
 UICorner.Parent = SniffAirHub
@@ -480,6 +482,8 @@ HomeFrame.Parent = SniffAirHubGUI
 HomeFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 HomeFrame.Position = UDim2.new(0.44053638, 0, 0.0244897958, 0)
 HomeFrame.Size = UDim2.new(0, 173, 0, 31)
+HomeFrame.Active = true
+HomeFrame.Draggable = true
 
 UICorner_13.CornerRadius = UDim.new(3, 8)
 UICorner_13.Parent = HomeFrame
