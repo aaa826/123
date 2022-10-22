@@ -110,8 +110,10 @@ local Close = Instance.new("ImageButton")
 
 --Properties:
 
+
+
 SniffAirHubGUI.Name = "Sniff Air Hub GUI"
-SniffAirHubGUI.Parent = game.Workspace
+SniffAirHubGUI.Parent = game.CoreGui
 SniffAirHubGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 HomeFrame.Name = "HomeFrame"
@@ -538,7 +540,7 @@ name_2.Size = UDim2.new(0, 93, 0, 12)
 name_2.Font = Enum.Font.GothamBold
 name_2.Text = "  From System"
 name_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-name_2.TextSize = 10.000
+name_2.TextSize = 7.00
 name_2.TextTransparency = 1.000
 name_2.TextWrapped = true
 
@@ -814,11 +816,12 @@ InputBox.Size = UDim2.new(1, -15, 0, 14)
 InputBox.ClearTextOnFocus = false
 InputBox.Font = Enum.Font.GothamMedium
 InputBox.PlaceholderText = "16"
-InputBox.Text = ""
+InputBox.Text = "16"
 InputBox.TextColor3 = Color3.fromRGB(240, 240, 240)
 InputBox.TextSize = 14.000
-UserInputService.InputBegan:Connect(function()
+InputBox.FocusLost:Connect(function()
 	game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = InputBox.Text
+    
 end)
 
 
@@ -870,11 +873,13 @@ InputBox_2.Size = UDim2.new(1, -15, 0, 14)
 InputBox_2.ClearTextOnFocus = false
 InputBox_2.Font = Enum.Font.GothamMedium
 InputBox_2.PlaceholderText = "FOV here"
-InputBox_2.Text = ""
+InputBox_2.Text = "65"
 InputBox_2.TextColor3 = Color3.fromRGB(240, 240, 240)
 InputBox_2.TextSize = 14.000
-UserInputService.InputBegan:Connect(function()
+InputBox_2.FocusLost:Connect(function()
+
 	game.Workspace.Camera.FieldOfView = InputBox_2.Text
+    
 end)
 
 UICorner_20.CornerRadius = UDim.new(0, 5)
@@ -925,11 +930,12 @@ InputBox_3.Size = UDim2.new(1, -15, 0, 14)
 InputBox_3.ClearTextOnFocus = false
 InputBox_3.Font = Enum.Font.GothamMedium
 InputBox_3.PlaceholderText = "50"
-InputBox_3.Text = ""
+InputBox_3.Text = "50"
 InputBox_3.TextColor3 = Color3.fromRGB(240, 240, 240)
 InputBox_3.TextSize = 14.000
-UserInputService.InputBegan:Connect(function()
-	game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = InputBox_3.Text
+InputBox_3.FocusLost:Connect(function()
+	game.Players.LocalPlayer.Character.Humanoid.JumpPower = InputBox_3.Text
+    
 end)
 
 
@@ -1041,7 +1047,7 @@ local function CTNUF_fake_script() -- TextLabel_5.LocalScript
 	local script = Instance.new('LocalScript', TextLabel_5)
 
 	local players = game:GetService("Players")
-	script.Parent.Text = "Welcome, "..players.LocalPlayer.DisplayName
+	script.Parent.Text = players.LocalPlayer.Name
 end
 coroutine.wrap(CTNUF_fake_script)()
 local function ELNH_fake_script() -- TextLabel_7.LocalScript 
@@ -1059,6 +1065,23 @@ local function OORIVVD_fake_script() -- TextLabel_8.LocalScript
 end
 coroutine.wrap(OORIVVD_fake_script)()
 --Games
+Notify("Welcome to Sniff Air Hub")
+function Notify(Texts)
+
+	TS:Create(HomeFrame, TweenInfo.new(0.2), {Size = UDim2.new(0, 220,0, 50)}):Play()
+	TS:Create(message, TweenInfo.new(0.2), {TextTransparency = 0}):Play()
+	TS:Create(name, TweenInfo.new(0.2), {TextTransparency = 0.5}):Play()
+	TS:Create(ImageLabel_3, TweenInfo.new(0.2), {ImageTransparency = 0}):Play()
+	TS:Create(Messages, TweenInfo.new(0.2), {Transparency = 0}):Play()
+	message.Text = Texts
+	wait(3)
+	TS:Create(name, TweenInfo.new(0.2), {TextTransparency = 1}):Play()
+	TS:Create(message, TweenInfo.new(0.2), {TextTransparency = 1}):Play()
+	TS:Create(ImageLabel_3, TweenInfo.new(0.2), {ImageTransparency = 1}):Play()
+	TS:Create(Messages, TweenInfo.new(0.2), {Transparency = 1}):Play()
+	wait(0.2)
+	TS:Create(HomeFrame, TweenInfo.new(0.2), {Size = UDim2.new(0, 173,0, 31)}):Play()
+end
 BackgroundExploits = {
 	EZHub = {
 		Name = "EZHub",
@@ -1263,22 +1286,7 @@ UniversalExploits = {
 		Code = "https://raw.githubusercontent.com/debug420/Ez-Industries-Launcher-Data/master/Launcher.lua"
 	},
 }
-function Notify(Texts)
 
-	TS:Create(HomeFrame, TweenInfo.new(0.2), {Size = UDim2.new(0, 220,0, 50)}):Play()
-	TS:Create(message, TweenInfo.new(0.2), {TextTransparency = 0}):Play()
-	TS:Create(name, TweenInfo.new(0.2), {TextTransparency = 0.5}):Play()
-	TS:Create(ImageLabel_3, TweenInfo.new(0.2), {ImageTransparency = 0}):Play()
-	TS:Create(Messages, TweenInfo.new(0.2), {Transparency = 0}):Play()
-	message = Texts
-	wait(3)
-	TS:Create(name, TweenInfo.new(0.2), {TextTransparency = 1}):Play()
-	TS:Create(message, TweenInfo.new(0.2), {TextTransparency = 1}):Play()
-	TS:Create(ImageLabel_3, TweenInfo.new(0.2), {ImageTransparency = 1}):Play()
-	TS:Create(Messages, TweenInfo.new(0.2), {Transparency = 1}):Play()
-	wait(0.2)
-	TS:Create(HomeFrame, TweenInfo.new(0.2), {Size = UDim2.new(0, 173,0, 31)}):Play()
-end
 function Execute(String)
 	if loadstring then
 		loadstring(game:HttpGet(String, true))()
