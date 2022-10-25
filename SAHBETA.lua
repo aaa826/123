@@ -1081,6 +1081,52 @@ end
 coroutine.wrap(JCFEPDI_fake_script)()
 
 --other scripts
+
+Close.MouseButton1Click:Connect(function()
+	TS:Create(UpgradePrompt, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
+	TS:Create(WelcomeMessage, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
+	TS:Create(WelcomeMessage, TweenInfo.new(0.2), {ImageTransparency = 1}):Play()
+	TS:Create(Description, TweenInfo.new(0.2), {TextTransparency = 1}):Play()
+	TS:Create(CatThumbs, TweenInfo.new(0.2), {ImageTransparency = 1}):Play()
+	TS:Create(TextLabel_11, TweenInfo.new(0.2), {TextTransparency = 1}):Play()
+	wait(0.3)
+	WelcomeMessage:Destroy()
+end)
+
+local Input = Walkspeed
+local TweenService = game:GetService("TweenService")
+Input.InputFrame.InputBox:GetPropertyChangedSignal("Text"):Connect(function()
+	TweenService:Create(Input.InputFrame, TweenInfo.new(0.55, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Size = UDim2.new(0, Input.InputFrame.InputBox.TextBounds.X + 24, 0, 30)}):Play()
+end)
+
+local Input = JumpPower
+local TweenService = game:GetService("TweenService")
+Input.InputFrame.InputBox:GetPropertyChangedSignal("Text"):Connect(function()
+	TweenService:Create(Input.InputFrame, TweenInfo.new(0.55, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Size = UDim2.new(0, Input.InputFrame.InputBox.TextBounds.X + 24, 0, 30)}):Play()
+end)
+
+local Input = FOV
+local TweenService = game:GetService("TweenService")
+Input.InputFrame.InputBox:GetPropertyChangedSignal("Text"):Connect(function()
+	TweenService:Create(Input.InputFrame, TweenInfo.new(0.55, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Size = UDim2.new(0, Input.InputFrame.InputBox.TextBounds.X + 24, 0, 30)}):Play()
+end)
+
+InputBox_3.FocusLost:Connect(function()
+	game.Players.LocalPlayer.Character.Humanoid.JumpPower = InputBox_3.Text
+	Notify("JP changed to "..InputBox_3.Text, "    From System")
+end)
+InputBox_2.FocusLost:Connect(function()
+
+	game.Workspace.Camera.FieldOfView = InputBox_2.Text
+	Notify("FOV changed to "..InputBox_2.Text,"    From System")
+
+end)
+InputBox.FocusLost:Connect(function()
+	game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = InputBox.Text
+Notify("WS changed to "..InputBox.Text,"   From System")
+end)
+
+
 function Notify(Texts,Name)
 
 	TS:Create(HomeFrame, TweenInfo.new(0.2), {Size = UDim2.new(0, 220,0, 50)}):Play()
@@ -1099,7 +1145,7 @@ function Notify(Texts,Name)
 	wait(0.2)
 	TS:Create(HomeFrame, TweenInfo.new(0.2), {Size = UDim2.new(0, 173,0, 31)}):Play()
 end
-Notify("Welcome to Sniff Air Hub"," From System")
+Notify("Welcome to Sniff Air Hub","  From System")
 BackgroundExploits = {
 	EZHub = {
 		Name = "EZHub",
@@ -1123,7 +1169,7 @@ BackgroundExploits = {
 		PlaceIds = {6447798030},
 		PremiumOnly = false,
 		WaitDuration = 9,
-		Loadstring = "https://raw.githubusercontent.com/shlexsoftworks/Domain/main/funkyfriday",
+		Loadstring = "https://raw.githubusercontent.com/wally-rblx/funky-friday-autoplay/main/main.lua",
 	},
 	anomic = {
 		Name = "Anomic",
@@ -1269,6 +1315,14 @@ BackgroundExploits = {
 		WaitDuration = 0,
 		Loadstring = "https://pastebin.com/raw/bHQ8dyX8",
 	},
+	PrisonLife = {
+		Name = "Prison Life",
+		Description = "UI Bu Jake",
+		PlaceIds = {155615604},
+		PremiumOnly = false,
+		WaitDuration = 0,
+		Loadstring = "https://pastebin.com/hy5PDLVQ",
+	},
 }
 
 UniversalExploits = {
@@ -1305,11 +1359,12 @@ UniversalExploits = {
 	},
 }
 
+
 function Execute(String)
 	if loadstring then
 		loadstring(game:HttpGet(String, true))()
 	else
-		Notify("Your executor doesn't have the loadstring function. Please choose a different executor and try again.")
+		Notify("Your executor doesn't have the loadstring function. Please choose a different executor and try again.","   From System")
 	end
 end
 
@@ -1318,8 +1373,7 @@ function PromptExploit(Exploit)
 	pexploit = true
 	wait(Exploit.WaitDuration)
 	
-	description.Text = Exploit.Description
-	title.Text = Exploit.Name
+	description.Text = Exploit.Name
 	TS:Create(HomeFrame, TweenInfo.new(0.2), {Size = UDim2.new(0, 267,0, 91)}):Play()
 	TS:Create(description, TweenInfo.new(0.2), {TextTransparency = 0.5}):Play()
 	TS:Create(keybind, TweenInfo.new(0.2), {TextTransparency = 0.5}):Play()
@@ -1344,15 +1398,18 @@ Load.MouseButton1Click:Connect(function()
 			TS:Create(Shadow, TweenInfo.new(0.2), {ImageTransparency = 1}):Play()
 			TS:Create(Load, TweenInfo.new(0.2), {TextTransparency = 1}):Play()
 			TS:Create(Load, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
+			TS:Create(cancel, TweenInfo.new(0.2), {TextTransparency = 1}):Play()
+			TS:Create(cancel, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
+		
 			wait(0.2)
 			TS:Create(HomeFrame, TweenInfo.new(0.2), {Size = UDim2.new(0, 173,0, 31)}):Play()
 			HomeFrame.UICorner.CornerRadius = UDim.new(3,8)
 			pexploit = false
-			Notify("Loading "..Exploit.Name..", this may bug for a few seconds in some cases","GothamSemibold",Color3.fromRGB(0, 95, 139))
+			Notify("Loading "..Exploit.Name..", this may bug for a few seconds in some cases","   From System")
 			Execute(Exploit.Loadstring)
 		end
 	end)
-	cancel.MouseButton1Click:Connect(function()
+	cancel.MouseButton1Down:Connect(function()
 		TS:Create(title, TweenInfo.new(0.2), {TextTransparency = 1}):Play()
 		TS:Create(keybind, TweenInfo.new(0.2), {TextTransparency = 1}):Play()
 
@@ -1361,8 +1418,8 @@ Load.MouseButton1Click:Connect(function()
 		TS:Create(Shadow, TweenInfo.new(0.2), {ImageTransparency = 1}):Play()
 		TS:Create(Load, TweenInfo.new(0.2), {TextTransparency = 1}):Play()
 		TS:Create(Load, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
-		TS:Create(cancel, TweenInfo.new(0.2), {TextTransparency = 0}):Play()
-		TS:Create(cancel, TweenInfo.new(0.2), {BackgroundTransparency = 0.2}):Play()
+		TS:Create(cancel, TweenInfo.new(0.2), {TextTransparency = 1}):Play()
+		TS:Create(cancel, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
 		wait(0.2)
 		TS:Create(HomeFrame, TweenInfo.new(0.2), {Size = UDim2.new(0, 173,0, 31)}):Play()
 		HomeFrame.UICorner.CornerRadius = UDim.new(3,8)
@@ -1380,6 +1437,8 @@ Load.MouseButton1Click:Connect(function()
 			TS:Create(Shadow, TweenInfo.new(0.2), {ImageTransparency = 1}):Play()
 			TS:Create(Load, TweenInfo.new(0.2), {TextTransparency = 1}):Play()
 			TS:Create(Load, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
+			TS:Create(cancel, TweenInfo.new(0.2), {TextTransparency = 1}):Play()
+			TS:Create(cancel, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
 			wait(0.2)
 			TS:Create(HomeFrame, TweenInfo.new(0.2), {Size = UDim2.new(0, 173,0, 31)}):Play()
 			HomeFrame.UICorner.CornerRadius = UDim.new(3,8)
@@ -1389,29 +1448,7 @@ Load.MouseButton1Click:Connect(function()
 	end)
 end
 
-InputBox_3.FocusLost:Connect(function()
-	game.Players.LocalPlayer.Character.Humanoid.JumpPower = InputBox_3.Text
 
-end)
-InputBox_2.FocusLost:Connect(function()
-
-	game.Workspace.Camera.FieldOfView = InputBox_2.Text
-
-end)
-InputBox.FocusLost:Connect(function()
-	game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = InputBox.Text
-
-end)
-Close.MouseButton1Click:Connect(function()
-	TS:Create(UpgradePrompt, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
-	TS:Create(WelcomeMessage, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
-	TS:Create(WelcomeMessage, TweenInfo.new(0.2), {ImageTransparency = 1}):Play()
-	TS:Create(Description, TweenInfo.new(0.2), {TextTransparency = 1}):Play()
-	TS:Create(CatThumbs, TweenInfo.new(0.2), {ImageTransparency = 1}):Play()
-	TS:Create(TextLabel_11, TweenInfo.new(0.2), {TextTransparency = 1}):Play()
-	wait(0.3)
-	WelcomeMessage:Destroy()
-end)
 
 
 
@@ -1429,3 +1466,17 @@ for _, exp in pairs(BackgroundExploits) do
 		end
 	end
 end
+--close UI 
+opened = false
+UserInputService.InputBegan:Connect(function(KeyCode)
+if KeyCode.KeyCode == Enum.KeyCode.K then
+	if opened == false then
+	SniffAirHub.Visible = true
+		opened = true
+	elseif opened == true then
+		opened = false
+		SniffAirHub.Visible = false
+		end 
+	end
+end)
+--Like a good neighbor, Jake from State Farm is here.
