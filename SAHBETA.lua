@@ -3,6 +3,13 @@
 
 -- Instances:
 pexploit = false
+local StrokeWS = Instance.new("UIStroke")
+local StrokeWSText = Instance.new("UIStroke")
+
+local StrokeJP = Instance.new("UIStroke")
+local StrokeJPText = Instance.new("UIStroke")
+local StrokeFOV = Instance.new("UIStroke")
+local StrokeFOVText = Instance.new("UIStroke")
 local TS = game:GetService("TweenService")
 local UserInputService = game:GetService("UserInputService")
 local SniffAirHubGUI = Instance.new("ScreenGui")
@@ -568,6 +575,30 @@ callingtext.Text = "8:05"
 callingtext.TextColor3 = Color3.fromRGB(85, 255, 127)
 callingtext.TextSize = 14.000
 callingtext.TextTransparency = 1.000
+
+StrokeWS.Color = Color3.fromRGB(50,50,50)
+StrokeWS.Enabled = true
+StrokeWS.Parent = Walkspeed
+
+StrokeWSText.Color = Color3.fromRGB(50,50,50)
+StrokeWSText.Enabled = true
+StrokeWSText.Parent = InputFrame
+
+StrokeJP.Color = Color3.fromRGB(50,50,50)
+StrokeJP.Enabled = true
+StrokeJP.Parent = JumpPower
+
+StrokeJPText.Color = Color3.fromRGB(50,50,50)
+StrokeJPText.Enabled = true
+StrokeJPText.Parent = InputFrame_2
+
+StrokeFOV.Color = Color3.fromRGB(50,50,50)
+StrokeFOV.Enabled = true
+StrokeFOV.Parent = FOV
+
+StrokeFOVText.Color = Color3.fromRGB(50,50,50)
+StrokeFOVText.Enabled = true
+StrokeFOVText.Parent = InputFrame_3
 
 Accept.Name = "Accept"
 Accept.Parent = HomeFrame
